@@ -24,8 +24,8 @@ namespace Completed
             }
         }
 
-        public int columns = 25;
-        public int rows = 25;
+        public int columns = 225;
+        public int rows = 225;
         public GameObject Exit; //Prefab to spawn for exit
         public GameObject[] floorTiles; //Array of floor prefabs
         
@@ -42,10 +42,10 @@ namespace Completed
             gridPositions.Clear();
 
             //Loop through x axis (columns).
-            for(int x = 1; x < columns-1; x++)
+            for(int x = 1; x < columns-1; x = x +15)
             {
                 //Within each column loop throug z axis (rows).
-                for(int z = 1; z < rows-1; z++)
+                for(int z = 1; z < rows-1; z = z + 15)
                 {
                     //At each index add a new Vector3 to our list with the x and y coordinates of that position.
                     gridPositions.Add(new Vector3(x, 0f, z));
@@ -60,10 +60,10 @@ namespace Completed
             boardHolder = new GameObject("Board").transform;
 
             //loop along x axis to place wall
-            for(int x =-1; x < columns + 1; x++)
+            for(int x =-1; x < columns + 1; x = x + 15)
             {
                 //loop along z axis
-                for(int z= -1; z < rows + 1; z++)
+                for(int z= -1; z < rows + 1; z= z + 15)
                 {
                     //choose a random floor from prefab array and prepare to instantiate it.
                     GameObject toInstantiate = floorTiles[Random.Range(0, floorTiles.Length)];
