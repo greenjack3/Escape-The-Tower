@@ -70,6 +70,7 @@
     <Compile Include="Assets\SCRIPTS\BoardManagerScript.cs" />
     <Compile Include="Assets\SCRIPTS\CameraMovementScript.cs" />
     <Compile Include="Assets\SCRIPTS\CameraMovementScript2.cs" />
+    <Compile Include="Assets\SCRIPTS\CharacterMovementScript.cs" />
     <Compile Include="Assets\SCRIPTS\ExitButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\GameManagerScript.cs" />
     <Compile Include="Assets\SCRIPTS\NewGameButtonScript.cs" />
