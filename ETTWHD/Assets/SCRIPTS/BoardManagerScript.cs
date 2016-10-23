@@ -23,11 +23,12 @@ namespace Completed
 
             }
         }
-
+        public int sizerome;
         public int columns = 225;
         public int rows = 225;
         public GameObject Exit; //Prefab to spawn for exit
         public GameObject[] floorTiles; //Array of floor prefabs
+        
         
 
         private Transform boardHolder; // A variable to store refrence to the transform of our board object.
@@ -42,10 +43,10 @@ namespace Completed
             gridPositions.Clear();
 
             //Loop through x axis (columns).
-            for(int x = 1; x < columns-1; x = x +15)
+            for(int x = 1; x < columns-1; x = x + sizerome)
             {
                 //Within each column loop throug z axis (rows).
-                for(int z = 1; z < rows-1; z = z + 15)
+                for(int z = 1; z < rows-1; z = z + sizerome)
                 {
                     //At each index add a new Vector3 to our list with the x and y coordinates of that position.
                     gridPositions.Add(new Vector3(x, 0f, z));
@@ -60,10 +61,10 @@ namespace Completed
             boardHolder = new GameObject("Board").transform;
 
             //loop along x axis to place wall
-            for(int x =-1; x < columns + 1; x = x + 15)
+            for(int x =-1; x < columns + 1; x = x + sizerome)
             {
                 //loop along z axis
-                for(int z= -1; z < rows + 1; z= z + 15)
+                for(int z= -1; z < rows + 1; z= z + sizerome)
                 {
                     //choose a random floor from prefab array and prepare to instantiate it.
                     GameObject toInstantiate = floorTiles[Random.Range(0, floorTiles.Length)];
