@@ -53,6 +53,7 @@
      <Compile Include="Assets\SCRIPTS\ExitButtonScript.cs" />
      <Compile Include="Assets\SCRIPTS\GameManagerScript.cs" />
      <Compile Include="Assets\SCRIPTS\NewGameButtonScript.cs" />
+     <Compile Include="Assets\SCRIPTS\NewLevelManagerScript.cs" />
      <Compile Include="Assets\SCRIPTS\NotebookButtonScript.cs" />
      <Compile Include="Assets\SCRIPTS\SettingsButtonScript.cs" />
  <Reference Include="UnityEngine.UI">

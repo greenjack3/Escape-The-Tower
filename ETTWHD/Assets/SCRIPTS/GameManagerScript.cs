@@ -9,8 +9,9 @@ namespace Completed
     public class GameManagerScript : MonoBehaviour
     {
         public static GameManagerScript instance = null;
-        private BoardManagerScript boardScript;
-        private int level = 3;
+       // private BoardManagerScript boardScript;
+        private NewLevelManagerScript levelScirpt;
+        private int level = 0;
 
         void Awake()
         {
@@ -25,7 +26,8 @@ namespace Completed
 
             DontDestroyOnLoad(gameObject);
 
-            boardScript = GetComponent<BoardManagerScript>();
+            // boardScript = GetComponent<BoardManagerScript>();
+            levelScirpt = GetComponent<NewLevelManagerScript>();
 
             InitGame();
 
@@ -33,7 +35,7 @@ namespace Completed
         
         void InitGame()
         {
-            boardScript.SetupScene(level);
+            levelScirpt.SetupScene(level);
         }
         void Update()
         {
