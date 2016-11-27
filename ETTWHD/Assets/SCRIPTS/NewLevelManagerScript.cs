@@ -51,7 +51,7 @@ using Random = UnityEngine.Random;
 
         foreach (GameObject Room in InnerRoomsOnScene)
         {
-            GameObject InnerPrefab = InnerRoom[Random.Range(0, EdgeRoom.Lenght)];
+            GameObject InnerPrefab = InnerRoom[Random.Range(0, InnerRoom.Length)];
             instance = (GameObject)Instantiate(InnerPrefab, Room.transform.position, Room.transform.rotation);
         }
 
@@ -61,7 +61,7 @@ using Random = UnityEngine.Random;
             instance = (GameObject)Instantiate(OuterPrefab, Room.transform.position, Room.transform.rotation);
         }
       
-     */
+     
     }
     public void SetupScene(int level)
     {
