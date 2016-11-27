@@ -22,10 +22,11 @@ using Random = UnityEngine.Random;
     {
         // if (CenterRooms == null)
         CenterRoomsOnScene = GameObject.FindGameObjectsWithTag("CR");
+
         EdgeRoomsOnScene = GameObject.FindGameObjectsWithTag("ER");
 
-     //   InnerRoomsOnScene = GameObject.FindGameObjectsWithTag("IR");
-     //   OuterRoomsOnScene = GameObject.FindGameObjectsWithTag("OR");
+        InnerRoomsOnScene = GameObject.FindGameObjectsWithTag("IR");
+       OuterRoomsOnScene = GameObject.FindGameObjectsWithTag("OR");
 
 
         //choose a random floor from prefab array and prepare to instantiate it.
@@ -48,9 +49,16 @@ using Random = UnityEngine.Random;
         }
 
 
-     /*   foreach (GameObject Room in InnerRoomsOnScene)
+        foreach (GameObject Room in InnerRoomsOnScene)
         {
-            GameObject InnerPrefab = InnerRoom[Random.Range()]
+            GameObject InnerPrefab = InnerRoom[Random.Range(0, EdgeRoom.Lenght)];
+            instance = (GameObject)Instantiate(InnerPrefab, Room.transform.position, Room.transform.rotation);
+        }
+
+        foreach (GameObject Room in OuterRoomsOnScene)
+        {
+            GameObject OuterPrefab = OuterRoom[Random.Range(0, OuterRoom.Length)];
+            instance = (GameObject)Instantiate(OuterPrefab, Room.transform.position, Room.transform.rotation);
         }
       
      */
