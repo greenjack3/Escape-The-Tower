@@ -15,7 +15,7 @@ using Random = UnityEngine.Random;
     public GameObject[] EdgeRoomsOnScene;
     public GameObject[] InnerRoomsOnScene;
     public GameObject[] OuterRoomsOnScene;
-
+    public Grid gridscript;
 
 
     void BoardSetup()
@@ -60,14 +60,15 @@ using Random = UnityEngine.Random;
             GameObject OuterPrefab = OuterRoom[Random.Range(0, OuterRoom.Length)];
             instance = (GameObject)Instantiate(OuterPrefab, Room.transform.position, Room.transform.rotation);
         }
-      
+
+        gridscript = GetComponent<Grid>();
      
     }
     public void SetupScene(int level)
     {
         //Creates floor.
         BoardSetup();
-
+        gridscript.GenerateGrid();
         
 
     }
