@@ -15,8 +15,8 @@ using Random = UnityEngine.Random;
     public GameObject[] EdgeRoomsOnScene;
     public GameObject[] InnerRoomsOnScene;
     public GameObject[] OuterRoomsOnScene;
-    public Grid gridscript;
-
+    private Grid gridscript;
+    public float rotationmodifactor;
 
     void BoardSetup()
     {
@@ -38,14 +38,22 @@ using Random = UnityEngine.Random;
         {
             CenterPrefab = CenterRoom[Random.Range(0, CenterRoom.Length)];
             instance = (GameObject)Instantiate(CenterPrefab, Room.transform.position, Room.transform.rotation);
-            //instance.transform.Rotate(Vector3.up * 30f, Space.World); obracanie pokoju 
-            
+           
          }
 
         foreach (GameObject Room in EdgeRoomsOnScene)
         {
            GameObject EdgePrefab = EdgeRoom[Random.Range(0, EdgeRoom.Length)];
             instance = (GameObject)Instantiate(EdgePrefab, Room.transform.position, Room.transform.rotation);
+            rotationmodifactor = Random.Range(0f, 9f);
+            if (rotationmodifactor < 5)
+            {
+                instance.transform.Rotate(Vector3.up * 90f, Space.World); //obracanie pokoju 
+            }
+            else if (rotationmodifactor > 5)
+            {
+                instance.transform.Rotate(Vector3.up * (-90f), Space.World); //obracanie pokoju 
+            }
         }
 
 
@@ -53,12 +61,30 @@ using Random = UnityEngine.Random;
         {
             GameObject InnerPrefab = InnerRoom[Random.Range(0, InnerRoom.Length)];
             instance = (GameObject)Instantiate(InnerPrefab, Room.transform.position, Room.transform.rotation);
+            rotationmodifactor = Random.Range(0f, 9f);
+            if (rotationmodifactor < 5)
+            {
+                instance.transform.Rotate(Vector3.up * 90f, Space.World); //obracanie pokoju 
+            }
+            else if (rotationmodifactor > 5)
+            {
+                instance.transform.Rotate(Vector3.up * (-90f), Space.World); //obracanie pokoju 
+            }
         }
 
         foreach (GameObject Room in OuterRoomsOnScene)
         {
             GameObject OuterPrefab = OuterRoom[Random.Range(0, OuterRoom.Length)];
             instance = (GameObject)Instantiate(OuterPrefab, Room.transform.position, Room.transform.rotation);
+            rotationmodifactor = Random.Range(0f, 9f);
+            if (rotationmodifactor < 5)
+            {
+                instance.transform.Rotate(Vector3.up * 90f, Space.World); //obracanie pokoju 
+            }
+            else if (rotationmodifactor > 5)
+            {
+                instance.transform.Rotate(Vector3.up * (-90f), Space.World); //obracanie pokoju 
+            }
         }
 
         gridscript = GetComponent<Grid>();
@@ -68,7 +94,7 @@ using Random = UnityEngine.Random;
     {
         //Creates floor.
         BoardSetup();
-        gridscript.GenerateGrid();
+       // gridscript.GenerateGrid();
         
 
     }
