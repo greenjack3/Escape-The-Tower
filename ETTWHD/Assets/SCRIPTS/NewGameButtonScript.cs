@@ -6,7 +6,7 @@ public class NewGameButtonScript : MonoBehaviour {
 
 	public void STARTGAME()
     {
-        SceneManager.LoadScene("Level1Scene");
+        SceneManager.LoadScene("test");
 
     }
 }
