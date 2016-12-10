@@ -9,7 +9,7 @@ namespace Completed
     public class GameManagerScript : MonoBehaviour
     {
         public static GameManagerScript instance = null;
-        //private BoardManagerScript boardScript;
+        
         private NewLevelManagerScript levelScirpt;
         private int level = 0;
 

@@ -47,9 +47,8 @@
   <ItemGroup>
      <Compile Include="Assets\SCRIPTS\BackToMainMenuButtonScript.cs" />
      <Compile Include="Assets\SCRIPTS\BoardManagerScript.cs" />
-     <Compile Include="Assets\SCRIPTS\CameraMovementScript.cs" />
-     <Compile Include="Assets\SCRIPTS\CameraMovementScript2.cs" />
      <Compile Include="Assets\SCRIPTS\CharacterMovementScript.cs" />
+     <Compile Include="Assets\SCRIPTS\EnemyDustlingScript.cs" />
      <Compile Include="Assets\SCRIPTS\ExitButtonScript.cs" />
      <Compile Include="Assets\SCRIPTS\GameManagerScript.cs" />
      <Compile Include="Assets\SCRIPTS\Grid.cs" />
@@ -57,6 +56,7 @@
      <Compile Include="Assets\SCRIPTS\NewLevelManagerScript.cs" />
      <Compile Include="Assets\SCRIPTS\NotebookButtonScript.cs" />
      <Compile Include="Assets\SCRIPTS\SettingsButtonScript.cs" />
+     <Compile Include="Assets\SCRIPTS\TapToMove.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
