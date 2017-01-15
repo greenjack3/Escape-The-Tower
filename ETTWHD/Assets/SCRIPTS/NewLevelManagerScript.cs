@@ -85,7 +85,7 @@ using Random = UnityEngine.Random;
     {
         //Creates floor.
         BoardSetup();
-        gridscript.GenerateGrid();
+        Grid.Instance.GenerateGrid();
         
 
     }
