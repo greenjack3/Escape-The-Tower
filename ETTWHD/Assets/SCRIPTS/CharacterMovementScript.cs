@@ -7,7 +7,7 @@ public class CharacterMovementScript : MonoBehaviour
 
     private Vector3 endPoint;
 
-    public float duration = 50.0f;
+    public float duration = 2.0f;
 
     private float yAxis;
 

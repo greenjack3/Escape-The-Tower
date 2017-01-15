@@ -56,7 +56,6 @@
      <Compile Include="Assets\SCRIPTS\NewLevelManagerScript.cs" />
      <Compile Include="Assets\SCRIPTS\NotebookButtonScript.cs" />
      <Compile Include="Assets\SCRIPTS\SettingsButtonScript.cs" />
-     <Compile Include="Assets\SCRIPTS\TapToMove.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
