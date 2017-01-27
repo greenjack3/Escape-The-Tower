@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Random = UnityEngine.Random;
+using UnityEngine.UI;
 
 
 
- public class NewLevelManagerScript : MonoBehaviour{
+public class NewLevelManagerScript : MonoBehaviour{
 
     
     public GameObject[] CenterRoom;
@@ -17,6 +18,8 @@ using Random = UnityEngine.Random;
     public GameObject[] OuterRoomsOnScene;
     private Grid gridscript;
     public float rotationmodifactor;
+    public int pupy;
+    public Text PUPY;
 
     void BoardSetup()
     {
@@ -88,5 +91,14 @@ using Random = UnityEngine.Random;
         Grid.Instance.GenerateGrid();
         
 
+    }
+    void Start()
+    {
+        SetPupyText();
+        pupy = 0;
+    }
+    void SetPupyText()
+    {
+        PUPY.text = "PUPy:" + pupy.ToString();
     }
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 namespace Completed
 {
@@ -12,7 +13,8 @@ namespace Completed
         
         private NewLevelManagerScript levelScirpt;
         private int level = 1;
-
+        public int pupy;
+        public Text PUPY;
         void Awake()
         {
             if (instance == null)
@@ -38,9 +40,25 @@ namespace Completed
             levelScirpt.SetupScene(level);
            
         }
+        void Start()
+        {
+            SetPupyText();
+            pupy = 0;
+        }
+
+
+
+
+
         void Update()
         {
+            
 
+        }
+
+        void SetPupyText()
+        {
+            PUPY.text = "PUPy:" + pupy.ToString();
         }
     }
   

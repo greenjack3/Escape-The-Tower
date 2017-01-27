@@ -78,9 +78,11 @@
     <Compile Include="Assets\SCRIPTS\BackToMainMenuButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\BoardManagerScript.cs" />
     <Compile Include="Assets\SCRIPTS\CharacterMovementScript.cs" />
+    <Compile Include="Assets\SCRIPTS\EnemySpawnerScript.cs" />
     <Compile Include="Assets\SCRIPTS\ExitButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\GameManagerScript.cs" />
     <Compile Include="Assets\SCRIPTS\Grid.cs" />
+    <Compile Include="Assets\SCRIPTS\HeroSpawnerScript.cs" />
     <Compile Include="Assets\SCRIPTS\NewGameButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\NewLevelManagerScript.cs" />
     <Compile Include="Assets\SCRIPTS\NotebookButtonScript.cs" />
