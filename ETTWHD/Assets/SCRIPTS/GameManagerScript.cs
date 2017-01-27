@@ -11,7 +11,7 @@ namespace Completed
         public static GameManagerScript instance = null;
         
         private NewLevelManagerScript levelScirpt;
-        private int level = 0;
+        private int level = 1;
 
         void Awake()
         {
@@ -26,7 +26,7 @@ namespace Completed
 
             DontDestroyOnLoad(gameObject);
 
-            //boardScript = GetComponent<BoardManagerScript>();
+           
             levelScirpt = GetComponent<NewLevelManagerScript>();
 
             InitGame();
@@ -36,7 +36,7 @@ namespace Completed
         void InitGame()
         {
             levelScirpt.SetupScene(level);
-            //boardScript.SetupScene(level);
+           
         }
         void Update()
         {
