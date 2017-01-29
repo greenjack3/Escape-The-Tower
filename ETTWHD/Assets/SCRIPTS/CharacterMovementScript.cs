@@ -15,7 +15,7 @@ public class CharacterMovementScript : MonoBehaviour
     {
         yAxis = gameObject.transform.position.y;
     }
-    
+
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -24,15 +24,15 @@ public class CharacterMovementScript : MonoBehaviour
             Ray ray;
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if(Physics.Raycast(ray,out hit))
+            if (Physics.Raycast(ray, out hit))
             {
                 flag = true;
                 endPoint = hit.point;
                 endPoint.y = yAxis;
-                
+
             }
         }
-        if(flag && !Mathf.Approximately(gameObject.transform.position.magnitude, endPoint.magnitude))
+        if (flag && !Mathf.Approximately(gameObject.transform.position.magnitude, endPoint.magnitude))
         {
             gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, endPoint, 1 / (duration * (Vector3.Distance(gameObject.transform.position, endPoint))));
         }
@@ -42,7 +42,39 @@ public class CharacterMovementScript : MonoBehaviour
             Debug.Log("i am here");
         }
 
+        if (Input.GetMouseButtonDown(1))
+        {
+                RaycastHit hitEnemy;
+                Ray rayAttack;
+                rayAttack = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(rayAttack, out hitEnemy))
+                {
+                    if (hitEnemy.collider.tag == "Enemy")
+                    {
+                        Debug.Log("HADZIA!");
+                        GameObject.Find("room").SendMessage("Add100Pup");
+
+                    }
+                }
+       if (hitEnemy.collider.tag == "Exit")
+            {
+                Debug.Log("Radek, otwórz!");
+//                GameObject.Find("room").SendMessage("Add100Pup");
+
+            }
+
+       if (hitEnemy.collider.tag == "Player")
+            {
+                Debug.Log("CZEGO?!");
+//                GameObject.Find("room").SendMessage("Add100Pup");
+            }
+
+
+        }
+
     }
 
-	
+
+
 }
