@@ -1,0 +1,209 @@
+fileFormatVersion: 2
+guid: 5c3c3809ea557d1439add46418799786
+timeCreated: 1486577799
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: ArmFingers_L
+    100004: ArmFingers_R
+    100006: ArmHand_L
+    100008: ArmHand_R
+    100010: ArmLower_L
+    100012: ArmLower_R
+    100014: ArmThumb_L
+    100016: ArmThumb_R
+    100018: ArmUpper_L
+    100020: ArmUpper_R
+    100022: BigBone
+    100024: Chest
+    100026: Dwarf01
+    100028: //RootNode
+    100030: Empty
+    100032: Head
+    100034: LegFoot_L
+    100036: LegFoot_R
+    100038: LegLower_L
+    100040: LegLower_R
+    100042: LegUpper_L
+    100044: LegUpper_R
+    100046: Main
+    100048: Torso
+    400000: Armature
+    400002: ArmFingers_L
+    400004: ArmFingers_R
+    400006: ArmHand_L
+    400008: ArmHand_R
+    400010: ArmLower_L
+    400012: ArmLower_R
+    400014: ArmThumb_L
+    400016: ArmThumb_R
+    400018: ArmUpper_L
+    400020: ArmUpper_R
+    400022: BigBone
+    400024: Chest
+    400026: Dwarf01
+    400028: //RootNode
+    400030: Empty
+    400032: Head
+    400034: LegFoot_L
+    400036: LegFoot_R
+    400038: LegLower_L
+    400040: LegLower_R
+    400042: LegUpper_L
+    400044: LegUpper_R
+    400046: Main
+    400048: Torso
+    4300000: Dwarf01
+    7400000: Default Take
+    7400002: Type01Idle
+    7400004: Type01Idle_001
+    9500000: //RootNode
+    13700000: Dwarf01
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Type01Idle
+      takeName: Type01Idle
+      firstFrame: 0
+      lastFrame: 63
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/BigBone
+        weight: 1
+      - path: Armature/BigBone/Main
+        weight: 1
+      - path: Armature/BigBone/Main/LegUpper_L
+        weight: 1
+      - path: Armature/BigBone/Main/LegUpper_L/LegLower_L
+        weight: 1
+      - path: Armature/BigBone/Main/LegUpper_L/LegLower_L/LegFoot_L
+        weight: 1
+      - path: Armature/BigBone/Main/LegUpper_R
+        weight: 1
+      - path: Armature/BigBone/Main/LegUpper_R/LegLower_R
+        weight: 1
+      - path: Armature/BigBone/Main/LegUpper_R/LegLower_R/LegFoot_R
+        weight: 1
+      - path: Armature/BigBone/Main/Torso
+        weight: 1
+      - path: Armature/BigBone/Main/Torso/Chest
+        weight: 1
+      - path: Armature/BigBone/Main/Torso/Chest/ArmUpper_L
+        weight: 1
+      - path: Armature/BigBone/Main/Torso/Chest/ArmUpper_L/ArmLower_L
+        weight: 1
+      - path: Armature/BigBone/Main/Torso/Chest/ArmUpper_L/ArmLower_L/ArmHand_L
+        weight: 1
+      - path: Armature/BigBone/Main/Torso/Chest/ArmUpper_L/ArmLower_L/ArmHand_L/ArmFingers_L
+        weight: 1
+      - path: Armature/BigBone/Main/Torso/Chest/ArmUpper_L/ArmLower_L/ArmHand_L/ArmThumb_L
+        weight: 1
+      - path: Armature/BigBone/Main/Torso/Chest/ArmUpper_R
+        weight: 1
+      - path: Armature/BigBone/Main/Torso/Chest/ArmUpper_R/ArmLower_R
+        weight: 1
+      - path: Armature/BigBone/Main/Torso/Chest/ArmUpper_R/ArmLower_R/ArmHand_R
+        weight: 1
+      - path: Armature/BigBone/Main/Torso/Chest/ArmUpper_R/ArmLower_R/ArmHand_R/ArmFingers_R
+        weight: 1
+      - path: Armature/BigBone/Main/Torso/Chest/ArmUpper_R/ArmLower_R/ArmHand_R/ArmThumb_R
+        weight: 1
+      - path: Armature/BigBone/Main/Torso/Chest/Head
+        weight: 1
+      - path: Armature/Empty
+        weight: 1
+      - path: Dwarf01
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

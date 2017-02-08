@@ -83,6 +83,7 @@
   <ItemGroup>
     <Compile Include="Assets\SCRIPTS\BackToMainMenuButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\BoardManagerScript.cs" />
+    <Compile Include="Assets\SCRIPTS\CameraControlScript.cs" />
     <Compile Include="Assets\SCRIPTS\CharacterMovementScript.cs" />
     <Compile Include="Assets\SCRIPTS\EnemySpawnerScript.cs" />
     <Compile Include="Assets\SCRIPTS\ExitButtonScript.cs" />

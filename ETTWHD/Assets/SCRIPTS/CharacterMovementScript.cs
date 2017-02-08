@@ -54,7 +54,7 @@ public class CharacterMovementScript : MonoBehaviour
                     {
                         Debug.Log("HADZIA!");
                         GameObject.Find("room").SendMessage("Add100Pup");
-
+                        hitEnemy.collider.gameObject.SetActive(false);
                     }
                 }
        if (hitEnemy.collider.tag == "Exit")

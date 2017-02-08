@@ -94,7 +94,7 @@ public class NewLevelManagerScript : MonoBehaviour{
     }
     void Start()
     {
-        pupy = 1000;
+        pupy = 0;
     }
 
     void Update()
