@@ -30,6 +30,9 @@ ModelImporter:
     100044: LegUpper_R
     100046: Main
     100048: Torso
+    100050: HeadSocket
+    100052: ShieldSocket
+    100054: Weapon1hSocket
     400000: Armature
     400002: ArmFingers_L
     400004: ArmFingers_R
@@ -55,6 +58,9 @@ ModelImporter:
     400044: LegUpper_R
     400046: Main
     400048: Torso
+    400050: HeadSocket
+    400052: ShieldSocket
+    400054: Weapon1hSocket
     4300000: Dwarf01
     7400000: Default Take
     7400002: Type01Idle
