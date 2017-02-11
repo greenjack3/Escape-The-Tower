@@ -94,25 +94,20 @@ public class NewLevelManagerScript : MonoBehaviour{
     }
     void Start()
     {
-        pupy = 0;
+//        pupy = 0;
     }
 
     void Update()
     {
         SetPupyText();
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            Add100Pup();
-        }
     }
     void SetPupyText()
     {
         PUPY.text = "PUPy:" + pupy.ToString();
     }
 
-    void Add100Pup()
+    void AddPup(int PUPamount)
     {
-        pupy += 100;
+        pupy += PUPamount;
     }
 }

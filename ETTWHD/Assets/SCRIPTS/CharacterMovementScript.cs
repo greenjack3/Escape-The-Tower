@@ -11,13 +11,22 @@ public class CharacterMovementScript : MonoBehaviour
 
     private float yAxis;
 
+    public float AtkStr;
+
+    private GameObject Target;
+
     void start()
     {
+        // nie wiem co to Jacuś :P
         yAxis = gameObject.transform.position.y;
     }
 
     void Update()
     {
+        // liczenie ataku
+        Calc_AtkStr();
+
+        // ruch
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -42,32 +51,38 @@ public class CharacterMovementScript : MonoBehaviour
             Debug.Log("i am here");
         }
 
+
+        // atak/interakcja
         if (Input.GetMouseButtonDown(1))
         {
-                RaycastHit hitEnemy;
+                RaycastHit RightClickRay;
                 Ray rayAttack;
                 rayAttack = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                if (Physics.Raycast(rayAttack, out hitEnemy))
+                if (Physics.Raycast(rayAttack, out RightClickRay))
                 {
-                    if (hitEnemy.collider.tag == "Enemy")
+                    if (RightClickRay.collider.tag == "Enemy")
                     {
                         Debug.Log("HADZIA!");
-                        GameObject.Find("room").SendMessage("Add100Pup");
-                        hitEnemy.collider.gameObject.SetActive(false);
-                    }
+//                        GameObject.Find(RightClickRay.collider.gameObject.name).SendMessage("CalculateDamage", AtkStr);
+                        GameObject Target = RightClickRay.collider.transform.gameObject;
+                        Target.SendMessage("CalculateDamage", AtkStr);
+
+//                        GameObject.Find("room").SendMessage("Add100Pup");
+//                        hitEnemy.collider.gameObject.SetActive(false);
                 }
-       if (hitEnemy.collider.tag == "Exit")
+                }
+       if (RightClickRay.collider.tag == "Exit")
             {
                 Debug.Log("Radek, otwórz!");
-//                GameObject.Find("room").SendMessage("Add100Pup");
+//                GameObject.Find("odbiorca").SendMessage("nazwa voida");
 
             }
 
-       if (hitEnemy.collider.tag == "Player")
+       if (RightClickRay.collider.tag == "Player")
             {
                 Debug.Log("CZEGO?!");
-//                GameObject.Find("room").SendMessage("Add100Pup");
+//                GameObject.Find("odbiorca").SendMessage("nazwa voida");
             }
 
 
@@ -75,6 +90,8 @@ public class CharacterMovementScript : MonoBehaviour
 
     }
 
-
-
+    void Calc_AtkStr()
+    {
+        // Tu policzcie sobie ile ma AtkStr :)
+    }
 }
