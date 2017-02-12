@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthBarScript : MonoBehaviour {
 
-    public Camera MainCam = Camera.main;
+    public Camera MainCam;
 
     void Start()
     {

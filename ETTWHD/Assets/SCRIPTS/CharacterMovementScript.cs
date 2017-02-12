@@ -74,12 +74,10 @@ public class CharacterMovementScript : MonoBehaviour
                 }
        if (RightClickRay.collider.tag == "Exit")
             {
-                Debug.Log("Radek, otwórz!");
-//                GameObject.Find("odbiorca").SendMessage("nazwa voida");
-
+                GameObject.FindGameObjectWithTag("Exit").SendMessage("TryDoor");
             }
 
-       if (RightClickRay.collider.tag == "Player")
+            if (RightClickRay.collider.tag == "Player")
             {
                 Debug.Log("CZEGO?!");
 //                GameObject.Find("odbiorca").SendMessage("nazwa voida");

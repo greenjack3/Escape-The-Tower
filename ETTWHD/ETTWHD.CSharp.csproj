@@ -81,6 +81,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CameraSpinScript.cs" />
+    <Compile Include="Assets\EnemyCountScript.cs" />
+    <Compile Include="Assets\OpenDoorScript.cs" />
     <Compile Include="Assets\SCRIPTS\BackToMainMenuButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\BoardManagerScript.cs" />
     <Compile Include="Assets\SCRIPTS\CameraControlScript.cs" />
