@@ -1,0 +1,161 @@
+fileFormatVersion: 2
+guid: bba3013c7c7918d49ad89b91746340e6
+timeCreated: 1487001083
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ArmLower_L
+    100002: ArmLower_R
+    100004: ArmUpper_L
+    100006: ArmUpper_R
+    100008: Body00Rig
+    100010: Chest
+    100012: Collar_L
+    100014: Collar_R
+    100016: //RootNode
+    100018: DwarfBodyType00
+    100020: DwarfHead01
+    100022: FingersLower_L
+    100024: FingersLower_R
+    100026: FingersUpper_L
+    100028: FingersUpper_R
+    100030: Foot_L
+    100032: Foot_R
+    100034: Hand_L
+    100036: Hand_R
+    100038: Head
+    100040: HeadSocket
+    100042: IndexLower_L
+    100044: IndexLower_R
+    100046: IndexUpper_L
+    100048: IndexUpper_R
+    100050: LegLower_L
+    100052: LegLower_R
+    100054: LegUpper_L
+    100056: LegUpper_R
+    100058: Main
+    100060: SCALE
+    100062: ThumbLower_L
+    100064: ThumbLower_R
+    100066: Toes_L
+    100068: Toes_R
+    100070: Torso
+    100072: TyumbUpper_L
+    100074: TyumbUpper_R
+    400000: ArmLower_L
+    400002: ArmLower_R
+    400004: ArmUpper_L
+    400006: ArmUpper_R
+    400008: Body00Rig
+    400010: Chest
+    400012: Collar_L
+    400014: Collar_R
+    400016: //RootNode
+    400018: DwarfBodyType00
+    400020: DwarfHead01
+    400022: FingersLower_L
+    400024: FingersLower_R
+    400026: FingersUpper_L
+    400028: FingersUpper_R
+    400030: Foot_L
+    400032: Foot_R
+    400034: Hand_L
+    400036: Hand_R
+    400038: Head
+    400040: HeadSocket
+    400042: IndexLower_L
+    400044: IndexLower_R
+    400046: IndexUpper_L
+    400048: IndexUpper_R
+    400050: LegLower_L
+    400052: LegLower_R
+    400054: LegUpper_L
+    400056: LegUpper_R
+    400058: Main
+    400060: SCALE
+    400062: ThumbLower_L
+    400064: ThumbLower_R
+    400066: Toes_L
+    400068: Toes_R
+    400070: Torso
+    400072: TyumbUpper_L
+    400074: TyumbUpper_R
+    2300000: DwarfHead01
+    2300002: SCALE
+    3300000: DwarfHead01
+    3300002: SCALE
+    4300000: DwarfBodyType00
+    4300002: SCALE
+    4300004: DwarfHead01
+    7400000: Default Take
+    9500000: //RootNode
+    13700000: DwarfBodyType00
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
