@@ -7,17 +7,149 @@ using UnityEngine.UI;
 
 public class NewLevelManagerScript : MonoBehaviour {
 
+    // Tablice prefabów
 
-    public GameObject[] CenterRoom;
-    public GameObject[] EdgeRoom;
-    public GameObject[] InnerRoom;
-    public GameObject[] OuterRoom;
-    public GameObject[] CenterRoomsOnScene;
-    public GameObject[] EdgeRoomsOnScene;
-    public GameObject[] InnerRoomsOnScene;
-    public GameObject[] OuterRoomsOnScene;
+    // Pokoje
+    public GameObject[] CenterRoom;     // Tablica prefabów klatki schodowej dla poziomów 1-9
+    public GameObject[] CenterRoom2;    // Tablica prefabów klatki schodowej dla poziomów 11-19
+    public GameObject[] CenterRoom3;    // Tablica prefabów klatki schodowej dla poziomów 21-29
+    public GameObject[] CenterRoom4;    // Tablica prefabów klatki schodowej dla poziomów 31-39
+    public GameObject[] CenterRoom5;    // Tablica prefabów klatki schodowej dla poziomów 41-49
+    public GameObject[] EdgeRoom;       // Tablica prefabów pokoi narożnych dla poziomów 1-9
+    public GameObject[] EdgeRoom2;
+    public GameObject[] EdgeRoom3;
+    public GameObject[] EdgeRoom4;
+    public GameObject[] EdgeRoom5;
+    public GameObject[] InnerRoom;      // Tablica prefabów pokoi wewnętrznych dla poziomów 1-9
+    public GameObject[] InnerRoom2;
+    public GameObject[] InnerRoom3;
+    public GameObject[] InnerRoom4;
+    public GameObject[] InnerRoom5;
+    public GameObject[] OuterRoom;      // Tablica prefabów pokoi zewnętrznych dla poziomów 1-9
+    public GameObject[] OuterRoom2;
+    public GameObject[] OuterRoom3;
+    public GameObject[] OuterRoom4;
+    public GameObject[] OuterRoom5;
+
+    // Meble
+    public GameObject[] Mebelki_1x1;    // Tablica prefabów mebli 1x1 dla poziomów 1-9
+    public GameObject[] Mebelki_1x1_2;
+    public GameObject[] Mebelki_1x1_3;
+    public GameObject[] Mebelki_1x1_4;
+    public GameObject[] Mebelki_1x1_5;
+    public GameObject[] Mebelki_1x2;    // Tablica prefabów mebli 1x2 dla poziomów 1-9
+    public GameObject[] Mebelki_1x2_2;
+    public GameObject[] Mebelki_1x2_3;
+    public GameObject[] Mebelki_1x2_4;
+    public GameObject[] Mebelki_1x2_5;
+    public GameObject[] Mebelki_1x3;    // Tablica prefabów mebli 1x3 dla poziomów 1-9
+    public GameObject[] Mebelki_1x3_2;
+    public GameObject[] Mebelki_1x3_3;
+    public GameObject[] Mebelki_1x3_4;
+    public GameObject[] Mebelki_1x3_5;
+    public GameObject[] Mebelki_2x1;    // Tablica prefabów mebli 2x1 dla poziomów 1-9
+    public GameObject[] Mebelki_2x1_2;
+    public GameObject[] Mebelki_2x1_3;
+    public GameObject[] Mebelki_2x1_4;
+    public GameObject[] Mebelki_2x1_5;
+    public GameObject[] Mebelki_2x2;    // Tablica prefabów mebli 2x2 dla poziomów 1-9
+    public GameObject[] Mebelki_2x2_2;
+    public GameObject[] Mebelki_2x2_3;
+    public GameObject[] Mebelki_2x2_4;
+    public GameObject[] Mebelki_2x2_5;
+    public GameObject[] Mebelki_2x3;    // Tablica prefabów mebli 2x3 dla poziomów 1-9
+    public GameObject[] Mebelki_2x3_2;
+    public GameObject[] Mebelki_2x3_3;
+    public GameObject[] Mebelki_2x3_4;
+    public GameObject[] Mebelki_2x3_5;
+    public GameObject[] Mebelki_3x1;    // Tablica prefabów mebli 3x1 dla poziomów 1-9
+    public GameObject[] Mebelki_3x1_2;
+    public GameObject[] Mebelki_3x1_3;
+    public GameObject[] Mebelki_3x1_4;
+    public GameObject[] Mebelki_3x1_5;
+    public GameObject[] Mebelki_3x2;    // Tablica prefabów mebli 3x2 dla poziomów 1-9
+    public GameObject[] Mebelki_3x2_2;
+    public GameObject[] Mebelki_3x2_3;
+    public GameObject[] Mebelki_3x2_4;
+    public GameObject[] Mebelki_3x2_5;
+    public GameObject[] Mebelki_3x3;    // Tablica prefabów mebli 3x3 dla poziomów 1-9
+    public GameObject[] Mebelki_3x3_2;
+    public GameObject[] Mebelki_3x3_3;
+    public GameObject[] Mebelki_3x3_4;
+    public GameObject[] Mebelki_3x3_5;
+
+    // Kowadło
+    public GameObject[] Kowadło;
+
+    // Skrzynki
+    public GameObject[] Skrzynia;
+    public GameObject[] Skrzynia2;
+    public GameObject[] Skrzynia3;
+    public GameObject[] Skrzynia4;
+    public GameObject[] Skrzynia5;
+
+    // Obiekty interakatywne
+    public GameObject[] Interactive;
+    public GameObject[] Interactive2;
+    public GameObject[] Interactive3;
+    public GameObject[] Interactive4;
+    public GameObject[] Interactive5;
+
+    // Punkty świetlne 
+    public GameObject[] LightSpot;
+    public GameObject[] LightSpot2;
+    public GameObject[] LightSpot3;
+    public GameObject[] LightSpot4;
+    public GameObject[] LightSpot5;
+
+    // Przeciwnicy Melee
+    public GameObject[] EnemyMelee;
+    public GameObject[] EnemyMelee2;
+    public GameObject[] EnemyMelee3;
+    public GameObject[] EnemyMelee4;
+    public GameObject[] EnemyMelee5;
+
+    // Przeciwnicy Dist
+    public GameObject[] EnemyRanged;
+    public GameObject[] EnemyRanged2;
+    public GameObject[] EnemyRanged3;
+    public GameObject[] EnemyRanged4;
+    public GameObject[] EnemyRanged5;
+
+    // Przeciwnicy Supp
+    public GameObject[] EnemySupport;
+    public GameObject[] EnemySupport2;
+    public GameObject[] EnemySupport3;
+    public GameObject[] EnemySupport4;
+    public GameObject[] EnemySupport5;
+
+
+    //Tablice spawn pointów 
+    public GameObject[] CenterRoomsOnScene; // Tablica spawn pointu klatki schodowej  
+    public GameObject[] EdgeRoomsOnScene;   // Tablica spawn pointów pokoi narożnych 
+    public GameObject[] InnerRoomsOnScene;  // Tablica spawn pointów pokoi wewnętrznych
+    public GameObject[] OuterRoomsOnScene;  // Tablica spwan pointów pokoi zewnętrznych
+    public GameObject[] Mebelki_1x1_OnScene;
+    public GameObject[] Mebelki_1x2_OnScene;
+    public GameObject[] Mebelki_1x3_OnScene;
+    public GameObject[] Mebelki_2x1_OnScene;
+    public GameObject[] Mebelki_2x2_OnScene;
+    public GameObject[] Mebelki_2x3_OnScene;
+    public GameObject[] Mebelki_3x1_OnScene;
+    public GameObject[] Mebelki_3x2_OnScene;
+    public GameObject[] Mebelki_3x3_OnScene;
+    public GameObject[] KowadłoOnScene;
+    public GameObject[] SkrzyniaOnScene;
+    public GameObject[] InteractiveOnScene;
+    public GameObject[] LightSpotOnScene;
+    public GameObject[] EnemyMeleeOnScene;
+    public GameObject[] EnemyRangedOnScene;
+    public GameObject[] EnemySupportOnScene; 
+
+    //Zmienne i inne parametry
     //private Grid gridscript;
-    public float rotationmodifactor;
+    public int RotationModifactor;
+    public int BossSelector; // zmiena wybierająca bossa i jego level
     public int pupy;
     public Text PUPY;
     public int Level;
@@ -54,10 +186,10 @@ public class NewLevelManagerScript : MonoBehaviour {
         {
             GameObject EdgePrefab = EdgeRoom[Random.Range(0, EdgeRoom.Length)];
             instance = (GameObject)Instantiate(EdgePrefab, Room.transform.position, Room.transform.rotation);
-            rotationmodifactor = Random.Range(0f, 9f);
-            if (rotationmodifactor < 3)
+            RotationModifactor = Random.Range(0, 4);
+            if (RotationModifactor < 3)
             {
-                instance.transform.Rotate(Vector3.up * 90f, Space.World); //obracanie pokoju 
+                instance.transform.Rotate(Vector3.up * 90f * RotationModifactor, Space.World); //obracanie pokoju 
             }
 
         }
@@ -67,8 +199,8 @@ public class NewLevelManagerScript : MonoBehaviour {
         {
             GameObject InnerPrefab = InnerRoom[Random.Range(0, InnerRoom.Length)];
             instance = (GameObject)Instantiate(InnerPrefab, Room.transform.position, Room.transform.rotation);
-            rotationmodifactor = Random.Range(0f, 9f);
-            if (rotationmodifactor < 4)
+            RotationModifactor = Random.Range(0, 8);
+            if (RotationModifactor < 4)
             {
                 instance.transform.Rotate(Vector3.up * 90f, Space.World); //obracanie pokoju 
             }
@@ -79,8 +211,8 @@ public class NewLevelManagerScript : MonoBehaviour {
         {
             GameObject OuterPrefab = OuterRoom[Random.Range(0, OuterRoom.Length)];
             instance = (GameObject)Instantiate(OuterPrefab, Room.transform.position, Room.transform.rotation);
-            rotationmodifactor = Random.Range(0f, 9f);
-            if (rotationmodifactor < 5)
+            RotationModifactor = Random.Range(0, 9);
+            if (RotationModifactor < 5)
             {
                 instance.transform.Rotate(Vector3.up * 90f, Space.World); //obracanie pokoju 
             }
@@ -101,8 +233,8 @@ public class NewLevelManagerScript : MonoBehaviour {
                 {
                     GameObject EdgePrefab = EdgeRoom[Random.Range(0, EdgeRoom.Length)];
                     instance = (GameObject)Instantiate(EdgePrefab, Room.transform.position, Room.transform.rotation);
-                    rotationmodifactor = Random.Range(0f, 9f);
-                    if (rotationmodifactor < 3)
+                    RotationModifactor = Random.Range(0, 9);
+                    if (RotationModifactor < 3)
                     {
                         instance.transform.Rotate(Vector3.up * 90f, Space.World); //obracanie pokoju 
                     }
@@ -114,8 +246,8 @@ public class NewLevelManagerScript : MonoBehaviour {
                 {
                     GameObject InnerPrefab = InnerRoom[Random.Range(0, InnerRoom.Length)];
                     instance = (GameObject)Instantiate(InnerPrefab, Room.transform.position, Room.transform.rotation);
-                    rotationmodifactor = Random.Range(0f, 9f);
-                    if (rotationmodifactor < 4)
+                    RotationModifactor = Random.Range(0, 9);
+                    if (RotationModifactor < 4)
                     {
                         instance.transform.Rotate(Vector3.up * 90f, Space.World); //obracanie pokoju 
                     }
@@ -126,8 +258,8 @@ public class NewLevelManagerScript : MonoBehaviour {
                 {
                     GameObject OuterPrefab = OuterRoom[Random.Range(0, OuterRoom.Length)];
                     instance = (GameObject)Instantiate(OuterPrefab, Room.transform.position, Room.transform.rotation);
-                    rotationmodifactor = Random.Range(0f, 9f);
-                    if (rotationmodifactor < 5)
+                    RotationModifactor = Random.Range(0, 9);
+                    if (RotationModifactor < 5)
                     {
                         instance.transform.Rotate(Vector3.up * 90f, Space.World); //obracanie pokoju 
                     }

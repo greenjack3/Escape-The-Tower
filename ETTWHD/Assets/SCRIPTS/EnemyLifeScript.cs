@@ -44,8 +44,8 @@ public class EnemyLifeScript : MonoBehaviour
         if (Cur_Health <=0)
         {
             gameObject.SetActive(false);
-            GameObject.Find("room").SendMessage("AddPup", PUPreward);
-            GameObject.Find("room").SendMessage("EnemyKilled");
+            GameObject.FindGameObjectWithTag("DM").SendMessage("AddPup", PUPreward);
+            GameObject.FindGameObjectWithTag("DM").SendMessage("EnemyKilled");
         }
     }
 

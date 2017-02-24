@@ -15,6 +15,7 @@ namespace Completed
         private int level = 1;
         public int pupy;
         public Text PUPY;
+
         void Awake()
         {
             if (instance == null)
@@ -40,6 +41,7 @@ namespace Completed
             levelScirpt.SetupScene(level);
            
         }
+
         void Start()
         {
             SetPupyText();
