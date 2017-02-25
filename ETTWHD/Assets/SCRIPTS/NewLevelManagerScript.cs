@@ -147,9 +147,9 @@ public class NewLevelManagerScript : MonoBehaviour {
     public GameObject[] EnemySupportOnScene; 
 
     //Zmienne i inne parametry
-    //private Grid gridscript;
+    public Grid gridscript;
     public int RotationModifactor;
-    public int BossSelector; // zmiena wybierająca bossa i jego level
+    public int BossSelector; // zmienna wybierająca bossa i jego level
     public int pupy;
     public Text PUPY;
     public int Level;
@@ -179,8 +179,9 @@ public class NewLevelManagerScript : MonoBehaviour {
         {
             CenterPrefab = CenterRoom[Random.Range(0, CenterRoom.Length)];
             instance = (GameObject)Instantiate(CenterPrefab, Room.transform.position, Room.transform.rotation);
-
-        }
+                    print("działam");
+                    
+                }
 
         foreach (GameObject Room in EdgeRoomsOnScene)
         {
@@ -202,7 +203,7 @@ public class NewLevelManagerScript : MonoBehaviour {
             RotationModifactor = Random.Range(0, 8);
             if (RotationModifactor < 4)
             {
-                instance.transform.Rotate(Vector3.up * 90f, Space.World); //obracanie pokoju 
+                instance.transform.Rotate(Vector3.up * 90f * RotationModifactor, Space.World); //obracanie pokoju 
             }
 
         }
@@ -214,12 +215,24 @@ public class NewLevelManagerScript : MonoBehaviour {
             RotationModifactor = Random.Range(0, 9);
             if (RotationModifactor < 5)
             {
-                instance.transform.Rotate(Vector3.up * 90f, Space.World); //obracanie pokoju 
+                instance.transform.Rotate(Vector3.up * 90f * RotationModifactor, Space.World); //obracanie pokoju 
             }
 
         }
 
-       break;
+                Mebelki_1x1_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp1x1");
+
+                 foreach (GameObject Mebelek in Mebelki_1x1_OnScene)
+                {
+                    print("działam2");
+                    
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+            
+                    GameObject MebelekPrefab = Mebelki_1x1[Random.Range(0, Mebelki_1x1.Length)];
+                    instance = (GameObject)Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
+                }   
+               
+                break;
 
             case 2:
                 foreach (GameObject Room in CenterRoomsOnScene)
@@ -463,16 +476,39 @@ public class NewLevelManagerScript : MonoBehaviour {
 
         }
 
+        
 
+    }
+
+   public void SpawnerPrzedmiotów()
+    {
+        
+        
+       
+       // Mebelki_1x2_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp1x2");
+       // Mebelki_1x3_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp1x3");
+       // Mebelki_2x1_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp2x1");
+       // Mebelki_2x2_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp2x2");
+       // Mebelki_2x3_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp2x3");
+       // Mebelki_3x1_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp3x1");
+       // Mebelki_3x2_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp3x2");
+       // Mebelki_3x3_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp3x3");
+       // KowadłoOnScene = GameObject.FindGameObjectsWithTag("Anvil");
+       // SkrzyniaOnScene = GameObject.FindGameObjectsWithTag("Chest");
+       // InteractiveOnScene = GameObject.FindGameObjectsWithTag("Interactive");
+       // LightSpotOnScene = GameObject.FindGameObjectsWithTag("LightSpot");
+
+       
+       
     }
 
     public void SetupScene(int Level)
     {
         //Creates floor.
         BoardSetup();
-        //Grid.Instance.GenerateGrid();
+        SpawnerPrzedmiotów();
+        gridscript.GenerateGrid();
         
-
     }
     void Start()
     {
