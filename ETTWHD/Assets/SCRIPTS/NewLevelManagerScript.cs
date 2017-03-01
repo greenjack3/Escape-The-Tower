@@ -224,14 +224,95 @@ public class NewLevelManagerScript : MonoBehaviour {
 
                  foreach (GameObject Mebelek in Mebelki_1x1_OnScene)
                 {
-                    print("działam2");
-                    
-                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                   GameObject.FindGameObjectWithTag("pointer").SetActive(false);
             
                     GameObject MebelekPrefab = Mebelki_1x1[Random.Range(0, Mebelki_1x1.Length)];
                     instance = (GameObject)Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
-                }   
+                }
+
+                Mebelki_1x2_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp1x2");
+
+                foreach (GameObject Mebelek in Mebelki_1x2_OnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject MebelekPrefab = Mebelki_1x2[Random.Range(0, Mebelki_1x2.Length)];
+                    instance = Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
+                }
+
+                Mebelki_1x3_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp1x3");
                
+                foreach (GameObject Mebelek in Mebelki_1x3_OnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject MebelekPrefab = Mebelki_1x3[Random.Range(0, Mebelki_1x3.Length)];
+                    instance = Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
+                }
+
+                Mebelki_2x1_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp2x1");
+
+                foreach (GameObject Mebelek in Mebelki_2x1_OnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject MebelekPrefab = Mebelki_2x1[Random.Range(0, Mebelki_2x1.Length)];
+                    instance = Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
+                }
+
+                Mebelki_2x2_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp2x2");
+
+                foreach (GameObject Mebelek in Mebelki_2x2_OnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject MebelekPrefab = Mebelki_2x2[Random.Range(0, Mebelki_2x2.Length)];
+                    instance = Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
+                }
+
+                Mebelki_2x3_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp2x3");
+
+                foreach (GameObject Mebelek in Mebelki_2x3_OnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject MebelekPrefab = Mebelki_2x3[Random.Range(0, Mebelki_2x3.Length)];
+                    instance = Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
+                }
+
+                Mebelki_3x1_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp3x1");
+
+                foreach (GameObject Mebelek in Mebelki_3x1_OnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject MebelekPrefab = Mebelki_3x1[Random.Range(0, Mebelki_3x1.Length)];
+                    instance = Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
+                }
+
+                Mebelki_3x2_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp3x2");
+
+                foreach (GameObject Mebelek in Mebelki_3x2_OnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject MebelekPrefab = Mebelki_3x2[Random.Range(0, Mebelki_3x2.Length)];
+                    instance = Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
+                }
+
+                Mebelki_3x3_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp3x3");
+
+                foreach (GameObject Mebelek in Mebelki_3x3_OnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject MebelekPrefab = Mebelki_3x3[Random.Range(0, Mebelki_3x3.Length)];
+                    instance = Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
+                }
+
+                KowadłoOnScene = GameObject.FindGameObjectsWithTag("Anvil");
+
+                foreach (GameObject Kowadełko in KowadłoOnScene)
+                {
+
+                }
+                 SkrzyniaOnScene = GameObject.FindGameObjectsWithTag("Chest");
+                 InteractiveOnScene = GameObject.FindGameObjectsWithTag("Interactive");
+                 LightSpotOnScene = GameObject.FindGameObjectsWithTag("LigthSpot");
+
+                
                 break;
 
             case 2:
@@ -278,6 +359,8 @@ public class NewLevelManagerScript : MonoBehaviour {
                     }
 
                 }
+
+               
                 break;
 
             case 3:
@@ -476,7 +559,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
         }
 
-        
+        gridscript.GenerateGrid();
 
     }
 
@@ -485,29 +568,16 @@ public class NewLevelManagerScript : MonoBehaviour {
         
         
        
-       // Mebelki_1x2_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp1x2");
-       // Mebelki_1x3_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp1x3");
-       // Mebelki_2x1_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp2x1");
-       // Mebelki_2x2_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp2x2");
-       // Mebelki_2x3_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp2x3");
-       // Mebelki_3x1_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp3x1");
-       // Mebelki_3x2_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp3x2");
-       // Mebelki_3x3_OnScene = GameObject.FindGameObjectsWithTag("MebelkiSp3x3");
-       // KowadłoOnScene = GameObject.FindGameObjectsWithTag("Anvil");
-       // SkrzyniaOnScene = GameObject.FindGameObjectsWithTag("Chest");
-       // InteractiveOnScene = GameObject.FindGameObjectsWithTag("Interactive");
-       // LightSpotOnScene = GameObject.FindGameObjectsWithTag("LightSpot");
-
        
        
     }
 
     public void SetupScene(int Level)
     {
-        //Creates floor.
+       
         BoardSetup();
-        SpawnerPrzedmiotów();
-        gridscript.GenerateGrid();
+        //SpawnerPrzedmiotów();
+       
         
     }
     void Start()
