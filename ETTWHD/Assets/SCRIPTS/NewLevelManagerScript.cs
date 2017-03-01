@@ -123,6 +123,24 @@ public class NewLevelManagerScript : MonoBehaviour {
     public GameObject[] EnemySupport4;
     public GameObject[] EnemySupport5;
 
+    // Tablice poziomów Bossa
+    public GameObject[] BoosLevel1_1; // Tablica poziomów dla 1 bossa na poziome 10
+    public GameObject[] BoosLevel1_2;
+    public GameObject[] BoosLevel1_3;
+    public GameObject[] BoosLevel2_1;
+    public GameObject[] BoosLevel2_2;
+    public GameObject[] BoosLevel2_3;
+    public GameObject[] BoosLevel3_1;
+    public GameObject[] BoosLevel3_2;
+    public GameObject[] BoosLevel3_3;
+    public GameObject[] BoosLevel4_1;
+    public GameObject[] BoosLevel4_2;
+    public GameObject[] BoosLevel4_3;
+    public GameObject[] BoosLevel5_1;
+    public GameObject[] BoosLevel5_2;
+    public GameObject[] BoosLevel5_3;
+
+
 
     //Tablice spawn pointów 
     public GameObject[] CenterRoomsOnScene; // Tablica spawn pointu klatki schodowej  
@@ -144,7 +162,25 @@ public class NewLevelManagerScript : MonoBehaviour {
     public GameObject[] LightSpotOnScene;
     public GameObject[] EnemyMeleeOnScene;
     public GameObject[] EnemyRangedOnScene;
-    public GameObject[] EnemySupportOnScene; 
+    public GameObject[] EnemySupportOnScene;
+    public GameObject BossOnScene;
+
+    //Prefaby Bossa 
+    public GameObject BossPrefab1_1;
+    public GameObject BossPrefab1_2;
+    public GameObject BossPrefab1_3;
+    public GameObject BossPrefab2_1;
+    public GameObject BossPrefab2_2;
+    public GameObject BossPrefab2_3;
+    public GameObject BossPrefab3_1;
+    public GameObject BossPrefab3_2;
+    public GameObject BossPrefab3_3;
+    public GameObject BossPrefab4_1;
+    public GameObject BossPrefab4_2;
+    public GameObject BossPrefab4_3;
+    public GameObject BossPrefab5_1;
+    public GameObject BossPrefab5_2;
+    public GameObject BossPrefab5_3;
 
     //Zmienne i inne parametry
     public Grid gridscript;
@@ -1664,6 +1700,36 @@ public class NewLevelManagerScript : MonoBehaviour {
                 break;
 
             case 10:
+                BossSelector = Random.Range(1, 4);
+
+                switch (BossSelector)
+                {
+                    case 1:
+
+                     GameObject Center = GameObject.FindGameObjectWithTag("CR");
+                        GameObject LevelPrefab = BoosLevel1_1[Random.Range(0, BoosLevel1_1.Length)];
+                        instance = Instantiate(LevelPrefab, Center.transform.position, Center.transform.rotation);
+
+                        break;
+
+                    case 2:
+
+                        GameObject Center2 = GameObject.FindGameObjectWithTag("CR");
+                        GameObject LevelPrefab2 = BoosLevel1_2[Random.Range(0, BoosLevel1_2.Length)];
+                        instance = Instantiate(LevelPrefab2, Center2.transform.position, Center2.transform.rotation);
+
+                        break;
+
+                    case 3:
+
+                        GameObject Center3 = GameObject.FindGameObjectWithTag("CR");
+                        GameObject LevelPrefab3 = BoosLevel1_3[Random.Range(0, BoosLevel1_3.Length)];
+                        instance = Instantiate(LevelPrefab3, Center3.transform.position, Center3.transform.rotation);
+
+                        break;
+
+
+                }
 
                 break;
 
@@ -1835,21 +1901,366 @@ public class NewLevelManagerScript : MonoBehaviour {
 
     }
 
-   public void SpawnerPrzedmiotów()
+   public void EnemySpawner()
     {
-        
-        
-       
-       
-       
+
+        switch (Level)
+        {
+            case 1:
+                EnemyMeleeOnScene = GameObject.FindGameObjectsWithTag("EnemyMelee");
+                EnemyRangedOnScene = GameObject.FindGameObjectsWithTag("EnemyDist");
+                EnemySupportOnScene = GameObject.FindGameObjectsWithTag("EnemySup");
+
+                foreach (GameObject EnemyM in EnemyMeleeOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyMPrefab = EnemyMelee[Random.Range(0, EnemyMelee.Length)];
+                    GameObject intance = Instantiate(EnemyMPrefab, EnemyM.transform.position, EnemyM.transform.rotation);
+                }
+
+                foreach (GameObject EnemyD in EnemyRangedOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyDPrefab = EnemyRanged[Random.Range(0, EnemyRanged.Length)];
+                    GameObject instance = Instantiate(EnemyDPrefab, EnemyD.transform.position, EnemyD.transform.rotation);
+                }
+                
+                foreach (GameObject EnemyS in EnemySupportOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
+                    GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
+                }
+
+                break;
+            case 2:
+                EnemyMeleeOnScene = GameObject.FindGameObjectsWithTag("EnemyMelee");
+                EnemyRangedOnScene = GameObject.FindGameObjectsWithTag("EnemyDist");
+                EnemySupportOnScene = GameObject.FindGameObjectsWithTag("EnemySup");
+
+                foreach (GameObject EnemyM in EnemyMeleeOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyMPrefab = EnemyMelee[Random.Range(0, EnemyMelee.Length)];
+                    GameObject intance = Instantiate(EnemyMPrefab, EnemyM.transform.position, EnemyM.transform.rotation);
+                }
+
+                foreach (GameObject EnemyD in EnemyRangedOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyDPrefab = EnemyRanged[Random.Range(0, EnemyRanged.Length)];
+                    GameObject instance = Instantiate(EnemyDPrefab, EnemyD.transform.position, EnemyD.transform.rotation);
+                }
+
+                foreach (GameObject EnemyS in EnemySupportOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
+                    GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
+                }
+
+                break;
+            case 3:
+                EnemyMeleeOnScene = GameObject.FindGameObjectsWithTag("EnemyMelee");
+                EnemyRangedOnScene = GameObject.FindGameObjectsWithTag("EnemyDist");
+                EnemySupportOnScene = GameObject.FindGameObjectsWithTag("EnemySup");
+
+                foreach (GameObject EnemyM in EnemyMeleeOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyMPrefab = EnemyMelee[Random.Range(0, EnemyMelee.Length)];
+                    GameObject intance = Instantiate(EnemyMPrefab, EnemyM.transform.position, EnemyM.transform.rotation);
+                }
+
+                foreach (GameObject EnemyD in EnemyRangedOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyDPrefab = EnemyRanged[Random.Range(0, EnemyRanged.Length)];
+                    GameObject instance = Instantiate(EnemyDPrefab, EnemyD.transform.position, EnemyD.transform.rotation);
+                }
+
+                foreach (GameObject EnemyS in EnemySupportOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
+                    GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
+                }
+
+                break;
+            case 4:
+                EnemyMeleeOnScene = GameObject.FindGameObjectsWithTag("EnemyMelee");
+                EnemyRangedOnScene = GameObject.FindGameObjectsWithTag("EnemyDist");
+                EnemySupportOnScene = GameObject.FindGameObjectsWithTag("EnemySup");
+
+                foreach (GameObject EnemyM in EnemyMeleeOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyMPrefab = EnemyMelee[Random.Range(0, EnemyMelee.Length)];
+                    GameObject intance = Instantiate(EnemyMPrefab, EnemyM.transform.position, EnemyM.transform.rotation);
+                }
+
+                foreach (GameObject EnemyD in EnemyRangedOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyDPrefab = EnemyRanged[Random.Range(0, EnemyRanged.Length)];
+                    GameObject instance = Instantiate(EnemyDPrefab, EnemyD.transform.position, EnemyD.transform.rotation);
+                }
+
+                foreach (GameObject EnemyS in EnemySupportOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
+                    GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
+                }
+
+                break;
+            case 5:
+                EnemyMeleeOnScene = GameObject.FindGameObjectsWithTag("EnemyMelee");
+                EnemyRangedOnScene = GameObject.FindGameObjectsWithTag("EnemyDist");
+                EnemySupportOnScene = GameObject.FindGameObjectsWithTag("EnemySup");
+
+                foreach (GameObject EnemyM in EnemyMeleeOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyMPrefab = EnemyMelee[Random.Range(0, EnemyMelee.Length)];
+                    GameObject intance = Instantiate(EnemyMPrefab, EnemyM.transform.position, EnemyM.transform.rotation);
+                }
+
+                foreach (GameObject EnemyD in EnemyRangedOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyDPrefab = EnemyRanged[Random.Range(0, EnemyRanged.Length)];
+                    GameObject instance = Instantiate(EnemyDPrefab, EnemyD.transform.position, EnemyD.transform.rotation);
+                }
+
+                foreach (GameObject EnemyS in EnemySupportOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
+                    GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
+                }
+
+                break;
+            case 6:
+                EnemyMeleeOnScene = GameObject.FindGameObjectsWithTag("EnemyMelee");
+                EnemyRangedOnScene = GameObject.FindGameObjectsWithTag("EnemyDist");
+                EnemySupportOnScene = GameObject.FindGameObjectsWithTag("EnemySup");
+
+                foreach (GameObject EnemyM in EnemyMeleeOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyMPrefab = EnemyMelee[Random.Range(0, EnemyMelee.Length)];
+                    GameObject intance = Instantiate(EnemyMPrefab, EnemyM.transform.position, EnemyM.transform.rotation);
+                }
+
+                foreach (GameObject EnemyD in EnemyRangedOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyDPrefab = EnemyRanged[Random.Range(0, EnemyRanged.Length)];
+                    GameObject instance = Instantiate(EnemyDPrefab, EnemyD.transform.position, EnemyD.transform.rotation);
+                }
+
+                foreach (GameObject EnemyS in EnemySupportOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
+                    GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
+                }
+
+                break;
+            case 7:
+                EnemyMeleeOnScene = GameObject.FindGameObjectsWithTag("EnemyMelee");
+                EnemyRangedOnScene = GameObject.FindGameObjectsWithTag("EnemyDist");
+                EnemySupportOnScene = GameObject.FindGameObjectsWithTag("EnemySup");
+
+                foreach (GameObject EnemyM in EnemyMeleeOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyMPrefab = EnemyMelee[Random.Range(0, EnemyMelee.Length)];
+                    GameObject intance = Instantiate(EnemyMPrefab, EnemyM.transform.position, EnemyM.transform.rotation);
+                }
+
+                foreach (GameObject EnemyD in EnemyRangedOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyDPrefab = EnemyRanged[Random.Range(0, EnemyRanged.Length)];
+                    GameObject instance = Instantiate(EnemyDPrefab, EnemyD.transform.position, EnemyD.transform.rotation);
+                }
+
+                foreach (GameObject EnemyS in EnemySupportOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
+                    GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
+                }
+
+                break;
+            case 8:
+                EnemyMeleeOnScene = GameObject.FindGameObjectsWithTag("EnemyMelee");
+                EnemyRangedOnScene = GameObject.FindGameObjectsWithTag("EnemyDist");
+                EnemySupportOnScene = GameObject.FindGameObjectsWithTag("EnemySup");
+
+                foreach (GameObject EnemyM in EnemyMeleeOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyMPrefab = EnemyMelee[Random.Range(0, EnemyMelee.Length)];
+                    GameObject intance = Instantiate(EnemyMPrefab, EnemyM.transform.position, EnemyM.transform.rotation);
+                }
+
+                foreach (GameObject EnemyD in EnemyRangedOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyDPrefab = EnemyRanged[Random.Range(0, EnemyRanged.Length)];
+                    GameObject instance = Instantiate(EnemyDPrefab, EnemyD.transform.position, EnemyD.transform.rotation);
+                }
+
+                foreach (GameObject EnemyS in EnemySupportOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
+                    GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
+                }
+
+                break;
+            case 9:
+                EnemyMeleeOnScene = GameObject.FindGameObjectsWithTag("EnemyMelee");
+                EnemyRangedOnScene = GameObject.FindGameObjectsWithTag("EnemyDist");
+                EnemySupportOnScene = GameObject.FindGameObjectsWithTag("EnemySup");
+
+                foreach (GameObject EnemyM in EnemyMeleeOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyMPrefab = EnemyMelee[Random.Range(0, EnemyMelee.Length)];
+                    GameObject intance = Instantiate(EnemyMPrefab, EnemyM.transform.position, EnemyM.transform.rotation);
+                }
+
+                foreach (GameObject EnemyD in EnemyRangedOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemyDPrefab = EnemyRanged[Random.Range(0, EnemyRanged.Length)];
+                    GameObject instance = Instantiate(EnemyDPrefab, EnemyD.transform.position, EnemyD.transform.rotation);
+                }
+
+                foreach (GameObject EnemyS in EnemySupportOnScene)
+                {
+                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                    GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
+                    GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
+                }
+
+                break;
+            case 10:
+                BossOnScene = GameObject.FindGameObjectWithTag("Boss");
+              
+                switch (BossSelector)
+                    
+                {
+                    case 1:
+                        GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                        GameObject instance = Instantiate(BossPrefab1_1, BossOnScene.transform.position, BossOnScene.transform.rotation);
+                        break;
+                    case 2:
+                        GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                        GameObject instance2 = Instantiate(BossPrefab1_2, BossOnScene.transform.position, BossOnScene.transform.rotation);
+                        break;
+                    case 3:
+                        GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                        GameObject instance3 = Instantiate(BossPrefab1_3, BossOnScene.transform.position, BossOnScene.transform.rotation);
+                        break;
+                }
+                break;
+            case 11:
+                break;
+            case 12:
+                break;
+            case 13:
+                break;
+            case 14:
+                break;
+            case 15:
+                break;
+            case 16:
+                break;
+            case 17:
+                break;
+            case 18:
+                break;
+            case 19:
+                break;
+            case 20:
+                break;
+            case 21:
+                break;
+            case 22:
+                break;
+            case 23:
+                break;
+            case 24:
+                break;
+            case 25:
+                break;
+            case 26:
+                break;
+            case 27:
+                break;
+            case 28:
+                break;
+            case 29:
+                break;
+            case 30:
+                break;
+            case 31:
+                break;
+            case 32:
+                break;
+            case 33:
+                break;
+            case 34:
+                break;
+            case 35:
+                break;
+            case 36:
+                break;
+            case 37:
+                break;
+            case 38:
+                break;
+            case 39:
+                break;
+            case 40:
+                break;
+            case 41:
+                break;
+            case 42:
+                break;
+            case 43:
+                break;
+            case 44:
+                break;
+            case 45:
+                break;
+            case 46:
+                break;
+            case 47:
+                break;
+            case 48:
+                break;
+            case 49:
+                break;
+            case 50:
+                break;
+
+        }
+
+
+
     }
 
     public void SetupScene(int Level)
     {
        
         BoardSetup();
-        //SpawnerPrzedmiotów();
-       
+        EnemySpawner();
         
     }
     void Start()
