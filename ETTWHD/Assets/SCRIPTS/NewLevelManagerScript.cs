@@ -182,6 +182,12 @@ public class NewLevelManagerScript : MonoBehaviour {
     public GameObject BossPrefab5_2;
     public GameObject BossPrefab5_3;
 
+    //Gracz
+    public GameObject PlayerSpawner;
+    public GameObject Hero;
+    public GameObject HeroPrefab;
+    public GameObject[] Body;
+    public GameObject[] Head;
     //Zmienne i inne parametry
     public Grid gridscript;
     public int RotationModifactor;
@@ -189,6 +195,7 @@ public class NewLevelManagerScript : MonoBehaviour {
     public int pupy;
     public Text PUPY;
     public int Level;
+    
 
     void BoardSetup()
     {
@@ -9183,12 +9190,28 @@ public class NewLevelManagerScript : MonoBehaviour {
 
     }
 
+    public void PlayerSpawn()
+    {
+        GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+        PlayerSpawner = GameObject.FindGameObjectWithTag("PlayerSpawner");
+       GameObject hiro = Instantiate(Hero, PlayerSpawner.transform.position, PlayerSpawner.transform.rotation);
+        GameObject body = Body[Random.Range(0, Body.Length)];
+        GameObject b = Instantiate(body, hiro.transform.position, hiro.transform.rotation);
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        b.transform.parent = player.transform;
+        GameObject HeadSpawner = GameObject.FindGameObjectWithTag("HeadSpawner");
+        GameObject head = Head[Random.Range(0, Head.Length)];
+        GameObject h = Instantiate(head, HeadSpawner.transform.position, HeadSpawner.transform.rotation);
+        h.transform.parent = b.transform;
+
+    }
+
     public void SetupScene(int Level)
     {
        
         BoardSetup();
         EnemySpawner();
-        
+        PlayerSpawn();
     }
     void Start()
     {
