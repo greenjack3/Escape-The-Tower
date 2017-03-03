@@ -81,13 +81,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\CameraSpinScript.cs" />
-    <Compile Include="Assets\EnemyCountScript.cs" />
-    <Compile Include="Assets\OpenDoorScript.cs" />
     <Compile Include="Assets\SCRIPTS\BackToMainMenuButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\BoardManagerScript.cs" />
     <Compile Include="Assets\SCRIPTS\CameraControlScript.cs" />
+    <Compile Include="Assets\SCRIPTS\CameraSpinScript.cs" />
     <Compile Include="Assets\SCRIPTS\CharacterMovementScript.cs" />
+    <Compile Include="Assets\SCRIPTS\CharacterStatGenerator.cs" />
+    <Compile Include="Assets\SCRIPTS\EnemyCountScript.cs" />
     <Compile Include="Assets\SCRIPTS\EnemyLifeScript.cs" />
     <Compile Include="Assets\SCRIPTS\EnemySpawnerScript.cs" />
     <Compile Include="Assets\SCRIPTS\ExitButtonScript.cs" />
@@ -98,6 +98,7 @@
     <Compile Include="Assets\SCRIPTS\NewGameButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\NewLevelManagerScript.cs" />
     <Compile Include="Assets\SCRIPTS\NotebookButtonScript.cs" />
+    <Compile Include="Assets\SCRIPTS\OpenDoorScript.cs" />
     <Compile Include="Assets\SCRIPTS\SettingsButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\SpawnerScript.cs" />
   </ItemGroup>

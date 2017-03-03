@@ -196,7 +196,7 @@ public class NewLevelManagerScript : MonoBehaviour {
     public Text PUPY;
     public int Level;
     
-
+    
     void BoardSetup()
     {
         // if (CenterRooms == null)
@@ -9206,9 +9206,13 @@ public class NewLevelManagerScript : MonoBehaviour {
 
     }
 
+    public void zwiekszlevel()
+    {
+        Level = Level++;
+    } 
     public void SetupScene(int Level)
     {
-       
+        Level = 1;
         BoardSetup();
         EnemySpawner();
         PlayerSpawn();
@@ -9216,6 +9220,7 @@ public class NewLevelManagerScript : MonoBehaviour {
     void Start()
     {
 //        pupy = 0;
+
     }
 
     void Update()

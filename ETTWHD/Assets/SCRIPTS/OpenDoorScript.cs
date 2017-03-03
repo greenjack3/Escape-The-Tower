@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OpenDoorScript : MonoBehaviour
 {
 
     private bool Locked = true;
-
-	void Start ()
+    
+    
+    void Start()
     {
-		
-	}
-	
+        
+
+    }
 	void Update ()
     {
 		
@@ -32,6 +34,9 @@ public class OpenDoorScript : MonoBehaviour
         if (!Locked)
         {
             print("LOAD_LVL_+1");
+           
+            SceneManager.LoadScene("test");
+
         }
     }
 }
