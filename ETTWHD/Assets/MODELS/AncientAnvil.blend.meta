@@ -1,0 +1,234 @@
+fileFormatVersion: 2
+guid: a2de5dff5eeb729499d76e59c63061c7
+timeCreated: 1488579990
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: AncientAnvilBASE
+    100004: AncientAnvilBASE_001
+    100006: AncientAnvilBASE_002
+    100008: AnvilBase
+    100010: AnvilFloat
+    100012: AnvilPedal
+    100014: AnvilPedal_001
+    100016: Armature
+    100018: Link
+    100020: Link_001
+    100022: Link_002
+    100024: Link_003
+    100026: Link_004
+    100028: Link_005
+    100030: Link_006
+    100032: Link_007
+    100034: Link_008
+    100036: Link_009
+    100038: Link_010
+    100040: Link_013
+    100042: Link_014
+    100044: Link_015
+    100046: Link_016
+    100048: Link_017
+    100050: Link_018
+    100052: Link_019
+    100054: Link_020
+    100056: Link_021
+    100058: Link_022
+    100060: Link_023
+    100062: Torus_000
+    100064: Torus_001
+    100066: Torus_002
+    100068: Torus_003
+    100070: Torus_004
+    100072: Torus_005
+    100074: Torus_006
+    100076: Torus_007
+    100078: Torus_008
+    100080: Torus_009
+    100082: Torus_010
+    100084: Torus_011
+    100086: Torus_012
+    100088: Torus_013
+    100090: Torus_014
+    100092: Torus_015
+    100094: Torus_016
+    100096: Torus_017
+    100098: Torus_018
+    100100: Torus_019
+    100102: Torus_020
+    100104: Torus_021
+    400000: //RootNode
+    400002: AncientAnvilBASE
+    400004: AncientAnvilBASE_001
+    400006: AncientAnvilBASE_002
+    400008: AnvilBase
+    400010: AnvilFloat
+    400012: AnvilPedal
+    400014: AnvilPedal_001
+    400016: Armature
+    400018: Link
+    400020: Link_001
+    400022: Link_002
+    400024: Link_003
+    400026: Link_004
+    400028: Link_005
+    400030: Link_006
+    400032: Link_007
+    400034: Link_008
+    400036: Link_009
+    400038: Link_010
+    400040: Link_013
+    400042: Link_014
+    400044: Link_015
+    400046: Link_016
+    400048: Link_017
+    400050: Link_018
+    400052: Link_019
+    400054: Link_020
+    400056: Link_021
+    400058: Link_022
+    400060: Link_023
+    400062: Torus_000
+    400064: Torus_001
+    400066: Torus_002
+    400068: Torus_003
+    400070: Torus_004
+    400072: Torus_005
+    400074: Torus_006
+    400076: Torus_007
+    400078: Torus_008
+    400080: Torus_009
+    400082: Torus_010
+    400084: Torus_011
+    400086: Torus_012
+    400088: Torus_013
+    400090: Torus_014
+    400092: Torus_015
+    400094: Torus_016
+    400096: Torus_017
+    400098: Torus_018
+    400100: Torus_019
+    400102: Torus_020
+    400104: Torus_021
+    4300000: Torus_021
+    4300002: Torus_009
+    4300004: Torus_008
+    4300006: Torus_006
+    4300008: Torus_007
+    4300010: Torus_005
+    4300012: Torus_004
+    4300014: Torus_002
+    4300016: Torus_003
+    4300018: Torus_000
+    4300020: Torus_020
+    4300022: Torus_010
+    4300024: Torus_011
+    4300026: Torus_013
+    4300028: Torus_012
+    4300030: Torus_014
+    4300032: AncientAnvilBASE
+    4300034: Torus_001
+    4300036: AncientAnvilBASE_001
+    4300038: AncientAnvilBASE_002
+    4300040: Torus_015
+    4300042: Torus_017
+    4300044: Torus_016
+    4300046: Torus_018
+    4300048: Torus_019
+    7400000: Default Take
+    7400002: ArmatureAction_003
+    9500000: //RootNode
+    13700000: AncientAnvilBASE
+    13700002: AncientAnvilBASE_001
+    13700004: AncientAnvilBASE_002
+    13700006: Torus_000
+    13700008: Torus_001
+    13700010: Torus_002
+    13700012: Torus_003
+    13700014: Torus_004
+    13700016: Torus_005
+    13700018: Torus_006
+    13700020: Torus_007
+    13700022: Torus_008
+    13700024: Torus_009
+    13700026: Torus_010
+    13700028: Torus_011
+    13700030: Torus_012
+    13700032: Torus_013
+    13700034: Torus_014
+    13700036: Torus_015
+    13700038: Torus_016
+    13700040: Torus_017
+    13700042: Torus_018
+    13700044: Torus_019
+    13700046: Torus_020
+    13700048: Torus_021
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
