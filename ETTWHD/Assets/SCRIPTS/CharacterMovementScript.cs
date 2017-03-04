@@ -38,7 +38,8 @@ public class CharacterMovementScript : MonoBehaviour
                 flag = true;
                 endPoint = hit.point;
                 endPoint.y = yAxis;
-
+                GameObject h = GameObject.FindGameObjectWithTag("Player");
+                
             }
         }
         if (flag && !Mathf.Approximately(gameObject.transform.position.magnitude, endPoint.magnitude))

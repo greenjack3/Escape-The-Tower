@@ -9202,7 +9202,7 @@ public class NewLevelManagerScript : MonoBehaviour {
         GameObject HeadSpawner = GameObject.FindGameObjectWithTag("HeadSpawner");
         GameObject head = Head[Random.Range(0, Head.Length)];
         GameObject h = Instantiate(head, HeadSpawner.transform.position, HeadSpawner.transform.rotation);
-        h.transform.parent = b.transform;
+        h.transform.parent = HeadSpawner.transform;
 
     }
 
@@ -9210,17 +9210,18 @@ public class NewLevelManagerScript : MonoBehaviour {
     {
         Level = Level++;
     } 
+    
     public void SetupScene(int Level)
     {
-        Level = 1;
+       
         BoardSetup();
         EnemySpawner();
         PlayerSpawn();
     }
     void Start()
     {
-//        pupy = 0;
-
+        //        pupy = 0;
+        zwiekszlevel();
     }
 
     void Update()
