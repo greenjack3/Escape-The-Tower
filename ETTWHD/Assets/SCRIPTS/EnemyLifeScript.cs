@@ -16,7 +16,8 @@ public class EnemyLifeScript : MonoBehaviour
 	void Start ()
     {
         Cur_Health = Max_Health;
-//        InvokeRepeating("decreaseHealth", 1f, 1f);
+        //        InvokeRepeating("decreaseHealth", 1f, 1f);
+        
 	}
 	
 	void Update ()

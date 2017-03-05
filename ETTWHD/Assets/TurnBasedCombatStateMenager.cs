@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TurnBasedCombatStateMenager : MonoBehaviour {
-
+    public DetectionLogic det;
     private bool playerDetected;
+  
+
     public enum BattleStates
     {
         OUTOFCOMBAT,
@@ -18,12 +20,15 @@ public class TurnBasedCombatStateMenager : MonoBehaviour {
     void Start()
     {
         currentState = BattleStates.OUTOFCOMBAT;
-        playerDetected = false;
+        //  playerDetected = false;
+        // playerDetected = gameObject.GetComponent<DetectionLogic>().CanSeePlayer();
+        det = gameObject.GetComponent<DetectionLogic>();
     }
 
     void Update()
     {
-       // playerDetected = gameObject.GetComponent<DetectionLogic>().CanSeePlayer();
+        det = gameObject.GetComponent<DetectionLogic>();
+        playerDetected = det;
 
         if (playerDetected == false)
         {

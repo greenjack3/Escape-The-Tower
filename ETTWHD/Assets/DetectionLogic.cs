@@ -17,7 +17,7 @@ public class DetectionLogic : MonoBehaviour
     public bool CanSeePlayer()
     {
         RaycastHit hit;
-        GameObject player = GameObject.FindWithTag("Player");
+        GameObject player = GameObject.FindWithTag("h");
         playerPosition = player.transform.position;
         Vector3 rayDirection = player.transform.position - transform.position;
 
@@ -25,9 +25,10 @@ public class DetectionLogic : MonoBehaviour
         {
             if (Physics.Raycast(transform.position, rayDirection, out hit, visibilityDistance))
             {
-                return (hit.transform.CompareTag("Player"));
-
                 Debug.Log("Player Spotted");
+                return (hit.transform.CompareTag("h"));
+
+             //  Debug.Log("Player Spotted");
             }
         }
 

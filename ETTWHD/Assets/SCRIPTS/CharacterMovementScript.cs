@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.AI;
 
 public class CharacterMovementScript : MonoBehaviour
 {
@@ -15,8 +16,12 @@ public class CharacterMovementScript : MonoBehaviour
 
     private GameObject Target;
     public GameObject mosue;
+
+    NavMeshAgent agent;
+
     void Start()
     {
+        agent = GetComponent<NavMeshAgent>();
         // nie wiem co to Jacuś :P
         yAxis = gameObject.transform.position.y;
         mosue = GameObject.FindGameObjectWithTag("m");
@@ -40,13 +45,14 @@ public class CharacterMovementScript : MonoBehaviour
                 endPoint = hit.point;
                 endPoint.y = yAxis;
                 GameObject h = GameObject.FindGameObjectWithTag("Player");
+                agent.SetDestination(endPoint);
                 
             }
         }
-        if (flag && !Mathf.Approximately(gameObject.transform.position.magnitude, endPoint.magnitude))
-        {
-            gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, endPoint, 1 / (duration * (Vector3.Distance(gameObject.transform.position, endPoint))));
-        }
+        //if (flag && !Mathf.Approximately(gameObject.transform.position.magnitude, endPoint.magnitude))
+        //{
+        //    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, endPoint, 1 / (duration * (Vector3.Distance(gameObject.transform.position, endPoint))));
+        //}
         else if (flag && Mathf.Approximately(gameObject.transform.position.magnitude, endPoint.magnitude))
         {
             flag = false;
