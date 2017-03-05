@@ -194,7 +194,7 @@ public class NewLevelManagerScript : MonoBehaviour {
     public int BossSelector; // zmienna wybierająca bossa i jego level
     public int pupy;
     public Text PUPY;
-    public int Level;
+    public int Level ;
     
     
     void BoardSetup()
@@ -9217,16 +9217,18 @@ public class NewLevelManagerScript : MonoBehaviour {
         BoardSetup();
         EnemySpawner();
         PlayerSpawn();
+        
     }
     void Start()
     {
         //        pupy = 0;
-        zwiekszlevel();
+        
     }
 
     void Update()
     {
         SetPupyText();
+        
     }
     void SetPupyText()
     { 

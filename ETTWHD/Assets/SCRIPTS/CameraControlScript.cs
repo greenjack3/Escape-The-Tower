@@ -9,12 +9,16 @@ public class CameraControlScript : MonoBehaviour {
     public float MaxZoom;
     public float MinZoom;
     public Camera MainCam;
-
+    public GameObject player;
+    
+    
 
     void Start()
     {
         MinZoom = 1.5f;
         MaxZoom = 7f;
+        player = GameObject.FindGameObjectWithTag("Player");
+        
     }
 	
     void Update()
@@ -33,6 +37,10 @@ public class CameraControlScript : MonoBehaviour {
                 MainCam.orthographicSize--;
             }
         }
+
+
+        transform.position = player.transform.position;
+
     }
 
  /*   void Zoom()

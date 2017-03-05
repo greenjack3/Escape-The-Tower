@@ -14,18 +14,19 @@ public class CharacterMovementScript : MonoBehaviour
     public float AtkStr;
 
     private GameObject Target;
-
-    void start()
+    public GameObject mosue;
+    void Start()
     {
         // nie wiem co to Jacuś :P
         yAxis = gameObject.transform.position.y;
+        mosue = GameObject.FindGameObjectWithTag("m");
     }
 
     void Update()
     {
         // liczenie ataku
         Calc_AtkStr();
-
+        transform.LookAt(mosue.transform);
         // ruch
         if (Input.GetMouseButtonDown(0))
         {
