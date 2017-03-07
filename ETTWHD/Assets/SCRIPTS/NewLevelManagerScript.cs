@@ -195,7 +195,7 @@ public class NewLevelManagerScript : MonoBehaviour {
     public int pupy;
     public Text PUPY;
     public int Level ;
-    
+    public GameObject SavedHero;
     
     void BoardSetup()
     {
@@ -9192,32 +9192,40 @@ public class NewLevelManagerScript : MonoBehaviour {
 
     public void PlayerSpawn()
     {
-        GameObject.FindGameObjectWithTag("pointer").SetActive(false);
-        PlayerSpawner = GameObject.FindGameObjectWithTag("PlayerSpawner");
-       GameObject hiro = Instantiate(Hero, PlayerSpawner.transform.position, PlayerSpawner.transform.rotation);
-        GameObject body = Body[Random.Range(0, Body.Length)];
-        GameObject b = Instantiate(body, hiro.transform.position, hiro.transform.rotation);
-        GameObject player = GameObject.FindGameObjectWithTag("Player");
-        b.transform.parent = player.transform;
-        GameObject HeadSpawner = GameObject.FindGameObjectWithTag("HeadSpawner");
-        GameObject head = Head[Random.Range(0, Head.Length)];
-        GameObject h = Instantiate(head, HeadSpawner.transform.position, HeadSpawner.transform.rotation);
-        h.transform.parent = HeadSpawner.transform;
+        if (SavedHero == null)
+        {
 
+            GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+            PlayerSpawner = GameObject.FindGameObjectWithTag("PlayerSpawner");
+            GameObject hiro = Instantiate(Hero, PlayerSpawner.transform.position, PlayerSpawner.transform.rotation);
+            GameObject body = Body[Random.Range(0, Body.Length)];
+            GameObject b = Instantiate(body, hiro.transform.position, hiro.transform.rotation);
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            b.transform.parent = player.transform;
+            GameObject HeadSpawner = GameObject.FindGameObjectWithTag("HeadSpawner");
+            GameObject head = Head[Random.Range(0, Head.Length)];
+            GameObject h = Instantiate(head, HeadSpawner.transform.position, HeadSpawner.transform.rotation);
+            h.transform.parent = HeadSpawner.transform;
+        }
+        else
+        {
+            PlayerSpawner = GameObject.FindGameObjectWithTag("PlayerSpawner");
+            GameObject x = Instantiate(SavedHero, PlayerSpawner.transform.position, PlayerSpawner.transform.rotation);
+        }
     }
 
     public void zwiekszlevel()
     {
         Level = Level++;
-    } 
-    
+    }
+
     public void SetupScene(int Level)
     {
-       
+
         BoardSetup();
         EnemySpawner();
         PlayerSpawn();
-        
+        zwiekszlevel();
     }
     void Start()
     {
@@ -9228,7 +9236,7 @@ public class NewLevelManagerScript : MonoBehaviour {
     void Update()
     {
         SetPupyText();
-        
+        SavedHero = GameObject.FindGameObjectWithTag("Player");
     }
     void SetPupyText()
     { 
