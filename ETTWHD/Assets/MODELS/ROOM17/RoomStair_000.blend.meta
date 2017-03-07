@@ -17,6 +17,11 @@ ModelImporter:
     100018: Wall_001
     100020: Wall_002
     100022: Wall_003
+    100024: Cube_003
+    100026: Cube_004
+    100028: Cube_005
+    100030: Cube_006
+    100032: Cube_007
     400000: Cube
     400002: Cube_001
     400004: Cube_002
@@ -29,6 +34,11 @@ ModelImporter:
     400018: Wall_001
     400020: Wall_002
     400022: Wall_003
+    400024: Cube_003
+    400026: Cube_004
+    400028: Cube_005
+    400030: Cube_006
+    400032: Cube_007
     2300000: Cube
     2300002: Cube_001
     2300004: Cube_002
@@ -39,6 +49,11 @@ ModelImporter:
     2300014: Wall_001
     2300016: Wall_002
     2300018: Wall_003
+    2300020: Cube_003
+    2300022: Cube_004
+    2300024: Cube_005
+    2300026: Cube_006
+    2300028: Cube_007
     3300000: Cube
     3300002: Cube_001
     3300004: Cube_002
@@ -49,6 +64,11 @@ ModelImporter:
     3300014: Wall_001
     3300016: Wall_002
     3300018: Wall_003
+    3300020: Cube_003
+    3300022: Cube_004
+    3300024: Cube_005
+    3300026: Cube_006
+    3300028: Cube_007
     4300000: Cube_002
     4300002: Cube_001
     4300004: Cube
@@ -59,6 +79,11 @@ ModelImporter:
     4300014: grid
     4300016: Floor_000
     4300018: SCALE
+    4300020: Cube_007
+    4300022: Cube_006
+    4300024: Cube_005
+    4300026: Cube_004
+    4300028: Cube_003
     7400000: Default Take
     9500000: //RootNode
   materials:
@@ -107,6 +132,7 @@ ModelImporter:
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
+    serializedVersion: 2
     human: []
     skeleton: []
     armTwist: 0.5
@@ -117,7 +143,10 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   animationType: 2
   humanoidOversampling: 1
