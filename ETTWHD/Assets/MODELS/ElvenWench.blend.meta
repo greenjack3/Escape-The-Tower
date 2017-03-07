@@ -124,7 +124,247 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dagger
+        weight: 1
+      - path: ElvenWenchMesh
+        weight: 1
+      - path: ElvenWenchRig
+        weight: 1
+      - path: ElvenWenchRig/FootControl_L
+        weight: 1
+      - path: ElvenWenchRig/FootControl_L/Foot_L
+        weight: 1
+      - path: ElvenWenchRig/FootControl_L/Foot_L/Toes_L
+        weight: 1
+      - path: ElvenWenchRig/FootControl_R
+        weight: 1
+      - path: ElvenWenchRig/FootControl_R/Foot_R
+        weight: 1
+      - path: ElvenWenchRig/FootControl_R/Foot_R/Toes_R
+        weight: 1
+      - path: ElvenWenchRig/Main
+        weight: 1
+      - path: ElvenWenchRig/Main/Butt
+        weight: 1
+      - path: ElvenWenchRig/Main/LegUpper_L
+        weight: 1
+      - path: ElvenWenchRig/Main/LegUpper_L/LegLower_R
+        weight: 1
+      - path: ElvenWenchRig/Main/LegUpper_R
+        weight: 1
+      - path: ElvenWenchRig/Main/LegUpper_R/LegLower_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L/ArmLower_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L/ArmLower_L/Hand_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L/ArmLower_L/Hand_L/FingersUpper_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L/ArmLower_L/Hand_L/FingersUpper_L/FingerLower_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L/ArmLower_L/Hand_L/IndexUpper_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L/ArmLower_L/Hand_L/IndexUpper_L/IndexLower_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L/ArmLower_L/Hand_L/ThumbUpper_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L/ArmLower_L/Hand_L/ThumbUpper_L/ThumbLower_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R/FingersUpper_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R/FingersUpper_R/FingerLower_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R/IndexUpper_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R/IndexUpper_R/IndexLower_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R/KNIFE
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R/KNIFE/KNIFE_001
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R/ThumbUpper_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R/ThumbUpper_R/ThumbLower_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Neck
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Neck/Head
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Neck/Head/EarBase_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Neck/Head/EarBase_L/EarTip_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Neck/Head/EarBase_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Neck/Head/EarBase_R/EarTip_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: ArmatureAction
+      takeName: ArmatureAction
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Dagger
+        weight: 1
+      - path: ElvenWenchMesh
+        weight: 1
+      - path: ElvenWenchRig
+        weight: 1
+      - path: ElvenWenchRig/FootControl_L
+        weight: 1
+      - path: ElvenWenchRig/FootControl_L/Foot_L
+        weight: 1
+      - path: ElvenWenchRig/FootControl_L/Foot_L/Toes_L
+        weight: 1
+      - path: ElvenWenchRig/FootControl_R
+        weight: 1
+      - path: ElvenWenchRig/FootControl_R/Foot_R
+        weight: 1
+      - path: ElvenWenchRig/FootControl_R/Foot_R/Toes_R
+        weight: 1
+      - path: ElvenWenchRig/Main
+        weight: 1
+      - path: ElvenWenchRig/Main/Butt
+        weight: 1
+      - path: ElvenWenchRig/Main/LegUpper_L
+        weight: 1
+      - path: ElvenWenchRig/Main/LegUpper_L/LegLower_R
+        weight: 1
+      - path: ElvenWenchRig/Main/LegUpper_R
+        weight: 1
+      - path: ElvenWenchRig/Main/LegUpper_R/LegLower_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L/ArmLower_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L/ArmLower_L/Hand_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L/ArmLower_L/Hand_L/FingersUpper_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L/ArmLower_L/Hand_L/FingersUpper_L/FingerLower_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L/ArmLower_L/Hand_L/IndexUpper_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L/ArmLower_L/Hand_L/IndexUpper_L/IndexLower_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L/ArmLower_L/Hand_L/ThumbUpper_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_L/ArmUpper_L/ArmLower_L/Hand_L/ThumbUpper_L/ThumbLower_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R/FingersUpper_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R/FingersUpper_R/FingerLower_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R/IndexUpper_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R/IndexUpper_R/IndexLower_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R/KNIFE
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R/KNIFE/KNIFE_001
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R/ThumbUpper_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Collar_R/ArmUpper_R/ArmLower_R/Hand_R/ThumbUpper_R/ThumbLower_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Neck
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Neck/Head
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Neck/Head/EarBase_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Neck/Head/EarBase_L/EarTip_L
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Neck/Head/EarBase_R
+        weight: 1
+      - path: ElvenWenchRig/Main/Torso/Chest/Neck/Head/EarBase_R/EarTip_R
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
