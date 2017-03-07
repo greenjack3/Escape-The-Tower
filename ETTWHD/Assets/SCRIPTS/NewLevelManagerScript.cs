@@ -7856,7 +7856,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
         }
 
-        gridscript.GenerateGrid();
+      //  gridscript.GenerateGrid();
 
     }
 

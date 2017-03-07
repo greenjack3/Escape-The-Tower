@@ -31,7 +31,7 @@ public class CharacterMovementScript : MonoBehaviour
     {
         // liczenie ataku
         Calc_AtkStr();
-        transform.LookAt(mosue.transform);
+       // transform.LookAt(mosue.transform);
         // ruch
         if (Input.GetMouseButtonDown(0))
         {
