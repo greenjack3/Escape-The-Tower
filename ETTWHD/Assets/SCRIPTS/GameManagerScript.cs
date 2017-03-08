@@ -12,8 +12,8 @@ namespace Completed
         public static GameManagerScript instance = null;
         
         private NewLevelManagerScript levelScirpt;
-       
-        private int level = 1;
+
+        //public int Level;
         public int pupy;
         public Text PUPY;
 
@@ -31,6 +31,7 @@ namespace Completed
             DontDestroyOnLoad(gameObject);
 
            
+
             levelScirpt = GetComponent<NewLevelManagerScript>();
            
             InitGame();
@@ -39,7 +40,8 @@ namespace Completed
         
         void InitGame()
         {
-            levelScirpt.SetupScene(level);
+            levelScirpt.SetupScene();
+            
          
         }
 
@@ -47,6 +49,7 @@ namespace Completed
         {
             SetPupyText();
             pupy = 0;
+           // Level++;
         }
 
 

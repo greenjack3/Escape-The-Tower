@@ -194,10 +194,12 @@ public class NewLevelManagerScript : MonoBehaviour {
     public int BossSelector; // zmienna wybierająca bossa i jego level
     public int pupy;
     public Text PUPY;
-    public int Level ;
+     public int Level ;
+    public int L;
+
     public GameObject SavedHero;
     
-    void BoardSetup()
+  public  void BoardSetup()
     {
         // if (CenterRooms == null)
         CenterRoomsOnScene = GameObject.FindGameObjectsWithTag("CR");
@@ -206,11 +208,12 @@ public class NewLevelManagerScript : MonoBehaviour {
 
         InnerRoomsOnScene = GameObject.FindGameObjectsWithTag("IR");
         OuterRoomsOnScene = GameObject.FindGameObjectsWithTag("OR");
-        
-        
 
-        //choose a random floor from prefab array and prepare to instantiate it.
-        GameObject CenterPrefab = null;
+
+         
+
+    //choose a random floor from prefab array and prepare to instantiate it.
+    GameObject CenterPrefab = null;
 
         //instantiate the GameObject instance usng the prefab chosen for toInstantiate at the Vector3 corresponding to current grid positon in loop, cast it to GameObject.
         GameObject instance = null;// Instantiate(CenterPrefab ) as GameObject;
@@ -389,7 +392,7 @@ public class NewLevelManagerScript : MonoBehaviour {
                 {
                     CenterPrefab = CenterRoom[Random.Range(0, CenterRoom.Length)];
                     instance = (GameObject)Instantiate(CenterPrefab, Room.transform.position, Room.transform.rotation);
-                    print("działam");
+                    print("działam i załadowałem level 2");
 
                 }
 
@@ -9216,27 +9219,37 @@ public class NewLevelManagerScript : MonoBehaviour {
 
     public void zwiekszlevel()
     {
-        Level = Level++;
+        Level++;
+        
     }
 
-    public void SetupScene(int Level)
+    public void savH()
     {
+        SavedHero = GameObject.FindGameObjectWithTag("Player");
+    }
+    
 
+    public void SetupScene()
+    {
+       
+        
         BoardSetup();
         EnemySpawner();
         PlayerSpawn();
-        zwiekszlevel();
+       
     }
     void Start()
     {
         //        pupy = 0;
+       
         
     }
 
     void Update()
     {
         SetPupyText();
-        SavedHero = GameObject.FindGameObjectWithTag("Player");
+       
+      
     }
     void SetPupyText()
     { 
