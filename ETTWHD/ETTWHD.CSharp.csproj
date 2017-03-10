@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\DetectionLogic.cs" />
+    <Compile Include="Assets\LevelControler.cs" />
     <Compile Include="Assets\SCRIPTS\BackToMainMenuButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\BoardManagerScript.cs" />
     <Compile Include="Assets\SCRIPTS\CameraControlScript.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="Assets\SCRIPTS\OpenDoorScript.cs" />
     <Compile Include="Assets\SCRIPTS\SettingsButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\SpawnerScript.cs" />
+    <Compile Include="Assets\SkrzynkoOtwieracz.cs" />
     <Compile Include="Assets\TurnBasedCombatStateMenager.cs" />
     <Compile Include="Assets\virtualcursortest.cs" />
   </ItemGroup>
