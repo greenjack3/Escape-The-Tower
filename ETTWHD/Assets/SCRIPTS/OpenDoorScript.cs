@@ -36,7 +36,7 @@ public class OpenDoorScript : MonoBehaviour
         {
             print("LOAD_LVL_+1");
             GameObject.FindGameObjectWithTag("DM").SendMessage("zwiekszlevel");
-            GameObject.FindGameObjectWithTag("DM").SendMessage("savH");
+          //  GameObject.FindGameObjectWithTag("DM").SendMessage("savH");
             SceneManager.LoadScene("test");
 
         }

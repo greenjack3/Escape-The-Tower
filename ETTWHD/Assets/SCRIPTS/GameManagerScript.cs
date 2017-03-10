@@ -9,41 +9,43 @@ namespace Completed
 
     public class GameManagerScript : MonoBehaviour
     {
-        public static GameManagerScript instance = null;
+       // public static GameManagerScript instance = null;
         
-        private NewLevelManagerScript levelScirpt;
+      //  private NewLevelManagerScript levelScirpt;
 
         //public int Level;
         public int pupy;
         public Text PUPY;
+       // public int Level;
+
 
         void Awake()
         {
-            if (instance == null)
+            //if (instance == null)
 
-                instance = this;
+            //    instance = this;
 
-            else if (instance != this)
+            //else if (instance != this)
 
 
-                Destroy(gameObject);
+            //    Destroy(gameObject);
 
             DontDestroyOnLoad(gameObject);
 
            
 
-            levelScirpt = GetComponent<NewLevelManagerScript>();
-           
-            InitGame();
+           // levelScirpt = GetComponent<NewLevelManagerScript>();
+          //  Level = levelScirpt.Level;
+          //  InitGame();
 
         }
         
-        void InitGame()
-        {
-            levelScirpt.SetupScene();
+        //void InitGame()
+        //{
+        //    levelScirpt.SetupScene(Level);
             
          
-        }
+        //}
 
         void Start()
         {

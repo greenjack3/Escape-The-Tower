@@ -91,7 +91,12 @@ public class CharacterMovementScript : MonoBehaviour
 //                GameObject.Find("odbiorca").SendMessage("nazwa voida");
             }
 
-
+            if (RightClickRay.collider.tag == "CHEST")
+            {
+                Debug.Log("otwieraj sie ");
+                GameObject skrzynia = RightClickRay.collider.transform.gameObject;
+                skrzynia.SendMessage("Otwieraj");
+            }
         }
 
     }
