@@ -22,7 +22,8 @@ public class EnemyCountScript : MonoBehaviour
 //        EnemyTotal = GameObject.FindGameObjectsWithTag("Enemy");
 //        Enemy_Max = EnemyTotal.Length;
         Enemy_Cur = 0;
-//        EnemyCalculate();
+        //        EnemyCalculate();
+        EnemyCounter = GameObject.FindGameObjectWithTag("EnemyTekst").GetComponent<Text>();
     }
 	
 	void Update ()

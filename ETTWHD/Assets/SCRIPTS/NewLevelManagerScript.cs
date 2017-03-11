@@ -192,8 +192,8 @@ public class NewLevelManagerScript : MonoBehaviour {
    // public Grid gridscript;
     public int RotationModifactor;
     public int BossSelector; // zmienna wybierająca bossa i jego level
-    public int pupy;
-    public Text PUPY;
+    //public int pupy;
+    //public Text PUPY;
   public int Level ;
     public LevelControler L;
 
