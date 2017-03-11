@@ -9,26 +9,26 @@ namespace Completed
 
     public class GameManagerScript : MonoBehaviour
     {
-       // public static GameManagerScript instance = null;
+        public static GameManagerScript instance = null;
         
       //  private NewLevelManagerScript levelScirpt;
 
         //public int Level;
         public int pupy;
         public Text PUPY;
-       // public int Level;
+        //public int Level;
 
 
         void Awake()
         {
-            //if (instance == null)
+            if (instance == null)
 
-            //    instance = this;
+                instance = this;
 
-            //else if (instance != this)
+           else if (instance != this)
 
 
-            //    Destroy(gameObject);
+                Destroy(gameObject);
 
             DontDestroyOnLoad(gameObject);
 
@@ -51,7 +51,7 @@ namespace Completed
         {
             SetPupyText();
             pupy = 0;
-           // Level++;
+           
         }
 
 
@@ -60,7 +60,7 @@ namespace Completed
 
         void Update()
         {
-            
+            SetPupyText();
 
         }
 
@@ -68,6 +68,14 @@ namespace Completed
         {
             PUPY.text = "PUPy:" + pupy.ToString();
         }
+        void AddPup(int PUPamount)
+        {
+            pupy += PUPamount;
+        }
+        //public void zwiekszlevel()
+        //{
+        //    Level++;
+        //}
     }
   
 }

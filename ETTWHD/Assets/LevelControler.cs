@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class LevelControler : MonoBehaviour
 {
- //   public int Level;
+    public int Level;
  
-	////public void zwiekszlevel()
- //   {
- //       Level++;
- //   }
+	public void zwiekszlevel()
+   {
+        Level++;
+    }
 }

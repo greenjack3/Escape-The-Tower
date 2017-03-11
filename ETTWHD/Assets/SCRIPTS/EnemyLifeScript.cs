@@ -46,7 +46,7 @@ public class EnemyLifeScript : MonoBehaviour
         {
             gameObject.SetActive(false);
             GameObject.FindGameObjectWithTag("DM").SendMessage("AddPup", PUPreward);
-            GameObject.FindGameObjectWithTag("DM").SendMessage("EnemyKilled");
+            GameObject.FindGameObjectWithTag("CM").SendMessage("EnemyKilled");
         }
     }
 
