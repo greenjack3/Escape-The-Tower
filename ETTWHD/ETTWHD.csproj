@@ -98,6 +98,9 @@
     <Compile Include="Assets\SCRIPTS\Grid.cs" />
     <Compile Include="Assets\SCRIPTS\HealthBarScript.cs" />
     <Compile Include="Assets\SCRIPTS\HeroSpawnerScript.cs" />
+    <Compile Include="Assets\SCRIPTS\InventorySystem.cs" />
+    <Compile Include="Assets\SCRIPTS\Item.cs" />
+    <Compile Include="Assets\SCRIPTS\ItemDatabase.cs" />
     <Compile Include="Assets\SCRIPTS\NewGameButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\NewLevelManagerScript.cs" />
     <Compile Include="Assets\SCRIPTS\NotebookButtonScript.cs" />
