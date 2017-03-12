@@ -72,10 +72,7 @@ namespace Completed
         {
             pupy += PUPamount;
         }
-        //public void zwiekszlevel()
-        //{
-        //    Level++;
-        //}
+       
     }
   
 }
