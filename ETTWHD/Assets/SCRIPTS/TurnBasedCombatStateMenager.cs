@@ -2,10 +2,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public class CombatInfo
+{
+    public int position = - 1;
+    public CharacterAI character;
+}
+
+
 public class TurnBasedCombatStateMenager : MonoBehaviour {
+
+    public static TurnBasedCombatStateMenager Instance;
     public DetectionLogic det;
     private bool playerDetected;
-  
+    public int queue;
+    public List<CharacterAI> allCharacters = new List<CharacterAI>();
+    public List<CharacterAI> charactersInRoom = new List<CharacterAI>();
+    public List<CombatInfo> combatInfos = new List<CombatInfo>();
+    public CharacterAI playerCharacter;
+    public void RegisterCharacter(CharacterAI character)
+    {
+        if (!allCharacters.Contains(character))
+        {
+            allCharacters.Add(character);
+        }
+    }
+    public void RemoveCharacter(CharacterAI character)
+    {
+        if (allCharacters.Contains(character))
+        {
+            allCharacters.Remove(character);
+        }
+    }
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     public enum BattleStates
     {
@@ -19,59 +52,64 @@ public class TurnBasedCombatStateMenager : MonoBehaviour {
 
     void Start()
     {
+        GameObject playerOb = GameObject.FindGameObjectWithTag("Player");
+        playerCharacter = playerOb.GetComponent<CharacterAI>();
         currentState = BattleStates.OUTOFCOMBAT;
         //  playerDetected = false;
         // playerDetected = gameObject.GetComponent<DetectionLogic>().CanSeePlayer();
         det = gameObject.GetComponent<DetectionLogic>();
     }
 
-    void Update()
+    void EnterCombat()
     {
-        det = gameObject.GetComponent<DetectionLogic>();
-        playerDetected = det;
-
-        if (playerDetected == false)
+        charactersInRoom.Add(playerCharacter);
+        for (int i = 0; i < allCharacters.Count; i++)
         {
-            currentState = BattleStates.OUTOFCOMBAT;
-            Debug.Log("OutofCombat");
-        }
-        else
-        {
-            switch (currentState)
+            if (allCharacters[i] != playerCharacter)
             {
-                case (BattleStates.START):
-                    Debug.Log("CombatStateStart");
-                    break;
-                case (BattleStates.PLAYERCHOICE):
-                    Debug.Log("CombatStatePlayerChoice");
-                    break;
-                case (BattleStates.ENEMYCHOICE):
-                    Debug.Log("CombatStateStartEnemyChoice");
-                    break;
+                if (allCharacters[i].roomID == playerCharacter.roomID)
+                {
+                    charactersInRoom.Add(allCharacters[i]);
+                }
             }
         }
     }
 
-    void OnGUI()
+    int GetQueue(CharacterAI character)
     {
-        if (GUILayout.Button("NEXT STATE"))
+        if (charactersInRoom.Contains(character))
         {
-            if (currentState == BattleStates.OUTOFCOMBAT)
+            return charactersInRoom.IndexOf(character);
+        }
+        return -1;
+    }
+
+    void Update()
+    {
+       
+
+        if (currentState == BattleStates.OUTOFCOMBAT)
+        {
+            det = gameObject.GetComponent<DetectionLogic>();
+            playerDetected = det.CanSeePlayer();
+            if (playerDetected)
             {
-                currentState = BattleStates.START;
+                queue = 0;
             }
-            else if (currentState == BattleStates.START)
-            {
-                currentState = BattleStates.PLAYERCHOICE;
-            }
-            else if (currentState == BattleStates.PLAYERCHOICE)
-            {
-                currentState = BattleStates.ENEMYCHOICE;
-            }
-            else if (currentState == BattleStates.ENEMYCHOICE)
-            {
-                currentState = BattleStates.START;
-            }
+            Debug.Log("OutofCombat");
+        }
+
+        if (queue == -1 && currentState != BattleStates.START)
+        {
+            currentState = BattleStates.START;
+        }
+        if (queue == 0 && currentState != BattleStates.PLAYERCHOICE)
+        {
+            currentState = BattleStates.PLAYERCHOICE;
+        }
+        if (queue > 0 && currentState != BattleStates.ENEMYCHOICE)
+        {
+            currentState = BattleStates.ENEMYCHOICE;
         }
     }
 }
