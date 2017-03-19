@@ -81,35 +81,27 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\DetectionLogic.cs" />
-    <Compile Include="Assets\LevelControler.cs" />
-    <Compile Include="Assets\OtwierajSkrzynke.cs" />
     <Compile Include="Assets\SCRIPTS\BackToMainMenuButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\BoardManagerScript.cs" />
     <Compile Include="Assets\SCRIPTS\CameraControlScript.cs" />
-    <Compile Include="Assets\SCRIPTS\CameraSpinScript.cs" />
     <Compile Include="Assets\SCRIPTS\CharacterMovementScript.cs" />
     <Compile Include="Assets\SCRIPTS\CharacterStatGenerator.cs" />
+    <Compile Include="Assets\SCRIPTS\DetectionLogic.cs" />
     <Compile Include="Assets\SCRIPTS\EnemyCountScript.cs" />
     <Compile Include="Assets\SCRIPTS\EnemyLifeScript.cs" />
-    <Compile Include="Assets\SCRIPTS\EnemySpawnerScript.cs" />
     <Compile Include="Assets\SCRIPTS\ExitButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\GameManagerScript.cs" />
     <Compile Include="Assets\SCRIPTS\Grid.cs" />
     <Compile Include="Assets\SCRIPTS\HealthBarScript.cs" />
-    <Compile Include="Assets\SCRIPTS\HeroSpawnerScript.cs" />
-    <Compile Include="Assets\SCRIPTS\InventorySystem.cs" />
-    <Compile Include="Assets\SCRIPTS\Item.cs" />
-    <Compile Include="Assets\SCRIPTS\ItemDatabase.cs" />
+    <Compile Include="Assets\SCRIPTS\LevelControler.cs" />
     <Compile Include="Assets\SCRIPTS\NewGameButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\NewLevelManagerScript.cs" />
     <Compile Include="Assets\SCRIPTS\NotebookButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\OpenDoorScript.cs" />
     <Compile Include="Assets\SCRIPTS\SettingsButtonScript.cs" />
-    <Compile Include="Assets\SCRIPTS\SpawnerScript.cs" />
-    <Compile Include="Assets\SkrzynkoOtwieracz.cs" />
-    <Compile Include="Assets\TurnBasedCombatStateMenager.cs" />
-    <Compile Include="Assets\virtualcursortest.cs" />
+    <Compile Include="Assets\SCRIPTS\SkrzynkoOtwieracz.cs" />
+    <Compile Include="Assets\SCRIPTS\TurnBasedCombatStateMenager.cs" />
+    <Compile Include="Assets\SCRIPTS\virtualcursortest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
