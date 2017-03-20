@@ -13,13 +13,18 @@ public class CombatInfo
 public class TurnBasedCombatStateMenager : MonoBehaviour {
 
     public static TurnBasedCombatStateMenager Instance;
-    public DetectionLogic det;
+    public bool det;
     private bool playerDetected;
     public int queue;
     public List<CharacterAI> allCharacters = new List<CharacterAI>();
     public List<CharacterAI> charactersInRoom = new List<CharacterAI>();
     public List<CombatInfo> combatInfos = new List<CombatInfo>();
     public CharacterAI playerCharacter;
+    public bool playerTurn;
+
+
+
+
     public void RegisterCharacter(CharacterAI character)
     {
         if (!allCharacters.Contains(character))
@@ -57,11 +62,29 @@ public class TurnBasedCombatStateMenager : MonoBehaviour {
         currentState = BattleStates.OUTOFCOMBAT;
         //  playerDetected = false;
         // playerDetected = gameObject.GetComponent<DetectionLogic>().CanSeePlayer();
-        det = gameObject.GetComponent<DetectionLogic>();
+       // det = gameObject.GetComponent<DetectionLogic>();
+    }
+
+
+    public void EndPlayerTurn()
+    {
+        playerTurn = false;
+    }
+
+    public void PlayerDetected()
+    {
+        if (!playerDetected)
+        {
+            playerDetected = true;
+            EnterCombat();
+        }
     }
 
     void EnterCombat()
     {
+        playerCharacter.Stop();
+        playerTurn = true;
+        Debug.Log("ENTERING COMBAT");
         charactersInRoom.Add(playerCharacter);
         for (int i = 0; i < allCharacters.Count; i++)
         {
@@ -71,6 +94,19 @@ public class TurnBasedCombatStateMenager : MonoBehaviour {
                 {
                     charactersInRoom.Add(allCharacters[i]);
                 }
+            }
+        }
+        if (charactersInRoom.Count > 0)
+        {
+            
+            if (playerTurn)
+            {
+                playerCharacter.PlayerAction();
+            }
+            if (!playerTurn)
+            {
+                playerCharacter.Block();
+                Debug.Log("tura przeciwnika");
             }
         }
     }
@@ -84,32 +120,52 @@ public class TurnBasedCombatStateMenager : MonoBehaviour {
         return -1;
     }
 
+    //public void BattleStartUpdate()
+    //{
+
+    //}
+    public void PlayerControlUpdate()
+    {
+
+    }
+    public void EnemyControlUpdate()
+    {
+
+    }
+
+    
     void Update()
     {
-       
 
-        if (currentState == BattleStates.OUTOFCOMBAT)
+        switch (currentState)
         {
-            det = gameObject.GetComponent<DetectionLogic>();
-            playerDetected = det.CanSeePlayer();
-            if (playerDetected)
-            {
-                queue = 0;
-            }
-            Debug.Log("OutofCombat");
-        }
+            //case BattleStates.START: BattleStartUpdate(); break;
+            case BattleStates.PLAYERCHOICE: PlayerControlUpdate(); break;
+            case BattleStates.ENEMYCHOICE: EnemyControlUpdate(); break;
 
-        if (queue == -1 && currentState != BattleStates.START)
-        {
-            currentState = BattleStates.START;
         }
-        if (queue == 0 && currentState != BattleStates.PLAYERCHOICE)
-        {
-            currentState = BattleStates.PLAYERCHOICE;
-        }
-        if (queue > 0 && currentState != BattleStates.ENEMYCHOICE)
-        {
-            currentState = BattleStates.ENEMYCHOICE;
-        }
+        //if (currentState == BattleStates.OUTOFCOMBAT)
+        //{
+        //   // det = gameObject.GetComponent<DetectionLogic>().playerDetected;
+        //    //playerDetected = det;
+        //    if (playerDetected)
+        //    {
+        //        queue = 0;
+        //    }
+        //    Debug.Log("OutofCombat");
+        //}
+
+        //if (queue == -1 && currentState != BattleStates.START)
+        //{
+        //    currentState = BattleStates.START;
+        //}
+        //if (queue == 0 && currentState != BattleStates.PLAYERCHOICE)
+        //{
+        //    currentState = BattleStates.PLAYERCHOICE;
+        //}
+        //if (queue > 0 && currentState != BattleStates.ENEMYCHOICE)
+        //{
+        //    currentState = BattleStates.ENEMYCHOICE;
+        //}
     }
 }

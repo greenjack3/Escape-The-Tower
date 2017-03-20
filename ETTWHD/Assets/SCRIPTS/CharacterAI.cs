@@ -5,9 +5,28 @@ using UnityEngine;
 public class CharacterAI : MonoBehaviour {
 
     public int roomID;
+    CharacterMovementScript playerScript;
+    public void Stop()
+    {
+        if (playerScript != null)
+        {
+            playerScript.StopPlayer();
+        }
+    }
+    public void Block()
+    {
+        if (playerScript != null)
+        {
+            playerScript.BlockPlayer();
+        }
+    }
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
+        if (gameObject.CompareTag("Player"))
+        {
+            playerScript = GetComponent<CharacterMovementScript>();
+        }
         if (TurnBasedCombatStateMenager.Instance != null)
         {
             TurnBasedCombatStateMenager.Instance.RegisterCharacter(this);
@@ -23,7 +42,11 @@ public class CharacterAI : MonoBehaviour {
         }
     }
 
-
+   public void PlayerAction()
+    {
+        Debug.Log("tura krasnala");
+        TurnBasedCombatStateMenager.Instance.EndPlayerTurn();
+    }
     // Update is called once per frame
     void Update () {
 		

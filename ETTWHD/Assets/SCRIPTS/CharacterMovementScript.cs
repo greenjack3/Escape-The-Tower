@@ -19,6 +19,8 @@ public class CharacterMovementScript : MonoBehaviour
 
     NavMeshAgent agent;
 
+    public bool blockInput = false;
+
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -27,11 +29,24 @@ public class CharacterMovementScript : MonoBehaviour
         mosue = GameObject.FindGameObjectWithTag("m");
     }
 
-    void Update()
+
+    public void StopPlayer()
     {
-        // liczenie ataku
-        Calc_AtkStr();
-       // transform.LookAt(mosue.transform);
+        agent.Stop();
+        agent.ResetPath();
+        agent.Resume();
+    }
+    public void BlockPlayer()
+    {
+        blockInput = true;
+    }
+
+    void HandleInput()
+    {
+        if (blockInput)
+        {
+            return;
+        }
         // ruch
         if (Input.GetMouseButtonDown(0))
         {
@@ -46,41 +61,36 @@ public class CharacterMovementScript : MonoBehaviour
                 endPoint.y = yAxis;
                 GameObject h = GameObject.FindGameObjectWithTag("Player");
                 agent.SetDestination(endPoint);
-                
+
+            }
+            else if (flag && Mathf.Approximately(gameObject.transform.position.magnitude, endPoint.magnitude))
+            {
+                flag = false;
+                Debug.Log("i am here");
             }
         }
-        //if (flag && !Mathf.Approximately(gameObject.transform.position.magnitude, endPoint.magnitude))
-        //{
-        //    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, endPoint, 1 / (duration * (Vector3.Distance(gameObject.transform.position, endPoint))));
-        //}
-        else if (flag && Mathf.Approximately(gameObject.transform.position.magnitude, endPoint.magnitude))
-        {
-            flag = false;
-            Debug.Log("i am here");
-        }
-
-
         // atak/interakcja
         if (Input.GetMouseButtonDown(1))
         {
-                RaycastHit RightClickRay;
-                Ray rayAttack;
-                rayAttack = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit RightClickRay;
+            Ray rayAttack;
+            rayAttack = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                if (Physics.Raycast(rayAttack, out RightClickRay))
+            if (Physics.Raycast(rayAttack, out RightClickRay))
+            {
+                Debug.Log(RightClickRay.collider.gameObject.name);
+                if (RightClickRay.collider.tag == "Enemy")
                 {
-                    if (RightClickRay.collider.tag == "Enemy")
-                    {
-                        Debug.Log("HADZIA!");
-//                        GameObject.Find(RightClickRay.collider.gameObject.name).SendMessage("CalculateDamage", AtkStr);
-                        GameObject Target = RightClickRay.collider.transform.gameObject;
-                        Target.SendMessage("CalculateDamage", AtkStr);
+                    Debug.Log("HADZIA!");
+                    //                        GameObject.Find(RightClickRay.collider.gameObject.name).SendMessage("CalculateDamage", AtkStr);
+                    GameObject Target = RightClickRay.collider.transform.gameObject;
+                    Target.SendMessage("CalculateDamage", AtkStr);
 
-//                        GameObject.Find("room").SendMessage("Add100Pup");
-//                        hitEnemy.collider.gameObject.SetActive(false);
+                    //                        GameObject.Find("room").SendMessage("Add100Pup");
+                    //                        hitEnemy.collider.gameObject.SetActive(false);
                 }
-                }
-       if (RightClickRay.collider.tag == "Exit")
+            }
+            if (RightClickRay.collider.tag == "Exit")
             {
                 GameObject.FindGameObjectWithTag("Exit").SendMessage("TryDoor");
             }
@@ -88,7 +98,7 @@ public class CharacterMovementScript : MonoBehaviour
             if (RightClickRay.collider.tag == "Player")
             {
                 Debug.Log("CZEGO?!");
-//                GameObject.Find("odbiorca").SendMessage("nazwa voida");
+                //                GameObject.Find("odbiorca").SendMessage("nazwa voida");
             }
 
             if (RightClickRay.collider.tag == "CHEST")
@@ -98,6 +108,23 @@ public class CharacterMovementScript : MonoBehaviour
                 skrzynia.SendMessage("Otwieraj");
             }
         }
+    }
+
+    void Update()
+    {
+        // liczenie ataku
+        Calc_AtkStr();
+        HandleInput();
+       // transform.LookAt(mosue.transform);
+       
+        //if (flag && !Mathf.Approximately(gameObject.transform.position.magnitude, endPoint.magnitude))
+        //{
+        //    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, endPoint, 1 / (duration * (Vector3.Distance(gameObject.transform.position, endPoint))));
+        //}
+
+
+
+
 
     }
 

@@ -11,7 +11,7 @@ public class Board : MonoBehaviour {
         rooms = transform.GetComponentsInChildren<Room>();
         for (int i = 0; i < rooms.Length; i++)
         {
-            rooms[i].roomId = i;
+           // rooms[i].roomId = i;
         }
 	}
 	
