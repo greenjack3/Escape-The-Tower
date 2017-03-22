@@ -101,6 +101,7 @@ public class TurnBasedCombatStateMenager : MonoBehaviour {
             
             if (playerTurn)
             {
+                playerCharacter.UnBlock();
                 playerCharacter.PlayerAction();
             }
             if (!playerTurn)

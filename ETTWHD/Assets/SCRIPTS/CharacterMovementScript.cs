@@ -41,6 +41,11 @@ public class CharacterMovementScript : MonoBehaviour
         blockInput = true;
     }
 
+    public void StopBlockPlayer()
+    {
+        blockInput = false;
+    }
+
     void HandleInput()
     {
         if (blockInput)
