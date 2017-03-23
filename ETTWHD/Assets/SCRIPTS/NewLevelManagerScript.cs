@@ -9273,6 +9273,9 @@ public class NewLevelManagerScript : MonoBehaviour {
 
             GameObject.FindGameObjectWithTag("pointer").SetActive(false);
             PlayerSpawner = GameObject.FindGameObjectWithTag("PlayerSpawner");
+        if (Level == 1)
+        {
+
             GameObject hiro = Instantiate(Hero, PlayerSpawner.transform.position, PlayerSpawner.transform.rotation);
             GameObject body = Body[Random.Range(0, Body.Length)];
             GameObject b = Instantiate(body, hiro.transform.position, hiro.transform.rotation);
@@ -9282,8 +9285,9 @@ public class NewLevelManagerScript : MonoBehaviour {
             GameObject head = Head[Random.Range(0, Head.Length)];
             GameObject h = Instantiate(head, HeadSpawner.transform.position, HeadSpawner.transform.rotation);
             h.transform.parent = HeadSpawner.transform;
-        
-       
+        }
+        GameObject hir = GameObject.FindGameObjectWithTag("Player");
+        hir.transform.position = PlayerSpawner.transform.position;
     }
 
     //public void zwiekszlevel()
