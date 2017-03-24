@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterStatGenerator : MonoBehaviour {
+public class CharacterStatGenerator : MonoBehaviour
+{
+    public static CharacterStatGenerator instance = null;
 
     public int STR;
     public int AGI;
@@ -13,6 +15,8 @@ public class CharacterStatGenerator : MonoBehaviour {
     public int MainStat;
     public int SecStat;
 
+    public int Level;
+    public LevelControler L;
     void StatGenerator()
     {
         STR = Random.Range(1, 6);
@@ -174,6 +178,23 @@ public class CharacterStatGenerator : MonoBehaviour {
 
     private void Awake()
     {
-        StatGenerator();
+        if (instance == null)
+
+            instance = this;
+
+        else if (instance != this)
+
+
+            Destroy(gameObject);
+
+        DontDestroyOnLoad(gameObject);
+        L = GameObject.FindGameObjectWithTag("DM").GetComponent<LevelControler>();
+        Level = L.Level;
+
+        if (Level == 1)
+        {
+            StatGenerator();
+        }
     }
+
 }

@@ -21,6 +21,14 @@ public class CharacterAI : MonoBehaviour {
         }
     }
 
+    public void UnBlock()
+    {
+        if (playerScript != null)
+        {
+            playerScript.StopBlockPlayer();
+        }
+    }
+
     // Use this for initialization
     void Start () {
         if (gameObject.CompareTag("Player"))
