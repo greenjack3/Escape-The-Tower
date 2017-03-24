@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: 600a0e59aee31fc4da50fc5aeb3c2b33
+timeCreated: 1490381577
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Floor
+    100002: OutDoor_000
+    100004: OutDoor_001
+    100006: OutDoor_002
+    100008: OutDoor_003
+    100010: Outer
+    100012: OuterWall_000
+    100014: OuterWall_001
+    100016: OuterWall_002
+    100018: OuterWall_003
+    100020: OuterWall_004
+    100022: OuterWall_005
+    100024: OuterWall_006
+    100026: OuterWall_007
+    100028: //RootNode
+    400000: Floor
+    400002: OutDoor_000
+    400004: OutDoor_001
+    400006: OutDoor_002
+    400008: OutDoor_003
+    400010: Outer
+    400012: OuterWall_000
+    400014: OuterWall_001
+    400016: OuterWall_002
+    400018: OuterWall_003
+    400020: OuterWall_004
+    400022: OuterWall_005
+    400024: OuterWall_006
+    400026: OuterWall_007
+    400028: //RootNode
+    2300000: Floor
+    2300002: OutDoor_000
+    2300004: OutDoor_001
+    2300006: OutDoor_002
+    2300008: OutDoor_003
+    2300010: OuterWall_000
+    2300012: OuterWall_001
+    2300014: OuterWall_002
+    2300016: OuterWall_003
+    2300018: OuterWall_004
+    2300020: OuterWall_005
+    2300022: OuterWall_006
+    2300024: OuterWall_007
+    3300000: Floor
+    3300002: OutDoor_000
+    3300004: OutDoor_001
+    3300006: OutDoor_002
+    3300008: OutDoor_003
+    3300010: OuterWall_000
+    3300012: OuterWall_001
+    3300014: OuterWall_002
+    3300016: OuterWall_003
+    3300018: OuterWall_004
+    3300020: OuterWall_005
+    3300022: OuterWall_006
+    3300024: OuterWall_007
+    4300000: Floor
+    4300002: OutDoor_002
+    4300004: OutDoor_001
+    4300006: OutDoor_000
+    4300008: OutDoor_003
+    4300010: OuterWall_007
+    4300012: OuterWall_006
+    4300014: OuterWall_005
+    4300016: OuterWall_004
+    4300018: OuterWall_003
+    4300020: OuterWall_002
+    4300022: OuterWall_001
+    4300024: OuterWall_000
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
