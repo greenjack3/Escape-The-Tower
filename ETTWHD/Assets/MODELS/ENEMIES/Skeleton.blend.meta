@@ -1,0 +1,803 @@
+fileFormatVersion: 2
+guid: 10fd9eefee5241f4a89e2b1349eae5f2
+timeCreated: 1490478030
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ArmLower_L
+    100002: ArmLower_R
+    100004: ArmUpper_L
+    100006: ArmUpper_R
+    100008: Chest
+    100010: Colar_L
+    100012: Colar_R
+    100014: FingersLower_L
+    100016: FingersLower_R
+    100018: FingerUpper_L
+    100020: FingerUpper_R
+    100022: Hand_L
+    100024: Hand_R
+    100026: Head
+    100028: Hoof_L
+    100030: Hoof_R
+    100032: IndexLower_L
+    100034: IndexLower_R
+    100036: IndexUpper_L
+    100038: IndexUpper_R
+    100040: Jaw
+    100042: LegLower_L
+    100044: LegLower_R
+    100046: LegMid_L
+    100048: LegMid_R
+    100050: LegUpper_L
+    100052: LegUpper_R
+    100054: Main
+    100056: Neck
+    100058: Pelvis
+    100060: Plane
+    100062: SkelefaunRig
+    100064: //RootNode
+    100066: Skeleton01
+    100068: Tail
+    100070: ThumbLower_L
+    100072: ThumbLower_R
+    100074: ThumbUpper_L
+    100076: ThumbUpper_R
+    100078: Torso
+    400000: ArmLower_L
+    400002: ArmLower_R
+    400004: ArmUpper_L
+    400006: ArmUpper_R
+    400008: Chest
+    400010: Colar_L
+    400012: Colar_R
+    400014: FingersLower_L
+    400016: FingersLower_R
+    400018: FingerUpper_L
+    400020: FingerUpper_R
+    400022: Hand_L
+    400024: Hand_R
+    400026: Head
+    400028: Hoof_L
+    400030: Hoof_R
+    400032: IndexLower_L
+    400034: IndexLower_R
+    400036: IndexUpper_L
+    400038: IndexUpper_R
+    400040: Jaw
+    400042: LegLower_L
+    400044: LegLower_R
+    400046: LegMid_L
+    400048: LegMid_R
+    400050: LegUpper_L
+    400052: LegUpper_R
+    400054: Main
+    400056: Neck
+    400058: Pelvis
+    400060: Plane
+    400062: SkelefaunRig
+    400064: //RootNode
+    400066: Skeleton01
+    400068: Tail
+    400070: ThumbLower_L
+    400072: ThumbLower_R
+    400074: ThumbUpper_L
+    400076: ThumbUpper_R
+    400078: Torso
+    2300000: Plane
+    3300000: Plane
+    4300000: Plane
+    4300002: Skeleton01
+    7400000: Default Take
+    7400002: SkelefaunAttack01
+    7400004: SkelefaunRigDamage01
+    7400006: SkelefaunRigDeath01
+    7400008: SkelefaunRigIdle01
+    7400010: SkelefaunRigRun
+    9500000: //RootNode
+    13700000: Skeleton01
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SkelefaunRig
+        weight: 1
+      - path: SkelefaunRig/Main
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L/LegLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L/LegLower_L/Hoof_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R/LegLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R/LegLower_R/Hoof_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/Tail
+        weight: 1
+      - path: SkelefaunRig/Main/Torso
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/FingerUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/FingerUpper_L/FingersLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/IndexUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/IndexUpper_L/IndexLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/ThumbUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/ThumbUpper_L/ThumbLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/FingerUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/FingerUpper_R/FingersLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/IndexUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/IndexUpper_R/IndexLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/ThumbUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/ThumbUpper_R/ThumbLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck/Head
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck/Head/Jaw
+        weight: 1
+      - path: Skeleton01
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SkelefaunAttack01
+      takeName: SkelefaunAttack01
+      firstFrame: 0
+      lastFrame: 54
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SkelefaunRig
+        weight: 1
+      - path: SkelefaunRig/Main
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L/LegLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L/LegLower_L/Hoof_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R/LegLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R/LegLower_R/Hoof_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/Tail
+        weight: 1
+      - path: SkelefaunRig/Main/Torso
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/FingerUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/FingerUpper_L/FingersLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/IndexUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/IndexUpper_L/IndexLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/ThumbUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/ThumbUpper_L/ThumbLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/FingerUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/FingerUpper_R/FingersLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/IndexUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/IndexUpper_R/IndexLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/ThumbUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/ThumbUpper_R/ThumbLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck/Head
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck/Head/Jaw
+        weight: 1
+      - path: Skeleton01
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SkelefaunRigDamage01
+      takeName: SkelefaunRigDamage01
+      firstFrame: 0
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SkelefaunRig
+        weight: 1
+      - path: SkelefaunRig/Main
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L/LegLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L/LegLower_L/Hoof_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R/LegLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R/LegLower_R/Hoof_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/Tail
+        weight: 1
+      - path: SkelefaunRig/Main/Torso
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/FingerUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/FingerUpper_L/FingersLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/IndexUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/IndexUpper_L/IndexLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/ThumbUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/ThumbUpper_L/ThumbLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/FingerUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/FingerUpper_R/FingersLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/IndexUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/IndexUpper_R/IndexLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/ThumbUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/ThumbUpper_R/ThumbLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck/Head
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck/Head/Jaw
+        weight: 1
+      - path: Skeleton01
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SkelefaunRigDeath01
+      takeName: SkelefaunRigDeath01
+      firstFrame: 0
+      lastFrame: 16
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SkelefaunRig
+        weight: 1
+      - path: SkelefaunRig/Main
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L/LegLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L/LegLower_L/Hoof_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R/LegLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R/LegLower_R/Hoof_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/Tail
+        weight: 1
+      - path: SkelefaunRig/Main/Torso
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/FingerUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/FingerUpper_L/FingersLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/IndexUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/IndexUpper_L/IndexLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/ThumbUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/ThumbUpper_L/ThumbLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/FingerUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/FingerUpper_R/FingersLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/IndexUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/IndexUpper_R/IndexLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/ThumbUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/ThumbUpper_R/ThumbLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck/Head
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck/Head/Jaw
+        weight: 1
+      - path: Skeleton01
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SkelefaunRigIdle01
+      takeName: SkelefaunRigIdle01
+      firstFrame: 0
+      lastFrame: 124
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SkelefaunRig
+        weight: 1
+      - path: SkelefaunRig/Main
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L/LegLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L/LegLower_L/Hoof_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R/LegLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R/LegLower_R/Hoof_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/Tail
+        weight: 1
+      - path: SkelefaunRig/Main/Torso
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/FingerUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/FingerUpper_L/FingersLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/IndexUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/IndexUpper_L/IndexLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/ThumbUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/ThumbUpper_L/ThumbLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/FingerUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/FingerUpper_R/FingersLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/IndexUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/IndexUpper_R/IndexLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/ThumbUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/ThumbUpper_R/ThumbLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck/Head
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck/Head/Jaw
+        weight: 1
+      - path: Skeleton01
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: SkelefaunRigRun
+      takeName: SkelefaunRigRun
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: SkelefaunRig
+        weight: 1
+      - path: SkelefaunRig/Main
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L/LegLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_L/LegMid_L/LegLower_L/Hoof_L
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R/LegLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/LegUpper_R/LegMid_R/LegLower_R/Hoof_R
+        weight: 1
+      - path: SkelefaunRig/Main/Pelvis/Tail
+        weight: 1
+      - path: SkelefaunRig/Main/Torso
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/FingerUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/FingerUpper_L/FingersLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/IndexUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/IndexUpper_L/IndexLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/ThumbUpper_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_L/ArmUpper_L/ArmLower_L/Hand_L/ThumbUpper_L/ThumbLower_L
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/FingerUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/FingerUpper_R/FingersLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/IndexUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/IndexUpper_R/IndexLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/ThumbUpper_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Colar_R/ArmUpper_R/ArmLower_R/Hand_R/ThumbUpper_R/ThumbLower_R
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck/Head
+        weight: 1
+      - path: SkelefaunRig/Main/Torso/Chest/Neck/Head/Jaw
+        weight: 1
+      - path: Skeleton01
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

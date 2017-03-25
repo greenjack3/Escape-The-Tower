@@ -1,0 +1,940 @@
+fileFormatVersion: 2
+guid: 98c0e301f6cfbe74a8913a94e3bdda1e
+timeCreated: 1490479173
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: ArmLow_L
+    100002: ArmLow_R
+    100004: ArmUpp_L
+    100006: ArmUpp_R
+    100008: Chest
+    100010: Collar_L
+    100012: Collar_R
+    100014: DusterFluff
+    100016: DusterHand
+    100018: EarLow_L
+    100020: EarLow_R
+    100022: EarUp_L
+    100024: EarUp_R
+    100026: Eye_L
+    100028: Eye_R
+    100030: FingerLow_L
+    100032: FingerLow_R
+    100034: FingerUp_L
+    100036: FingerUp_R
+    100038: Foot_L
+    100040: Foot_R
+    100042: //RootNode
+    100044: GoblinMaidDuster
+    100046: GoblinMaidMesh
+    100048: GoblinMaidRig
+    100050: Hand_L
+    100052: Hand_R
+    100054: Head
+    100056: IndexLow_L
+    100058: IndexLow_R
+    100060: IndexUp_L
+    100062: IndexUp_R
+    100064: Jaw
+    100066: JawUp
+    100068: LegControl_L
+    100070: LegControl_R
+    100072: LegLow_L
+    100074: LegLow_R
+    100076: LegUp_L
+    100078: LegUp_R
+    100080: Main
+    100082: Neck
+    100084: ThumbLow_L
+    100086: ThumbLow_R
+    100088: ThumbUp_L
+    100090: ThumbUp_R
+    100092: Toes_L
+    100094: Toes_R
+    100096: Torso
+    400000: ArmLow_L
+    400002: ArmLow_R
+    400004: ArmUpp_L
+    400006: ArmUpp_R
+    400008: Chest
+    400010: Collar_L
+    400012: Collar_R
+    400014: DusterFluff
+    400016: DusterHand
+    400018: EarLow_L
+    400020: EarLow_R
+    400022: EarUp_L
+    400024: EarUp_R
+    400026: Eye_L
+    400028: Eye_R
+    400030: FingerLow_L
+    400032: FingerLow_R
+    400034: FingerUp_L
+    400036: FingerUp_R
+    400038: Foot_L
+    400040: Foot_R
+    400042: //RootNode
+    400044: GoblinMaidDuster
+    400046: GoblinMaidMesh
+    400048: GoblinMaidRig
+    400050: Hand_L
+    400052: Hand_R
+    400054: Head
+    400056: IndexLow_L
+    400058: IndexLow_R
+    400060: IndexUp_L
+    400062: IndexUp_R
+    400064: Jaw
+    400066: JawUp
+    400068: LegControl_L
+    400070: LegControl_R
+    400072: LegLow_L
+    400074: LegLow_R
+    400076: LegUp_L
+    400078: LegUp_R
+    400080: Main
+    400082: Neck
+    400084: ThumbLow_L
+    400086: ThumbLow_R
+    400088: ThumbUp_L
+    400090: ThumbUp_R
+    400092: Toes_L
+    400094: Toes_R
+    400096: Torso
+    4300000: GoblinMaidDuster
+    4300002: GoblinMaidMesh
+    7400000: Default Take
+    7400002: GoblinMaidRigDamage01
+    7400004: GoblinMaidRigDeath
+    7400006: GoblinMaidRigIdle01
+    7400008: GoblinMaidRigSkill01
+    7400010: GoblinMaidRigWalk
+    9500000: //RootNode
+    13700000: GoblinMaidDuster
+    13700002: GoblinMaidMesh
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 154
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoblinMaidDuster
+        weight: 1
+      - path: GoblinMaidMesh
+        weight: 1
+      - path: GoblinMaidRig
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L/Foot_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L/Foot_L/Toes_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R/Foot_R
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R/Foot_R/Toes_R
+        weight: 1
+      - path: GoblinMaidRig/Main
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_L/LegLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_R/LegLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/FingerUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/FingerUp_L/FingerLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/IndexUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/IndexUp_L/IndexLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/ThumbUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/ThumbUp_L/ThumbLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/DusterHand
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/DusterHand/DusterFluff
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/FingerUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/FingerUp_R/FingerLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/IndexUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/IndexUp_R/IndexLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/ThumbUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/ThumbUp_R/ThumbLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_L/EarLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_R/EarLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/Eye_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/Eye_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/JawUp
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/JawUp/Jaw
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GoblinMaidRigDamage01
+      takeName: GoblinMaidRigDamage01
+      firstFrame: 0
+      lastFrame: 79
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoblinMaidDuster
+        weight: 1
+      - path: GoblinMaidMesh
+        weight: 1
+      - path: GoblinMaidRig
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L/Foot_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L/Foot_L/Toes_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R/Foot_R
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R/Foot_R/Toes_R
+        weight: 1
+      - path: GoblinMaidRig/Main
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_L/LegLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_R/LegLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/FingerUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/FingerUp_L/FingerLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/IndexUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/IndexUp_L/IndexLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/ThumbUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/ThumbUp_L/ThumbLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/DusterHand
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/DusterHand/DusterFluff
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/FingerUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/FingerUp_R/FingerLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/IndexUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/IndexUp_R/IndexLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/ThumbUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/ThumbUp_R/ThumbLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_L/EarLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_R/EarLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/Eye_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/Eye_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/JawUp
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/JawUp/Jaw
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GoblinMaidRigDeath
+      takeName: GoblinMaidRigDeath
+      firstFrame: 0
+      lastFrame: 73
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoblinMaidDuster
+        weight: 1
+      - path: GoblinMaidMesh
+        weight: 1
+      - path: GoblinMaidRig
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L/Foot_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L/Foot_L/Toes_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R/Foot_R
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R/Foot_R/Toes_R
+        weight: 1
+      - path: GoblinMaidRig/Main
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_L/LegLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_R/LegLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/FingerUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/FingerUp_L/FingerLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/IndexUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/IndexUp_L/IndexLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/ThumbUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/ThumbUp_L/ThumbLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/DusterHand
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/DusterHand/DusterFluff
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/FingerUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/FingerUp_R/FingerLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/IndexUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/IndexUp_R/IndexLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/ThumbUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/ThumbUp_R/ThumbLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_L/EarLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_R/EarLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/Eye_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/Eye_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/JawUp
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/JawUp/Jaw
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GoblinMaidRigIdle01
+      takeName: GoblinMaidRigIdle01
+      firstFrame: 0
+      lastFrame: 154
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoblinMaidDuster
+        weight: 1
+      - path: GoblinMaidMesh
+        weight: 1
+      - path: GoblinMaidRig
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L/Foot_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L/Foot_L/Toes_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R/Foot_R
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R/Foot_R/Toes_R
+        weight: 1
+      - path: GoblinMaidRig/Main
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_L/LegLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_R/LegLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/FingerUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/FingerUp_L/FingerLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/IndexUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/IndexUp_L/IndexLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/ThumbUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/ThumbUp_L/ThumbLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/DusterHand
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/DusterHand/DusterFluff
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/FingerUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/FingerUp_R/FingerLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/IndexUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/IndexUp_R/IndexLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/ThumbUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/ThumbUp_R/ThumbLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_L/EarLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_R/EarLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/Eye_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/Eye_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/JawUp
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/JawUp/Jaw
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GoblinMaidRigSkill01
+      takeName: GoblinMaidRigSkill01
+      firstFrame: 0
+      lastFrame: 44
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoblinMaidDuster
+        weight: 1
+      - path: GoblinMaidMesh
+        weight: 1
+      - path: GoblinMaidRig
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L/Foot_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L/Foot_L/Toes_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R/Foot_R
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R/Foot_R/Toes_R
+        weight: 1
+      - path: GoblinMaidRig/Main
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_L/LegLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_R/LegLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/FingerUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/FingerUp_L/FingerLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/IndexUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/IndexUp_L/IndexLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/ThumbUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/ThumbUp_L/ThumbLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/DusterHand
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/DusterHand/DusterFluff
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/FingerUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/FingerUp_R/FingerLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/IndexUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/IndexUp_R/IndexLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/ThumbUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/ThumbUp_R/ThumbLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_L/EarLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_R/EarLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/Eye_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/Eye_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/JawUp
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/JawUp/Jaw
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: GoblinMaidRigWalk
+      takeName: GoblinMaidRigWalk
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: GoblinMaidDuster
+        weight: 1
+      - path: GoblinMaidMesh
+        weight: 1
+      - path: GoblinMaidRig
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L/Foot_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_L/Foot_L/Toes_L
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R/Foot_R
+        weight: 1
+      - path: GoblinMaidRig/LegControl_R/Foot_R/Toes_R
+        weight: 1
+      - path: GoblinMaidRig/Main
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_L/LegLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/LegUp_R/LegLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/FingerUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/FingerUp_L/FingerLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/IndexUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/IndexUp_L/IndexLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/ThumbUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_L/ArmUpp_L/ArmLow_L/Hand_L/ThumbUp_L/ThumbLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/DusterHand
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/DusterHand/DusterFluff
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/FingerUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/FingerUp_R/FingerLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/IndexUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/IndexUp_R/IndexLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/ThumbUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Collar_R/ArmUpp_R/ArmLow_R/Hand_R/ThumbUp_R/ThumbLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_L/EarLow_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/EarUp_R/EarLow_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/Eye_L
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/Eye_R
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/JawUp
+        weight: 1
+      - path: GoblinMaidRig/Main/Torso/Chest/Neck/Head/JawUp/Jaw
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
