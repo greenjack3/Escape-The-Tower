@@ -1,0 +1,162 @@
+fileFormatVersion: 2
+guid: fba068ae568505443aec17592703973d
+timeCreated: 1490476808
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: ArmLow_L
+    100004: ArmLow_R
+    100006: ArmUp_L
+    100008: ArmUp_R
+    100010: Chest
+    100012: Collar_L
+    100014: Collar_R
+    100016: Cube
+    100018: FingersLow_L
+    100020: FingersLow_R
+    100022: FingersUp_L
+    100024: FingersUp_R
+    100026: Foot_L
+    100028: Foot_R
+    100030: Hand_L
+    100032: Hand_R
+    100034: HandSocket_L
+    100036: HeadSocket
+    100038: IndexLow_L
+    100040: IndexLow_R
+    100042: IndexUp_L
+    100044: IndexUp_R
+    100046: LegControl_L
+    100048: LegControl_R
+    100050: LegLow_L
+    100052: LegLow_R
+    100054: LegUp_L
+    100056: LegUp_R
+    100058: Main
+    100060: ShieldSocket
+    100062: ThumbLow_L
+    100064: ThumbLow_R
+    100066: ThumbUp_L
+    100068: ThumbUp_R
+    100070: Toes_L
+    100072: Toes_R
+    100074: Torso
+    100076: //RootNode
+    400000: Armature
+    400002: ArmLow_L
+    400004: ArmLow_R
+    400006: ArmUp_L
+    400008: ArmUp_R
+    400010: Chest
+    400012: Collar_L
+    400014: Collar_R
+    400016: Cube
+    400018: FingersLow_L
+    400020: FingersLow_R
+    400022: FingersUp_L
+    400024: FingersUp_R
+    400026: Foot_L
+    400028: Foot_R
+    400030: Hand_L
+    400032: Hand_R
+    400034: HandSocket_L
+    400036: HeadSocket
+    400038: IndexLow_L
+    400040: IndexLow_R
+    400042: IndexUp_L
+    400044: IndexUp_R
+    400046: LegControl_L
+    400048: LegControl_R
+    400050: LegLow_L
+    400052: LegLow_R
+    400054: LegUp_L
+    400056: LegUp_R
+    400058: Main
+    400060: ShieldSocket
+    400062: ThumbLow_L
+    400064: ThumbLow_R
+    400066: ThumbUp_L
+    400068: ThumbUp_R
+    400070: Toes_L
+    400072: Toes_R
+    400074: Torso
+    400076: //RootNode
+    4300000: Cube
+    7400000: Default Take
+    7400002: DwarfType01_1hBattleDamage00
+    7400004: DwarfType01_1hBattleDeath00
+    7400006: DwarfType01_1hBattleIdle00
+    7400008: DwarfType01_1hBattleWalk00
+    7400010: DwarfType01_1hMediumAttack00
+    9500000: //RootNode
+    13700000: Cube
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
