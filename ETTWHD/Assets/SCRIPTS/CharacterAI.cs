@@ -53,7 +53,7 @@ public class CharacterAI : MonoBehaviour {
    public void PlayerAction()
     {
         Debug.Log("tura krasnala");
-        TurnBasedCombatStateMenager.Instance.EndPlayerTurn();
+       // TurnBasedCombatStateMenager.Instance.EndPlayerTurn();
     }
     // Update is called once per frame
     void Update () {
