@@ -22,6 +22,7 @@ ModelImporter:
     100028: OuterWall_007
     100030: OutWalls
     100032: //RootNode
+    100034: Outer
     400000: Floor
     400002: Int_000
     400004: Interior
@@ -39,6 +40,7 @@ ModelImporter:
     400028: OuterWall_007
     400030: OutWalls
     400032: //RootNode
+    400034: Outer
     2300000: Floor
     2300002: Int_000
     2300004: OutDoor_000
