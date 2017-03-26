@@ -5,10 +5,10 @@ using UnityEngine;
 public class EnemyStateMachine : MonoBehaviour {
 
     public EnemyBase enemy;
-    private BattleStateMachine BSM;
-
+   public BattleStateMachine BSM;
+    
     float timeLeft = 5.0f;
-
+    
 
 
     public enum TurnState

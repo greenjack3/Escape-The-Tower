@@ -111,6 +111,7 @@
     <Compile Include="Assets\SCRIPTS\TutorialScripts\PlayerBase.cs" />
     <Compile Include="Assets\SCRIPTS\TutorialScripts\PlayerStateMachine.cs" />
     <Compile Include="Assets\SCRIPTS\virtualcursortest.cs" />
+    <Compile Include="Assets\nam.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
