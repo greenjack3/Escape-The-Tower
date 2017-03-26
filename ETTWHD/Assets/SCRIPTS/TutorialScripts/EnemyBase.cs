@@ -9,8 +9,8 @@ public class EnemyBase
 
 {
 
+
     public string enemyName;
-    
     public enum EnemyType
     {
         MELEE,

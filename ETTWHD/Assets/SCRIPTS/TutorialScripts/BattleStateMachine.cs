@@ -18,6 +18,8 @@ public class BattleStateMachine : MonoBehaviour {
     public List<HandleTurns> PerformList = new List <HandleTurns> ();
     public List<GameObject> HerosInBattle = new List<GameObject>();
     public List<GameObject> EnemiesInBattle = new List<GameObject>();
+    public GameObject performer;
+
 
 
 
@@ -53,10 +55,13 @@ public class BattleStateMachine : MonoBehaviour {
                 break;
 
             case (PerformAction.TAKEACTION):
-                GameObject perfomer = GameObject.Find(PerformList[0].Attacker);
-                if(PerformList[0].Type == "Enemy")
-                {
+               // GameObject perfomer = GameObject.Find(PerformList[0].Attacker);
 
+                GameObject perfomer = GameObject.FindGameObjectWithTag("Enemy");
+                if (PerformList[0].Type == "Enemy")
+                {
+                    
+                   Debug.Log(perfomer);
                     EnemyStateMachine ESM = perfomer.GetComponent<EnemyStateMachine>();
                     ESM.playerToAttack = PerformList[0].AttackersTarget;
                     ESM.currentState = EnemyStateMachine.TurnState.ACTION;    
