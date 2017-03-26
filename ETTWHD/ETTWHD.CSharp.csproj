@@ -104,6 +104,12 @@
     <Compile Include="Assets\SCRIPTS\SettingsButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\SkrzynkoOtwieracz.cs" />
     <Compile Include="Assets\SCRIPTS\TurnBasedCombatStateMenager.cs" />
+    <Compile Include="Assets\SCRIPTS\TutorialScripts\BattleStateMachine.cs" />
+    <Compile Include="Assets\SCRIPTS\TutorialScripts\EnemyBase.cs" />
+    <Compile Include="Assets\SCRIPTS\TutorialScripts\EnemyStateMachine.cs" />
+    <Compile Include="Assets\SCRIPTS\TutorialScripts\HandleTurns.cs" />
+    <Compile Include="Assets\SCRIPTS\TutorialScripts\PlayerBase.cs" />
+    <Compile Include="Assets\SCRIPTS\TutorialScripts\PlayerStateMachine.cs" />
     <Compile Include="Assets\SCRIPTS\virtualcursortest.cs" />
   </ItemGroup>
   <ItemGroup>
