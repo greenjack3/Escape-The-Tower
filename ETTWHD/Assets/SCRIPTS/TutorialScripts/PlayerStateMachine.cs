@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerStateMachine : MonoBehaviour {
 
     public PlayerBase player;
+    float timeLeft = 5.0f;
+   
 
     public enum TurnState
     {
@@ -36,29 +38,41 @@ public class PlayerStateMachine : MonoBehaviour {
         {
 
             case (TurnState.PROCESSING):
-                Debug.Log("Napisz PROCESSING");
+             //   Debug.Log("Napisz PROCESSING");
                 break;
 
             case (TurnState.ADDTOLIST):
-                Debug.Log("Napisz ADDTOLIST");
+             //   Debug.Log("Napisz ADDTOLIST");
                 break;
 
             case (TurnState.WAITING):
-                Debug.Log("Napisz WAITING");
+                //    Debug.Log("Napisz WAITING");
+                Debug.Log("czekam na twoje rozkazy");
+                timeLeft -= Time.deltaTime;
+                if (timeLeft < 0)
+                {
+                    if (TurnBasedCombatStateMenager.Instance != null)
+                    {
+                        Debug.Log("koniec tury gracza");
+                        TurnBasedCombatStateMenager.Instance.ContinueCombat();
+                    }
+                }
+
+
                 break;
 
             case (TurnState.SELECTING):
-                Debug.Log("Napisz SELECTING");
+            //    Debug.Log("Napisz SELECTING");
 
                 break;
 
             case (TurnState.ACTION):
-                Debug.Log("Napisz ACTION");
+              //  Debug.Log("Napisz ACTION");
 
                 break;
 
             case (TurnState.DEAD):
-                Debug.Log("Napisz DEAD");
+              //  Debug.Log("Napisz DEAD");
 
                 break;
 

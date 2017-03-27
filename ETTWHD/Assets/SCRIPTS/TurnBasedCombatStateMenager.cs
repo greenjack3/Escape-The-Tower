@@ -38,6 +38,11 @@ public class TurnBasedCombatStateMenager : MonoBehaviour {
         {
             allCharacters.Remove(character);
         }
+        if (charactersInRoom.Contains(character))
+        {
+            charactersInRoom.Remove(character);
+            currentEnemyIndex--;
+        }
     }
 
     private void Awake()
@@ -73,18 +78,27 @@ public class TurnBasedCombatStateMenager : MonoBehaviour {
 
     public void PlayerDetected()
     {
-        if (!playerDetected)
-        {
-            playerDetected = true;
+       // if (!playerDetected)
+       // {
+        //    playerDetected = true;
             EnterCombat();
-        }
+       // }
     }
 
+    int currentEnemyIndex = 0;
+    public bool inCombat = false;
     void EnterCombat()
     {
+        if (inCombat)
+        {
+            return;
+        }
+        inCombat = true;
+        currentEnemyIndex = 0;
         playerCharacter.Stop();
         playerTurn = true;
         Debug.Log("ENTERING COMBAT");
+        charactersInRoom.Clear();
         charactersInRoom.Add(playerCharacter);
         for (int i = 0; i < allCharacters.Count; i++)
         {
@@ -104,12 +118,61 @@ public class TurnBasedCombatStateMenager : MonoBehaviour {
                 playerCharacter.UnBlock();
                 playerCharacter.PlayerAction();
             }
-            if (!playerTurn)
+            //if (!playerTurn)
+            //{
+            //    playerCharacter.Block();
+            //    if(charactersInRoom.Count > 1)
+            //    {
+            //        charactersInRoom[1].EnemyAction();
+            //    }
+               
+            //    Debug.Log("tura przeciwnika");
+               
+            //}
+        }
+    }
+
+   public void ContinueCombat()
+    {
+        if (charactersInRoom.Count < 2)
+        {
+            EndCombat();
+            return;
+        }
+        else
+        {
+            currentEnemyIndex++;
+            if (currentEnemyIndex >= charactersInRoom.Count) //Tura gracza
             {
-                playerCharacter.Block();
-                Debug.Log("tura przeciwnika");
+                currentEnemyIndex = 0;
+                playerCharacter.UnBlock();
+                playerCharacter.PlayerAction();
+            }
+            else //Tura przeciwnika
+            {
+                if (charactersInRoom.Count < 2 || currentEnemyIndex >= charactersInRoom.Count || currentEnemyIndex < 0)
+                {
+                    EndCombat();
+                    return;
+                }
+                else
+                {
+                    playerCharacter.Block();
+                    charactersInRoom[currentEnemyIndex].EnemyAction();
+                }
             }
         }
+    }
+
+    void EndCombat()
+    {
+        if (!inCombat)
+        {
+            return;
+        }
+        inCombat = false;
+        playerCharacter.UnBlock();
+        Debug.Log("END COMBAT");
     }
 
     int GetQueue(CharacterAI character)

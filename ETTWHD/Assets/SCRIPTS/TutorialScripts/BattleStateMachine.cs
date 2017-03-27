@@ -61,10 +61,10 @@ public class BattleStateMachine : MonoBehaviour {
                 if (PerformList[0].Type == "Enemy")
                 {
                     
-                   Debug.Log(perfomer);
-                    EnemyStateMachine ESM = perfomer.GetComponent<EnemyStateMachine>();
-                    ESM.playerToAttack = PerformList[0].AttackersTarget;
-                    ESM.currentState = EnemyStateMachine.TurnState.ACTION;    
+                   //Debug.Log(perfomer);
+                   // EnemyStateMachine ESM = perfomer.GetComponent<EnemyStateMachine>();
+                   // ESM.playerToAttack = PerformList[0].AttackersTarget;
+                   // ESM.currentState = EnemyStateMachine.TurnState.ACTION;    
                     
                 }
 

@@ -6,6 +6,8 @@ public class CharacterAI : MonoBehaviour {
 
     public int roomID;
     CharacterMovementScript playerScript;
+    PlayerStateMachine playerMachine;
+    EnemyStateMachine enemyMachine;
     public void Stop()
     {
         if (playerScript != null)
@@ -34,10 +36,16 @@ public class CharacterAI : MonoBehaviour {
         if (gameObject.CompareTag("Player"))
         {
             playerScript = GetComponent<CharacterMovementScript>();
+            playerMachine = GetComponent<PlayerStateMachine>();
         }
         if (TurnBasedCombatStateMenager.Instance != null)
         {
+            TurnBasedCombatStateMenager.Instance.ContinueCombat();
             TurnBasedCombatStateMenager.Instance.RegisterCharacter(this);
+        }
+        if (gameObject.CompareTag("Enemy"))
+        {
+            enemyMachine = GetComponent<EnemyStateMachine>();
         }
 	}
 
@@ -46,6 +54,7 @@ public class CharacterAI : MonoBehaviour {
     {
         if (TurnBasedCombatStateMenager.Instance != null)
         {
+            Debug.Log("zginąłem" + gameObject.name);
             TurnBasedCombatStateMenager.Instance.RemoveCharacter(this);
         }
     }
@@ -53,10 +62,22 @@ public class CharacterAI : MonoBehaviour {
    public void PlayerAction()
     {
         Debug.Log("tura krasnala");
+        playerMachine.currentState = PlayerStateMachine.TurnState.WAITING;
        // TurnBasedCombatStateMenager.Instance.EndPlayerTurn();
     }
     // Update is called once per frame
-    void Update () {
+
+        public void EnemyAction()
+    {
+        if (enemyMachine != null)
+        {
+            Debug.Log("tura przeciwnika");
+            enemyMachine.currentState = EnemyStateMachine.TurnState.PROCESSING;
+        }
+    }
+
+ //   void Update ()
+ //   {
 		
-	}
+	//}
 }

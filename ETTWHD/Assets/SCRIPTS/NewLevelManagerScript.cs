@@ -9288,6 +9288,8 @@ public class NewLevelManagerScript : MonoBehaviour {
         }
         GameObject hir = GameObject.FindGameObjectWithTag("Player");
         hir.transform.position = PlayerSpawner.transform.position;
+        hir.transform.rotation = PlayerSpawner.transform.rotation;
+
     }
 
     //public void zwiekszlevel()

@@ -118,7 +118,7 @@ public class CharacterMovementScript : MonoBehaviour
     void Update()
     {
         // liczenie ataku
-        Calc_AtkStr();
+       // Calc_AtkStr();
         HandleInput();
        // transform.LookAt(mosue.transform);
        
