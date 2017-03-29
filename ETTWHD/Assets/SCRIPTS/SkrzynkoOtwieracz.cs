@@ -13,7 +13,7 @@ public class SkrzynkoOtwieracz : MonoBehaviour
     {
         
        
-        GetComponentInParent<Animator>().Play("ChestAnim");
+        GetComponent<Animator>().Play("ChestAnim");
         otwarte = true;
       
         

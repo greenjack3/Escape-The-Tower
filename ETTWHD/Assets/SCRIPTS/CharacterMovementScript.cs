@@ -112,6 +112,13 @@ public class CharacterMovementScript : MonoBehaviour
                 GameObject skrzynia = RightClickRay.collider.transform.gameObject;
                 skrzynia.SendMessage("Otwieraj");
             }
+
+            if (RightClickRay.collider.tag == "Item")
+            {
+                GameObject przedmiot = RightClickRay.collider.transform.gameObject;
+                Debug.Log("przedmiot:" + przedmiot.name);
+                przedmiot.gameObject.SetActive(false);
+            }
         }
     }
 
