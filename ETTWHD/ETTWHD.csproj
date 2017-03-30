@@ -82,6 +82,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SCRIPTS\BackToMainMenuButtonScript.cs" />
+    <Compile Include="Assets\SCRIPTS\BaseArmor.cs" />
+    <Compile Include="Assets\SCRIPTS\BaseItem.cs" />
+    <Compile Include="Assets\SCRIPTS\BaseWeapon.cs" />
     <Compile Include="Assets\SCRIPTS\Board.cs" />
     <Compile Include="Assets\SCRIPTS\CameraControlScript.cs" />
     <Compile Include="Assets\SCRIPTS\CameraSpinScript.cs" />
