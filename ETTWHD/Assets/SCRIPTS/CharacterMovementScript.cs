@@ -16,6 +16,7 @@ public class CharacterMovementScript : MonoBehaviour
 
     private GameObject Target;
     public GameObject mosue;
+    Animator anim;
 
     NavMeshAgent agent;
 
@@ -27,6 +28,7 @@ public class CharacterMovementScript : MonoBehaviour
         // nie wiem co to Jacuś :P
         yAxis = gameObject.transform.position.y;
         mosue = GameObject.FindGameObjectWithTag("m");
+        anim = GetComponentInChildren<Animator>();
     }
 
 
@@ -55,6 +57,7 @@ public class CharacterMovementScript : MonoBehaviour
         // ruch
         if (Input.GetMouseButtonDown(0))
         {
+            //anim.SetInteger("AnimDwarfControl", 0);
             RaycastHit hit;
             Ray ray;
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -65,13 +68,18 @@ public class CharacterMovementScript : MonoBehaviour
                 endPoint = hit.point;
                 endPoint.y = yAxis;
                 GameObject h = GameObject.FindGameObjectWithTag("Player");
+               
                 agent.SetDestination(endPoint);
+                // int mov = 1;
+                anim.SetInteger("AnimDwarfControl", 1);
+              //  anim.SetInteger("AnimDwarfControl", 0);
 
             }
             else if (flag && Mathf.Approximately(gameObject.transform.position.magnitude, endPoint.magnitude))
             {
                 flag = false;
                 Debug.Log("i am here");
+                
             }
         }
         // atak/interakcja
@@ -89,6 +97,7 @@ public class CharacterMovementScript : MonoBehaviour
                     Debug.Log("HADZIA!");
                     //                        GameObject.Find(RightClickRay.collider.gameObject.name).SendMessage("CalculateDamage", AtkStr);
                     GameObject Target = RightClickRay.collider.transform.gameObject;
+                    anim.SetInteger("AnimDwarfControl", 2);
                     Target.SendMessage("CalculateDamage", AtkStr);
 
                     //                        GameObject.Find("room").SendMessage("Add100Pup");
