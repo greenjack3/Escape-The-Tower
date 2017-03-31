@@ -10,6 +10,7 @@ public class DetectionLogic : MonoBehaviour
     public Vector3 playerPosition;
     public bool playerDetected;
     public CharacterAI Ai;
+    public EnemyStateMachine act;
     void Start()
     {
         playerDetected = false;
@@ -29,11 +30,13 @@ public class DetectionLogic : MonoBehaviour
             if (Physics.Raycast(transform.position, rayDirection, out hit, visibilityDistance))
             {
 
-                if(hit.collider.tag == "Player" && Ai.roomID ==TurnBasedCombatStateMenager.Instance.playerCharacter.roomID)
+                if(hit.collider.tag == "Player" /*&& Ai.roomID ==TurnBasedCombatStateMenager.Instance.playerCharacter.roomID*/)
                 {
                     Debug.Log("Player Spotted");
                     playerDetected = true;
-                    TurnBasedCombatStateMenager.Instance.PlayerDetected();
+                    // TurnBasedCombatStateMenager.Instance.PlayerDetected();
+                    act = gameObject.GetComponent<EnemyStateMachine>();
+                    act.currentState = EnemyStateMachine.TurnState.PROCESSING;
                 }
 
                 else

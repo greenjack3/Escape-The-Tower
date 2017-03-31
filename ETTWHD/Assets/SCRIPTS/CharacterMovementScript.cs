@@ -5,11 +5,11 @@ using UnityEngine.AI;
 public class CharacterMovementScript : MonoBehaviour
 {
     private bool flag = false;
-
+    public float timer = 0.1f;
     private Vector3 endPoint;
-
+    public bool startTimer = false;
     public float duration = 2.0f;
-
+    float Treshold = 0.25f;
     private float yAxis;
 
     public float AtkStr;
@@ -50,6 +50,19 @@ public class CharacterMovementScript : MonoBehaviour
 
     void HandleInput()
     {
+
+        if (timer < 0)
+        {
+            anim.SetInteger("AnimDwarfControl", 0);
+            startTimer = false;
+            timer = 0.1f;
+        }
+        float distanceToTarget = Vector3.Distance(transform.position, endPoint);
+        if (distanceToTarget < Treshold)
+        {
+            anim.SetInteger("AnimDwarfControl", 0);
+        }
+
         if (blockInput)
         {
             return;
@@ -72,7 +85,9 @@ public class CharacterMovementScript : MonoBehaviour
                 agent.SetDestination(endPoint);
                 // int mov = 1;
                 anim.SetInteger("AnimDwarfControl", 1);
-              //  anim.SetInteger("AnimDwarfControl", 0);
+                
+               
+
 
             }
             else if (flag && Mathf.Approximately(gameObject.transform.position.magnitude, endPoint.magnitude))
@@ -98,10 +113,12 @@ public class CharacterMovementScript : MonoBehaviour
                     //                        GameObject.Find(RightClickRay.collider.gameObject.name).SendMessage("CalculateDamage", AtkStr);
                     GameObject Target = RightClickRay.collider.transform.gameObject;
                     anim.SetInteger("AnimDwarfControl", 2);
+                    startTimer = true;
                     Target.SendMessage("CalculateDamage", AtkStr);
 
                     //                        GameObject.Find("room").SendMessage("Add100Pup");
                     //                        hitEnemy.collider.gameObject.SetActive(false);
+                   
                 }
             }
             if (RightClickRay.collider.tag == "Exit")
@@ -143,7 +160,10 @@ public class CharacterMovementScript : MonoBehaviour
         //    gameObject.transform.position = Vector3.Lerp(gameObject.transform.position, endPoint, 1 / (duration * (Vector3.Distance(gameObject.transform.position, endPoint))));
         //}
 
-
+        if(startTimer == true)
+        {
+            timer -= Time.deltaTime;
+        }
 
 
 

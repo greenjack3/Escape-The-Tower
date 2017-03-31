@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class EnemyStateMachine : MonoBehaviour {
 
     public EnemyBase enemy;
-   public BattleStateMachine BSM;
-    
-    float timeLeft = 5.0f;
-    
+    // public BattleStateMachine BSM;
+    public GameObject player;
+   public float timeLeft = 1.0f;
+    public int AtkStr;
 
 
     public enum TurnState
@@ -21,6 +22,8 @@ public class EnemyStateMachine : MonoBehaviour {
 
     }
 
+
+
     public TurnState currentState;
 
 
@@ -31,7 +34,9 @@ public class EnemyStateMachine : MonoBehaviour {
     //private float animSpeed = 5f;
 
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
 
        // currentState = TurnState.PROCESSING;
         //BSM = GameObject.Find("BattleManager").GetComponent<BattleStateMachine> ();
@@ -51,9 +56,10 @@ public class EnemyStateMachine : MonoBehaviour {
                 timeLeft -= Time.deltaTime;
                 if (timeLeft < 0)
                 {
-                    Debug.Log("następna postać na liście!!!!!!!!!! ");
-                    
-                    gameObject.SetActive(false);
+                    Debug.Log("zayebie tego krasnala " + gameObject.name);
+                    player.SendMessage("CalculateDamage", AtkStr);
+                    timeLeft = 1f;
+                  //  gameObject.SetActive(false);
                 }
                 break;
 
