@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [System.Serializable]
 
@@ -9,23 +10,47 @@ public class PlayerLifeScript : MonoBehaviour {
     public float Max_Health;
     public float Cur_Health;
     public float Def;
-
+    public Animator anim;
     public GameObject HealthBar;
+    public CharacterMovementScript x;
+    public float timer = 0.1f;
+    public bool startTimer = false;
+
 
     void Start()
     {
         Cur_Health = Max_Health;
+        anim = GetComponentInChildren<Animator>();
+        x = GetComponent<CharacterMovementScript>();
     }
 
     public void Update()
     {
         PlayerDeath();
+
+        if (startTimer == true)
+        {
+            timer -= Time.deltaTime;
+        }
+
+        if (timer < 0)
+        {
+            anim.SetInteger("AnimDwarfControl", 0);
+            startTimer = false;
+            timer = 0.1f;
+        }
+
+      
     }
 
     void CalculateDamage(float AtkStr)
     {
         float Damage = AtkStr - Def;
+       // anim.SetInteger("AnimDwarfControl", 3);
+        startTimer = true;
         CalculateHealth(Damage);
+       
+
     }
 
     void CalculateHealth(float Damage)
@@ -34,16 +59,30 @@ public class PlayerLifeScript : MonoBehaviour {
 
         float Calc_Health = Cur_Health / Max_Health;
         SetHealthBar(Calc_Health);
+        if (Cur_Health > 0)
+        {
+            anim.SetInteger("AnimDwarfControl", 3);
+            startTimer = true;
+
+        }
     }
 
     void PlayerDeath()
     {
         if (Cur_Health <= 0)
         {
-            Destroy(gameObject);
-       
-            GameObject.FindGameObjectWithTag("CM").SendMessage("EnemyKilled");
+            x.StopPlayer();
+            x.BlockPlayer();
+            anim.SetInteger("AnimDwarfControl", 4);
+           GameObject.FindGameObjectWithTag("DM").SendMessage("resetLevel");
+
+            Destroy(gameObject, 4f);
+         
         }
+    }
+     void OnDestroy()
+    {
+        SceneManager.LoadScene("test");
     }
 
     public void SetHealthBar(float HealthScale)

@@ -1,4 +1,19 @@
 sceneSetups:
 - path: Assets/SCENES/test.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/SCENES/test.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/SCENES/test.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/SCENES/test.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/SCENES/test.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/SCENES/test.unity
   isLoaded: 1
   isActive: 1

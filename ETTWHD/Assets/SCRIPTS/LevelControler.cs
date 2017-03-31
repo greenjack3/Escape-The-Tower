@@ -10,4 +10,11 @@ public class LevelControler : MonoBehaviour
    {
         Level++;
     }
+
+    public void resetLevel()
+    {
+        Level = 1;
+
+    }
+
 }

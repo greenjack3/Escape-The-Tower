@@ -21,7 +21,7 @@ public class OpenDoorScript : MonoBehaviour
 
     void Unlock()
     {
-        print("*click*");
+       // print("*click*");
         Locked = false;
         
     }

@@ -55,10 +55,10 @@ public class DetectionLogic : MonoBehaviour
 
     private void Update()
     {
-        if(playerDetected == false)
+        if (playerDetected == false)
         {
-           
-              CanSeePlayer();
+
+            CanSeePlayer();
         }
     }
 }

@@ -37,7 +37,7 @@ public class EnemyCountScript : MonoBehaviour
 //        Enemy_Cur = 0;
         EnemyCalculate();
 
-        print(Enemy_Cur + "/" + Enemy_Calc + "/" + Enemy_Max);
+      //  print(Enemy_Cur + "/" + Enemy_Calc + "/" + Enemy_Max);
     }
 
     void EnemyKilled()
