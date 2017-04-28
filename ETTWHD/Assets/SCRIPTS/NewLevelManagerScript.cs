@@ -9292,32 +9292,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
     }
 
-    //public void zwiekszlevel()
-    //{
-  
-    //    CenterRoomsOnScene = null;
-    //    EdgeRoomsOnScene = null;
-    //    InnerRoomsOnScene = null;
-    //    OuterRoomsOnScene = null;
-    //    Mebelki_1x1_OnScene = null;
-    //    Mebelki_1x2_OnScene = null;
-    //    Mebelki_1x3_OnScene = null;
-    //    Mebelki_2x1_OnScene = null;
-    //    Mebelki_2x2_OnScene = null;
-    //    Mebelki_2x3_OnScene = null;
-    //    Mebelki_3x1_OnScene = null;
-    //    Mebelki_3x2_OnScene = null;
-    //    Mebelki_3x3_OnScene = null;
-    //    KowadłoOnScene = null;
-    //    SkrzyniaOnScene = null;
-    //    InteractiveOnScene = null;
-    //    LightSpotOnScene = null;
-    //}
-
-    //public void savH()
-    //{
-    //    SavedHero = GameObject.FindGameObjectWithTag("Player");
-    //}
+   
     
 
     public void SetupScene()
@@ -9325,7 +9300,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
 
          BoardSetup();
-     
+        LocalNavMeshBuilder.Instance.UpdateNavMesh();
         EnemySpawner();
         PlayerSpawn();
        
@@ -9333,6 +9308,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
     private void Awake()
     {
+   
         L = GameObject.FindGameObjectWithTag("DM").GetComponent<LevelControler>();
         Level = L.Level;
 

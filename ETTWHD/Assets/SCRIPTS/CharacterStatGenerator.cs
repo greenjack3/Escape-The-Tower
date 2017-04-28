@@ -10,28 +10,44 @@ public class CharacterStatGenerator : MonoBehaviour
     public int AGI;
     public int END;
     public int INT;
-    public int CHA;
+   // public int CHA;
 
     public int MainStat;
     public int SecStat;
 
     public int Level;
     public LevelControler L;
+    public GameObject Hand;
+    //tablice broni startowych
+    public GameObject[] STRWeapon;
+    public GameObject[] AGIWeapon;
+    public GameObject[] INTWeapon;
     void StatGenerator()
     {
         STR = Random.Range(1, 6);
         AGI = Random.Range(1, 6);
         END = Random.Range(1, 6);
         INT = Random.Range(1, 6);
-        CHA = Random.Range(1, 6);
+        //  CHA = Random.Range(1, 6);
+    
+        
 
-        MainStat = Random.Range(1, 6);
+        MainStat = Random.Range(1, 5);
         switch (MainStat)
         {
             case 1:
                 STR = STR + 5;
                 print("MainStat STR");
-                SecStat = Random.Range(1, 5);
+                if(STRWeapon != null)
+                    {
+                    GameObject weapon = STRWeapon[Random.Range(0, STRWeapon.Length)];
+                    GameObject w = Instantiate(weapon, Hand.transform.position, Hand.transform.rotation);
+                    w.transform.parent = Hand.transform;
+                    w.transform.Rotate(180, 0, 45);
+                }
+                    
+               
+                SecStat = Random.Range(1, 4);
                 switch (SecStat)
                 {
                     case 1:
@@ -49,10 +65,10 @@ public class CharacterStatGenerator : MonoBehaviour
                         print("SecStat INT");
                         break;
 
-                    case 4:
-                        CHA = CHA + 3;
-                        print("SecStat CHA");
-                        break;
+                    //case 4:
+                    //    CHA = CHA + 3;
+                    //    print("SecStat CHA");
+                    //    break;
 
                 }
                 break;
@@ -60,7 +76,14 @@ public class CharacterStatGenerator : MonoBehaviour
             case 2:
                 AGI = AGI + 5;
                 print("MainStat AGI");
-                SecStat = Random.Range(1, 5);
+                if (AGIWeapon != null)
+                {
+                    GameObject weapon = AGIWeapon[Random.Range(0, AGIWeapon.Length)];
+                    GameObject w = Instantiate(weapon, Hand.transform.position, Hand.transform.rotation);
+                    w.transform.parent = Hand.transform;
+                    w.transform.Rotate(180, 0, 45);
+                }
+                SecStat = Random.Range(1, 4);
                 switch (SecStat)
                 {
                     case 1:
@@ -78,10 +101,10 @@ public class CharacterStatGenerator : MonoBehaviour
                         print("SecStat INT");
                         break;
 
-                    case 4:
-                        CHA = CHA + 3;
-                        print("SecStat CHA");
-                        break;
+                    //case 4:
+                    //    CHA = CHA + 3;
+                    //    print("SecStat CHA");
+                    //    break;
 
                 }
                 break;
@@ -90,28 +113,49 @@ public class CharacterStatGenerator : MonoBehaviour
             case 3:
                 END = END + 5;
                 print("MainStat END");
-                SecStat = Random.Range(1, 5);
+                SecStat = Random.Range(1, 4);
                 switch (SecStat)
                 {
                     case 1:
                         STR = STR + 3;
                         print("SecStat STR");
+                        if (STRWeapon != null)
+                        {
+                            GameObject weapon = STRWeapon[Random.Range(0, STRWeapon.Length)];
+                            GameObject w = Instantiate(weapon, Hand.transform.position, Hand.transform.rotation);
+                            w.transform.parent = Hand.transform;
+                            w.transform.Rotate(180, 0, 45);
+                        }
                         break;
 
                     case 2:
                         AGI = AGI + 3;
                         print("SecStat AGI");
+                        if (AGIWeapon != null)
+                        {
+                            GameObject weapon = AGIWeapon[Random.Range(0, AGIWeapon.Length)];
+                            GameObject w = Instantiate(weapon, Hand.transform.position, Hand.transform.rotation);
+                            w.transform.parent = Hand.transform;
+                            w.transform.Rotate(180, 0, 45);
+                        }
                         break;
 
                     case 3:
                         INT = INT + 3;
                         print("SecStat INT");
+                        if (INTWeapon != null)
+                        {
+                            GameObject weapon = INTWeapon[Random.Range(0, INTWeapon.Length)];
+                            GameObject w = Instantiate(weapon, Hand.transform.position, Hand.transform.rotation);
+                            w.transform.parent = Hand.transform;
+                            w.transform.Rotate(180, 0, 45);
+                        }
                         break;
 
-                    case 4:
-                        CHA = CHA + 3;
-                        print("SecStat CHA");
-                        break;
+                    //case 4:
+                    //    CHA = CHA + 3;
+                    //    print("SecStat CHA");
+                    //    break;
 
                 }
                 break;
@@ -119,7 +163,16 @@ public class CharacterStatGenerator : MonoBehaviour
             case 4:
                 INT = INT + 5;
                 print("MainStat INT");
-                SecStat = Random.Range(1, 5);
+                if (INTWeapon != null)
+                {
+                    GameObject weapon = INTWeapon[Random.Range(0, INTWeapon.Length)];
+                    GameObject w = Instantiate(weapon, Hand.transform.position, transform.rotation);
+
+                    w.transform.parent = Hand.transform;
+                    w.transform.Rotate(180, 0, 45);
+
+                }
+                SecStat = Random.Range(1, 4);
                 switch (SecStat)
                 {
                     case 1:
@@ -137,46 +190,46 @@ public class CharacterStatGenerator : MonoBehaviour
                         print("SecStat END");
                         break;
 
-                    case 4:
-                        CHA = CHA + 3;
-                        print("SecStat CHA");
-                        break;
+                    //case 4:
+                    //    CHA = CHA + 3;
+                    //    print("SecStat CHA");
+                    //    break;
 
                 }
                 break;
 
-            case 5:
-                CHA = CHA +  5;
-                print("MainStat CHA");
-                SecStat = Random.Range(1, 5);
-                switch (SecStat)
-                {
-                    case 1:
-                        STR = STR + 3;
-                        print("SecStat STR");
-                        break;
+            //case 5:
+            //    CHA = CHA +  5;
+            //    print("MainStat CHA");
+            //    SecStat = Random.Range(1, 5);
+            //    switch (SecStat)
+            //    {
+            //        case 1:
+            //            STR = STR + 3;
+            //            print("SecStat STR");
+            //            break;
 
-                    case 2:
-                        AGI = AGI + 3;
-                        print("SecStat AGI");
-                        break;
+            //        case 2:
+            //            AGI = AGI + 3;
+            //            print("SecStat AGI");
+            //            break;
 
-                    case 3:
-                        END = END + 3;
-                        print("SecStat END");
-                        break;
+            //        case 3:
+            //            END = END + 3;
+            //            print("SecStat END");
+            //            break;
 
-                    case 4:
-                        INT = INT + 3;
-                        print("SecStat INT");
-                        break;
+            //        case 4:
+            //            INT = INT + 3;
+            //            print("SecStat INT");
+            //            break;
 
-                }
-                break;
+            //    }
+            //    break;
         }
     }
 
-    private void Awake()
+ public void Awake()
     {
         if (instance == null)
 
@@ -190,11 +243,14 @@ public class CharacterStatGenerator : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         L = GameObject.FindGameObjectWithTag("DM").GetComponent<LevelControler>();
         Level = L.Level;
-
+       
+    }
+    public void Start()
+    {
+        Hand = GameObject.FindGameObjectWithTag("WeaponSocket");
         if (Level == 1)
         {
             StatGenerator();
         }
     }
-
 }

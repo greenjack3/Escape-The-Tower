@@ -11,13 +11,11 @@ namespace Completed
     {
         public static GameManagerScript instance = null;
         
-      //  private NewLevelManagerScript levelScirpt;
-
-        //public int Level;
+     
         public int pupy;
         public Text PUPY;
-        //public int Level;
-
+     
+        
 
         void Awake()
         {
@@ -32,20 +30,9 @@ namespace Completed
 
             DontDestroyOnLoad(gameObject);
 
-           
-
-           // levelScirpt = GetComponent<NewLevelManagerScript>();
-          //  Level = levelScirpt.Level;
-          //  InitGame();
-
-        }
+         }
         
-        //void InitGame()
-        //{
-        //    levelScirpt.SetupScene(Level);
-            
-         
-        //}
+        
 
         void Start()
         {
@@ -72,7 +59,9 @@ namespace Completed
         {
             pupy += PUPamount;
         }
-       
+
+
+        
     }
   
 }

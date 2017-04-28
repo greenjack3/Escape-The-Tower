@@ -75,7 +75,8 @@ public class PlayerLifeScript : MonoBehaviour {
             x.BlockPlayer();
             anim.SetInteger("AnimDwarfControl", 4);
            GameObject.FindGameObjectWithTag("DM").SendMessage("resetLevel");
-
+          GameObject Mc= GameObject.FindGameObjectWithTag("MainCamera");
+            Destroy(Mc, 4f);
             Destroy(gameObject, 4f);
          
         }

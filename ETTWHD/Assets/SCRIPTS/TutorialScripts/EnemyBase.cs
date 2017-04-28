@@ -31,10 +31,17 @@ public class EnemyBase
     public float baseDEF;
     public float curDEF;
 
+    public int AP;
+    public float AtkRng;
+    public float VisAngl;
+    public int VisRng;
+        
     public int Strenght;
     public int Agility;
     public int Inteligencce;
     public int Endurance;
-    public int Charisma;
+   // public int Charisma;
+
+
 
 }

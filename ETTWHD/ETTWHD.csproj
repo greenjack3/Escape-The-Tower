@@ -95,6 +95,7 @@
     <Compile Include="Assets\SCRIPTS\BaseItem.cs" />
     <Compile Include="Assets\SCRIPTS\BaseWeapon.cs" />
     <Compile Include="Assets\SCRIPTS\Board.cs" />
+    <Compile Include="Assets\SCRIPTS\CSVLoad.cs" />
     <Compile Include="Assets\SCRIPTS\CameraControlScript.cs" />
     <Compile Include="Assets\SCRIPTS\CameraSpinScript.cs" />
     <Compile Include="Assets\SCRIPTS\Camera_tazz.cs" />
@@ -109,6 +110,8 @@
     <Compile Include="Assets\SCRIPTS\Grid.cs" />
     <Compile Include="Assets\SCRIPTS\HealthBarScript.cs" />
     <Compile Include="Assets\SCRIPTS\LevelControler.cs" />
+    <Compile Include="Assets\SCRIPTS\NavGenerator\LocalNavMeshBuilder.cs" />
+    <Compile Include="Assets\SCRIPTS\NavGenerator\NavMeshSourceTag.cs" />
     <Compile Include="Assets\SCRIPTS\NewGameButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\NewLevelManagerScript.cs" />
     <Compile Include="Assets\SCRIPTS\NotebookButtonScript.cs" />
@@ -125,7 +128,6 @@
     <Compile Include="Assets\SCRIPTS\TutorialScripts\PlayerBase.cs" />
     <Compile Include="Assets\SCRIPTS\TutorialScripts\PlayerStateMachine.cs" />
     <Compile Include="Assets\SCRIPTS\virtualcursortest.cs" />
-    <Compile Include="Assets\nam.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />

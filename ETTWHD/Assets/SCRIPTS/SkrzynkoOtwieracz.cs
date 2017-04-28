@@ -7,8 +7,8 @@ public class SkrzynkoOtwieracz : MonoBehaviour
     public GameObject[] bronie;
     bool otwarte = false;
     float x = 0;
-   
-
+    bool spawned = false;
+    public GameObject Wep;
     public void Otwieraj()
     {
         
@@ -20,22 +20,43 @@ public class SkrzynkoOtwieracz : MonoBehaviour
             
        
      }
+
+    public void SpawnItem()
+    {
+        GameObject bron = bronie[Random.Range(0, bronie.Length)];
+        
+        Wep = Instantiate(bron, transform.position, transform.rotation);
+        Wep.transform.position = transform.position + Vector3.up*2;
+        Wep.transform.Rotate(90, 0,0);        
+
+        Debug.Log("prezent");
+        spawned = true;
+
+    }
      void Update()
     {
-        if (otwarte == true)
+        //Wep.transform.Rotate(90, 0, 45 * Time.deltaTime);
+        if (spawned == false)
         {
-            x++;
+
+            if (otwarte == true)
+            {
+                x++;
+            }
+
+
+            if (x > 20)
+            {
+                SpawnItem();
+
+
+                // gameObject.SetActive(false);
+
+            }
         }
-
-      
-        if (x > 62)
+        if(spawned == true)
         {
-            GameObject bron = bronie[Random.Range(0, bronie.Length)];
-            GameObject instance = Instantiate(bron, transform.position, transform.rotation);
-            Debug.Log("prezent");
-
-            gameObject.SetActive(false);
-           
+            Wep.transform.Rotate(0, 0, 90 * Time.deltaTime);
         }
     }
 }
