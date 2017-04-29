@@ -9,6 +9,12 @@ public class SkrzynkoOtwieracz : MonoBehaviour
     float x = 0;
     bool spawned = false;
     public GameObject Wep;
+    public float amplitude = 0.5f;
+    public float frequency = 1f;
+
+    // Position Storage Variables
+    Vector3 posOffset = new Vector3();
+    Vector3 tempPos = new Vector3();
     public void Otwieraj()
     {
         
@@ -27,8 +33,8 @@ public class SkrzynkoOtwieracz : MonoBehaviour
         
         Wep = Instantiate(bron, transform.position, transform.rotation);
         Wep.transform.position = transform.position + Vector3.up*2;
-        Wep.transform.Rotate(90, 0,0);        
-
+        Wep.transform.Rotate(90, 0,0);
+        posOffset = Wep.transform.position;
         Debug.Log("prezent");
         spawned = true;
 
@@ -57,6 +63,10 @@ public class SkrzynkoOtwieracz : MonoBehaviour
         if(spawned == true)
         {
             Wep.transform.Rotate(0, 0, 90 * Time.deltaTime);
+            tempPos = posOffset;
+            tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
+
+            Wep.transform.position = tempPos;
         }
     }
 }

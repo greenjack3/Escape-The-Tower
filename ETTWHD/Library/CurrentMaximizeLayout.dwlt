@@ -22,10 +22,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 917, y: 442}
-  m_MaxSize: {x: 22012, y: 14042}
+  m_MinSize: {x: 907, y: 442}
+  m_MaxSize: {x: 22002, y: 14021}
   vertical: 0
-  controlID: 2044
+  controlID: 1075
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 1873
+  controlID: 943
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -378,8 +378,8 @@ MonoBehaviour:
     y: 0
     width: 204
     height: 947
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
@@ -413,9 +413,9 @@ MonoBehaviour:
     height: 926
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 88a0f8ff
-    m_LastClickedID: -483192
-    m_ExpandedIDs: 0eb6f9ff12b6f9ff18b6f9ff50b6f9ffbafbffffd6fbfffff4ffffff00000000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 5693ffffd6fbffffd6fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -459,10 +459,10 @@ MonoBehaviour:
     y: 0
     width: 480
     height: 947
-  m_MinSize: {x: 234, y: 392}
-  m_MaxSize: {x: 10004, y: 14042}
+  m_MinSize: {x: 230, y: 371}
+  m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 1937
+  controlID: 1042
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -481,8 +481,8 @@ MonoBehaviour:
     y: 0
     width: 480
     height: 658
-  m_MinSize: {x: 234, y: 271}
-  m_MaxSize: {x: 10004, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -526,19 +526,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/SCRIPTS
+    - Assets/PREFABS/Chest
   m_ViewMode: 1
   m_StartGridSize: 96
   m_LastFolders:
-  - Assets/SCRIPTS
+  - Assets/PREFABS/Chest
   m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\admin\Desktop\Escape-The-Tower\Escape-The-Tower\ETTWHD
   m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7e280000
-    m_LastClickedID: 10366
-    m_ExpandedIDs: 000000003c2600006a2700007e28000056290000ae2a0000742b0000ea2c0000882d0000f62d0000002e0000c02e00007e54000080540000ffffff7f
+    m_SelectedIDs: 2e2f0000
+    m_LastClickedID: 12078
+    m_ExpandedIDs: 000000003e2600006a2700007e28000056290000ae2a0000742b0000ea2c0000882d0000f62d0000002e0000c02e00007a5400007c540000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -566,7 +566,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003c2600006a2700007e28000056290000ae2a0000742b0000ea2c0000882d0000f62d0000002e0000c02e00007e54000080540000ffffff7f
+    m_ExpandedIDs: 000000003e2600006a2700007e28000056290000ae2a0000742b0000ea2c0000882d0000f62d0000002e0000c02e00007a5400007c540000ffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -591,9 +591,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 88a0f8ff
-    m_LastClickedInstanceID: -483192
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: e0230000dc23000026240000dc82ffff96260000602700002a2700009027000010260000222700001e270000de250000e609fdff2e260000f83c0000a2270000b0260000aa2900001a58efffb4270000e628000052280000c6330000d4270000522a00009c270000b0270000d8330000b0330000e6330000422a00006c28000002280000f4270000442a000064c5faff4a2b0000cc29000012290000162b000002290000922b00004a290000042a0000822b000026320000603100006c390000da3b0000883c00002639000006320000b6380000ec3800005e3000002c3500006a3e0000a8250000202b00001a2b000092290000802a00000c270000b4260000342b0000ac290000c4290000702900009e2a0000d4280000f42a0000923b0000182b00000a2a000076330000622d0000c62a00003c300000362d00008a270000742f000014280000d42d00003a2d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -716,8 +716,8 @@ MonoBehaviour:
     y: 0
     width: 367
     height: 947
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
