@@ -51,6 +51,8 @@ ModelImporter:
     100086: Toes_L
     100088: Toes_R
     100090: Torso
+    100092: FootRoll_R
+    100094: ToesControl_R
     400000: ArmLower_L
     400002: ArmLower_R
     400004: ArmUpper_L
@@ -97,6 +99,8 @@ ModelImporter:
     400086: Toes_L
     400088: Toes_R
     400090: Torso
+    400092: FootRoll_R
+    400094: ToesControl_R
     4300000: ElvenWenchMesh
     4300002: Dagger
     7400000: Default Take
@@ -114,6 +118,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
