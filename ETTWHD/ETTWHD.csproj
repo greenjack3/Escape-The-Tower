@@ -106,6 +106,7 @@
     <Compile Include="Assets\SCRIPTS\EnemyCountScript.cs" />
     <Compile Include="Assets\SCRIPTS\EnemyLifeScript.cs" />
     <Compile Include="Assets\SCRIPTS\ExitButtonScript.cs" />
+    <Compile Include="Assets\SCRIPTS\FollowMouse.cs" />
     <Compile Include="Assets\SCRIPTS\GameManagerScript.cs" />
     <Compile Include="Assets\SCRIPTS\Grid.cs" />
     <Compile Include="Assets\SCRIPTS\HealthBarScript.cs" />
