@@ -213,7 +213,14 @@ public class NewLevelManagerScript : MonoBehaviour {
     public GameObject HeroPrefab;
     public GameObject[] Body;
     public GameObject[] Head;
-   
+    public Material[] ClothMaterials;
+    public Material[] SkinMaterials;
+    public Material[] LeatherMaterials;
+    public Material[] MetalMaterials;
+    public Material[] HairMaterials;
+    public Material[] NoseMaterials;
+    public Material[] EyeMaterials;
+
     #region parametry
     //Zmienne i inne parametry
     // public Grid gridscript;
@@ -4396,6 +4403,29 @@ public class NewLevelManagerScript : MonoBehaviour {
             GameObject head = Head[Random.Range(0, Head.Length)];
             GameObject h = Instantiate(head, HeadSpawner.transform.position, HeadSpawner.transform.rotation);
             h.transform.parent = HeadSpawner.transform;
+            // losowanie materiałów.
+
+            GameObject HeroBody = GameObject.FindGameObjectWithTag("h");
+            GameObject HeroHead = GameObject.FindGameObjectWithTag("HEAD");
+            Material Skóra = SkinMaterials[Random.Range(0, SkinMaterials.Length)];
+          Material[]bodyMats = HeroBody.GetComponent<Renderer>().materials;
+            bodyMats[0] = Skóra;
+            bodyMats[1] = ClothMaterials[Random.Range(0, ClothMaterials.Length)];
+            bodyMats[2] = ClothMaterials[Random.Range(0, ClothMaterials.Length)];
+            bodyMats[3] = LeatherMaterials[Random.Range(0, LeatherMaterials.Length)];
+            bodyMats[4] = MetalMaterials[Random.Range(0, MetalMaterials.Length)];
+            HeroBody.GetComponent<Renderer>().materials = bodyMats;
+
+            Material[] headMats = HeroHead.GetComponent<Renderer>().materials;
+
+            headMats[0] = Skóra;
+            headMats[1] = HairMaterials[Random.Range(0, HairMaterials.Length)];
+            headMats[2] = NoseMaterials[Random.Range(0, NoseMaterials.Length)];
+            headMats[3] = EyeMaterials[Random.Range(0, EyeMaterials.Length)];
+
+            HeroHead.GetComponent<Renderer>().materials = headMats;
+
+
         }
         GameObject hir = GameObject.FindGameObjectWithTag("Player");
         hir.transform.position = PlayerSpawner.transform.position;
@@ -4434,8 +4464,10 @@ public class NewLevelManagerScript : MonoBehaviour {
     void Start()
     {
         //        pupy = 0;
-       
-        
+        GameObject hir = GameObject.FindGameObjectWithTag("Player");
+        hir.transform.position = PlayerSpawner.transform.position;
+        hir.transform.rotation = PlayerSpawner.transform.rotation;
+
     }
 
     //void Update()
