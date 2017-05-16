@@ -15,6 +15,9 @@ public class CharacterStatGenerator : MonoBehaviour
     public int MainStat;
     public int SecStat;
 
+    public GameObject mainWeapon;
+    public GameObject secondaryWeapon;
+    public GameObject currentWeapon;
     public int Level;
     public LevelControler L;
     public GameObject Hand;
@@ -22,6 +25,9 @@ public class CharacterStatGenerator : MonoBehaviour
     public GameObject[] STRWeapon;
     public GameObject[] AGIWeapon;
     public GameObject[] INTWeapon;
+
+    // tablica dla dodatkowej broni;
+    public GameObject[] SecondaryWeapon;
     void StatGenerator()
     {
         STR = Random.Range(1, 6);
@@ -44,6 +50,15 @@ public class CharacterStatGenerator : MonoBehaviour
                     GameObject w = Instantiate(weapon, Hand.transform.position, Hand.transform.rotation);
                     w.transform.parent = Hand.transform;
                     w.transform.Rotate(180, 0, 45);
+                    mainWeapon = w;
+                    // losowanie dodatkowej broni
+                    GameObject weapon2 = SecondaryWeapon[Random.Range(0, SecondaryWeapon.Length)];
+                    GameObject w2 = Instantiate(weapon2, Hand.transform.position, Hand.transform.rotation);
+                    w2.transform.parent = Hand.transform;
+                    w2.transform.Rotate(180, 0, 45);
+                    secondaryWeapon = w2;
+
+                    currentWeapon = mainWeapon;
                 }
                     
                
@@ -82,6 +97,14 @@ public class CharacterStatGenerator : MonoBehaviour
                     GameObject w = Instantiate(weapon, Hand.transform.position, Hand.transform.rotation);
                     w.transform.parent = Hand.transform;
                     w.transform.Rotate(180, 0, 45);
+                    mainWeapon = w;
+                    // losowanie dodatkowej broni
+                    GameObject weapon2 = SecondaryWeapon[Random.Range(0, SecondaryWeapon.Length)];
+                    GameObject w2 = Instantiate(weapon2, Hand.transform.position, Hand.transform.rotation);
+                    w2.transform.parent = Hand.transform;
+                    w2.transform.Rotate(180, 0, 45);
+                    secondaryWeapon = w2;
+                    currentWeapon = mainWeapon;
                 }
                 SecStat = Random.Range(1, 4);
                 switch (SecStat)
@@ -125,6 +148,14 @@ public class CharacterStatGenerator : MonoBehaviour
                             GameObject w = Instantiate(weapon, Hand.transform.position, Hand.transform.rotation);
                             w.transform.parent = Hand.transform;
                             w.transform.Rotate(180, 0, 45);
+                            mainWeapon = w;
+                            // losowanie dodatkowej broni
+                            GameObject weapon2 = SecondaryWeapon[Random.Range(0, SecondaryWeapon.Length)];
+                            GameObject w2 = Instantiate(weapon2, Hand.transform.position, Hand.transform.rotation);
+                            w2.transform.parent = Hand.transform;
+                            w2.transform.Rotate(180, 0, 45);
+                            secondaryWeapon = w2;
+                            currentWeapon = mainWeapon;
                         }
                         break;
 
@@ -137,6 +168,14 @@ public class CharacterStatGenerator : MonoBehaviour
                             GameObject w = Instantiate(weapon, Hand.transform.position, Hand.transform.rotation);
                             w.transform.parent = Hand.transform;
                             w.transform.Rotate(180, 0, 45);
+                            mainWeapon = w;
+                            // losowanie dodatkowej broni
+                            GameObject weapon2 = SecondaryWeapon[Random.Range(0, SecondaryWeapon.Length)];
+                            GameObject w2 = Instantiate(weapon2, Hand.transform.position, Hand.transform.rotation);
+                            w2.transform.parent = Hand.transform;
+                            w2.transform.Rotate(180, 0, 45);
+                            secondaryWeapon = w2;
+                            currentWeapon = mainWeapon;
                         }
                         break;
 
@@ -149,6 +188,14 @@ public class CharacterStatGenerator : MonoBehaviour
                             GameObject w = Instantiate(weapon, Hand.transform.position, Hand.transform.rotation);
                             w.transform.parent = Hand.transform;
                             w.transform.Rotate(180, 0, 45);
+                            mainWeapon = w;
+                            // losowanie dodatkowej broni
+                            GameObject weapon2 = SecondaryWeapon[Random.Range(0, SecondaryWeapon.Length)];
+                            GameObject w2 = Instantiate(weapon2, Hand.transform.position, Hand.transform.rotation);
+                            w2.transform.parent = Hand.transform;
+                            w2.transform.Rotate(180, 0, 45);
+                            secondaryWeapon = w2;
+                            currentWeapon = mainWeapon;
                         }
                         break;
 
@@ -170,6 +217,15 @@ public class CharacterStatGenerator : MonoBehaviour
 
                     w.transform.parent = Hand.transform;
                     w.transform.Rotate(180, 0, 45);
+
+                    mainWeapon = w;
+                    // losowanie dodatkowej broni
+                    GameObject weapon2 = SecondaryWeapon[Random.Range(0, SecondaryWeapon.Length)];
+                    GameObject w2 = Instantiate(weapon2, Hand.transform.position, Hand.transform.rotation);
+                    w2.transform.parent = Hand.transform;
+                    w2.transform.Rotate(180, 0, 45);
+                    secondaryWeapon = w2;
+                    currentWeapon = mainWeapon;
 
                 }
                 SecStat = Random.Range(1, 4);
@@ -243,7 +299,13 @@ public class CharacterStatGenerator : MonoBehaviour
         DontDestroyOnLoad(gameObject);
         L = GameObject.FindGameObjectWithTag("DM").GetComponent<LevelControler>();
         Level = L.Level;
-       
+
+        //Hand = GameObject.FindGameObjectWithTag("WeaponSocket");
+        //if (Level == 1)
+        //{
+        //    StatGenerator();
+        //}
+
     }
     public void Start()
     {
@@ -253,4 +315,28 @@ public class CharacterStatGenerator : MonoBehaviour
             StatGenerator();
         }
     }
+
+    public void Update()
+    {
+
+        if (Input.GetButtonDown("Swap"))
+        {
+            if (currentWeapon = mainWeapon)
+            {
+
+                secondaryWeapon.SetActive(true);
+                mainWeapon.SetActive(false);
+                currentWeapon = secondaryWeapon;
+            }
+
+            else if (currentWeapon = secondaryWeapon)
+            {
+
+                mainWeapon.SetActive(true);
+                secondaryWeapon.SetActive(false);
+                currentWeapon = mainWeapon;
+            }
+        }
+    }
 }
+

@@ -21,6 +21,10 @@ public class CharacterMovementScript : MonoBehaviour
     NavMeshAgent agent;
 
     public bool blockInput = false;
+    //public GameObject mainWeapon;
+    //public GameObject secondaryWeapon;
+    //public GameObject currentWeapon;
+         
 
     void Start()
     {
@@ -29,6 +33,12 @@ public class CharacterMovementScript : MonoBehaviour
         yAxis = gameObject.transform.position.y;
         mosue = GameObject.FindGameObjectWithTag("m");
         anim = GetComponentInChildren<Animator>();
+        //mainWeapon = GetComponent<CharacterStatGenerator>().mainWeapon;
+        //secondaryWeapon = GetComponent<CharacterStatGenerator>().secondaryWeapon;
+        //currentWeapon = mainWeapon;
+        //secondaryWeapon.SetActive(false);
+    
+
     }
 
 
@@ -146,12 +156,38 @@ public class CharacterMovementScript : MonoBehaviour
                 przedmiot.gameObject.SetActive(false);
             }
         }
+
+        //if (Input.GetButtonDown("Swap"))
+        //{
+        //    if(currentWeapon = mainWeapon)
+        //    {
+        //        currentWeapon = secondaryWeapon;
+        //        secondaryWeapon.SetActive(true);
+        //        mainWeapon.SetActive(false);
+        //    }
+
+        //    else if(currentWeapon != mainWeapon)
+        //    {
+        //        currentWeapon = mainWeapon;
+        //        mainWeapon.SetActive(true);
+        //        secondaryWeapon.SetActive(false);
+        //    } 
+        //}
     }
 
     void Update()
     {
+
+        //if(mainWeapon = null)
+        //{
+        //    mainWeapon = GetComponent<CharacterStatGenerator>().mainWeapon;
+        //    secondaryWeapon = GetComponent<CharacterStatGenerator>().secondaryWeapon;
+        //    currentWeapon = mainWeapon;
+        //    secondaryWeapon.SetActive(false);
+
+        //}
         // liczenie ataku
-       // Calc_AtkStr();
+        // Calc_AtkStr();
         HandleInput();
        // transform.LookAt(mosue.transform);
        
