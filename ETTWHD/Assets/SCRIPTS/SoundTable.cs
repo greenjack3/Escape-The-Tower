@@ -101,71 +101,51 @@ public class SoundTable : MonoBehaviour {
 
     public void ChangeMusic()
     {
-        switch (Level)
+
+        if (audioSource.time >= audioSource.clip.length)
         {
-            case 1:
-                if (audioSource.time >= audioSource.clip.length)
-                {
+
+            switch (Level)
+            {
+                case 1:
+                    audioSource.loop = false;
+                    audioSource.clip = sounds[Random.Range(0, sounds.Count)];
+                        audioSource.Play();
+                    
+                    break;
+                case 2:
                     audioSource.clip = sounds[Random.Range(0, sounds.Count)];
                     audioSource.Play();
-                }
-                break;
-            case 2:
-                if (audioSource.time >= audioSource.clip.length)
-                {
+                    break;
+                case 3:
                     audioSource.clip = sounds[Random.Range(0, sounds.Count)];
                     audioSource.Play();
-                }
-                break;
-            case 3:
-                if (audioSource.time >= audioSource.clip.length)
-                {
+                    break;
+                case 4:
                     audioSource.clip = sounds[Random.Range(0, sounds.Count)];
                     audioSource.Play();
-                }
-                break;
-            case 4:
-                if (audioSource.time >= audioSource.clip.length)
-                {
+                    break;
+                case 5:
                     audioSource.clip = sounds[Random.Range(0, sounds.Count)];
                     audioSource.Play();
-                }
-                break;
-            case 5:
-                if (audioSource.time >= audioSource.clip.length)
-                {
-                    audioSource.clip = sounds2[Random.Range(0, sounds2.Count)];
+                    break;
+                case 6:
+                    audioSource.clip = sounds[Random.Range(0, sounds.Count)];
                     audioSource.Play();
-                }
-                break;
-            case 6:
-                if (audioSource.time >= audioSource.clip.length)
-                {
-                    audioSource.clip = sounds2[Random.Range(0, sounds2.Count)];
+                    break;
+                case 7:
+                    audioSource.clip = sounds[Random.Range(0, sounds.Count)];
                     audioSource.Play();
-                }
-                break;
-            case 7:
-                if (audioSource.time >= audioSource.clip.length)
-                {
-                    audioSource.clip = sounds2[Random.Range(0, sounds2.Count)];
+                    break;
+                case 8:
+                    audioSource.clip = sounds[Random.Range(0, sounds.Count)];
                     audioSource.Play();
-                }
-                break;
-            case 8:
-                if (audioSource.time >= audioSource.clip.length)
-                {
-                    audioSource.clip = sounds2[Random.Range(0, sounds2.Count)];
+                    break;
+                case 9:
+                    audioSource.clip = sounds[Random.Range(0, sounds.Count)];
                     audioSource.Play();
-                }
-                break;
-            case 9:
-                if (audioSource.time >= audioSource.clip.length)
-                {
-                    audioSource.clip = sounds2[Random.Range(0, sounds2.Count)];
-                    audioSource.Play();
-                }
-                break;
+                    break;
+            }
         }
     }
 }
