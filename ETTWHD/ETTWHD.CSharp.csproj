@@ -160,6 +160,7 @@
     <Compile Include="Assets\SCRIPTS\Room.cs" />
     <Compile Include="Assets\SCRIPTS\SettingsButtonScript.cs" />
     <Compile Include="Assets\SCRIPTS\SkrzynkoOtwieracz.cs" />
+    <Compile Include="Assets\SCRIPTS\SoundTable.cs" />
     <Compile Include="Assets\SCRIPTS\TurnBasedCombatStateMenager.cs" />
     <Compile Include="Assets\SCRIPTS\TutorialScripts\BattleStateMachine.cs" />
     <Compile Include="Assets\SCRIPTS\TutorialScripts\EnemyBase.cs" />
