@@ -28,8 +28,12 @@ public class SoundTable : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-        ChangeMusic();
+        if (audioSource.time >= audioSource.clip.length)
+        {
+            ChangeMusic();
+            Debug.Log("zmieniam");
+        }
+            
         //if (audioSource.time >= audioSource.clip.length)
         //{
         //    audioSource.clip = sounds[Random.Range(0, sounds.Count)];
@@ -46,6 +50,7 @@ public class SoundTable : MonoBehaviour {
                 audioSource.loop = false;
                 audioSource.clip = sounds[Random.Range(0, sounds.Count)];
                 audioSource.Play();
+                Debug.Log(audioSource.clip.length);
 
                 break;
             case 2:
@@ -102,50 +107,68 @@ public class SoundTable : MonoBehaviour {
     public void ChangeMusic()
     {
 
-        if (audioSource.time >= audioSource.clip.length)
-        {
-
-            switch (Level)
+        
+            if( Level < 5)
             {
-                case 1:
-                    audioSource.loop = false;
-                    audioSource.clip = sounds[Random.Range(0, sounds.Count)];
-                        audioSource.Play();
-                    
-                    break;
-                case 2:
-                    audioSource.clip = sounds[Random.Range(0, sounds.Count)];
-                    audioSource.Play();
-                    break;
-                case 3:
-                    audioSource.clip = sounds[Random.Range(0, sounds.Count)];
-                    audioSource.Play();
-                    break;
-                case 4:
-                    audioSource.clip = sounds[Random.Range(0, sounds.Count)];
-                    audioSource.Play();
-                    break;
-                case 5:
-                    audioSource.clip = sounds[Random.Range(0, sounds.Count)];
-                    audioSource.Play();
-                    break;
-                case 6:
-                    audioSource.clip = sounds[Random.Range(0, sounds.Count)];
-                    audioSource.Play();
-                    break;
-                case 7:
-                    audioSource.clip = sounds[Random.Range(0, sounds.Count)];
-                    audioSource.Play();
-                    break;
-                case 8:
-                    audioSource.clip = sounds[Random.Range(0, sounds.Count)];
-                    audioSource.Play();
-                    break;
-                case 9:
-                    audioSource.clip = sounds[Random.Range(0, sounds.Count)];
-                    audioSource.Play();
-                    break;
+                //audioSource.loop = false;
+                audioSource.clip = sounds[Random.Range(0, sounds.Count)];
+                audioSource.Play();
+            Debug.Log(audioSource.clip.length);
+
             }
-        }
+            if ( Level >= 5)
+            {
+                audioSource.loop = false;
+                audioSource.clip = sounds2[Random.Range(0, sounds2.Count)];
+                audioSource.Play();
+            }
+
+
+
+
+            #region switch
+            //switch (Level)
+            //{
+            //    case 1:
+            //        audioSource.loop = false;
+            //        audioSource.clip = sounds[Random.Range(0, sounds.Count)];
+            //            audioSource.Play();
+
+            //        break;
+            //    case 2:
+            //        audioSource.clip = sounds[Random.Range(0, sounds.Count)];
+            //        audioSource.Play();
+            //        break;
+            //    case 3:
+            //        audioSource.clip = sounds[Random.Range(0, sounds.Count)];
+            //        audioSource.Play();
+            //        break;
+            //    case 4:
+            //        audioSource.clip = sounds[Random.Range(0, sounds.Count)];
+            //        audioSource.Play();
+            //        break;
+            //    case 5:
+            //        audioSource.clip = sounds[Random.Range(0, sounds.Count)];
+            //        audioSource.Play();
+            //        break;
+            //    case 6:
+            //        audioSource.clip = sounds[Random.Range(0, sounds.Count)];
+            //        audioSource.Play();
+            //        break;
+            //    case 7:
+            //        audioSource.clip = sounds[Random.Range(0, sounds.Count)];
+            //        audioSource.Play();
+            //        break;
+            //    case 8:
+            //        audioSource.clip = sounds[Random.Range(0, sounds.Count)];
+            //        audioSource.Play();
+            //        break;
+            //    case 9:
+            //        audioSource.clip = sounds[Random.Range(0, sounds.Count)];
+            //        audioSource.Play();
+            //        break;
+            //}
+            #endregion
+        
     }
 }

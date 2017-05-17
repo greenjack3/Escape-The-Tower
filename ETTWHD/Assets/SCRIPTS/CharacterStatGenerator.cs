@@ -14,7 +14,7 @@ public class CharacterStatGenerator : MonoBehaviour
 
     public int MainStat;
     public int SecStat;
-
+    public bool mainWeaponIsActive;
     public GameObject mainWeapon;
     public GameObject secondaryWeapon;
     public GameObject currentWeapon;
@@ -314,29 +314,66 @@ public class CharacterStatGenerator : MonoBehaviour
         {
             StatGenerator();
         }
+        secondaryWeapon.SetActive(false);
+        mainWeaponIsActive = true;
+        Debug.Log("hahahahah");
     }
 
     public void Update()
     {
-
-        if (Input.GetButtonDown("Swap"))
+        if (Input.GetButtonDown("Fire1"))
         {
-            if (currentWeapon = mainWeapon)
+            if (mainWeaponIsActive == true)
             {
-
-                secondaryWeapon.SetActive(true);
-                mainWeapon.SetActive(false);
-                currentWeapon = secondaryWeapon;
+                mainWeaponIsActive = false;
             }
 
-            else if (currentWeapon = secondaryWeapon)
+            else if (mainWeaponIsActive == false) 
             {
-
-                mainWeapon.SetActive(true);
-                secondaryWeapon.SetActive(false);
-                currentWeapon = mainWeapon;
+                mainWeaponIsActive = true;
             }
+
+        }
+
+
+
+
+        if(mainWeaponIsActive == false)
+        {
+            mainWeapon.SetActive(false);
+            secondaryWeapon.SetActive(true);
+            currentWeapon = secondaryWeapon;    
+        }
+
+        if(mainWeaponIsActive == true)
+        {
+            mainWeapon.SetActive(true);
+            secondaryWeapon.SetActive(false);
+            currentWeapon = mainWeapon;
+        }
+        //Debug.Log("update");
+        //if (Input.GetButtonDown("Fire1"))
+        //{
+
+        //    Debug.Log("klikam");
+        //    if (mainWeaponIsActive == true)
+        //    {
+        //        Debug.Log("główna broń");
+        //      //  secondaryWeapon.SetActive(true);
+        //        //mainWeapon.SetActive(false);
+        //        //currentWeapon = secondaryWeapon;
+        //        mainWeaponIsActive = false;
+        //    }
+
+        //     if (mainWeaponIsActive == false)
+        //    {
+        //        Debug.Log("dodatkowa broń");
+        //       // mainWeapon.SetActive(true);
+        //       // secondaryWeapon.SetActive(false);
+        //        //currentWeapon = mainWeapon;
+        //        mainWeaponIsActive = true;
+        //    }
         }
     }
-}
+
 
