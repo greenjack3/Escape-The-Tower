@@ -33,7 +33,7 @@ public class SkrzynkoOtwieracz : MonoBehaviour
         
         Wep = Instantiate(bron, transform.position, transform.rotation);
         Wep.transform.position = transform.position + Vector3.up*2;
-        Wep.transform.Rotate(90, 0,0);
+        //Wep.transform.Rotate(90, 0,0);
         posOffset = Wep.transform.position;
         Debug.Log("prezent");
         spawned = true;
@@ -62,7 +62,7 @@ public class SkrzynkoOtwieracz : MonoBehaviour
         }
         if(spawned == true)
         {
-            Wep.transform.Rotate(0, 0, 90 * Time.deltaTime);
+            Wep.transform.Rotate(0, 90 * Time.deltaTime, 0 );
             tempPos = posOffset;
             tempPos.y += Mathf.Sin(Time.fixedTime * Mathf.PI * frequency) * amplitude;
 

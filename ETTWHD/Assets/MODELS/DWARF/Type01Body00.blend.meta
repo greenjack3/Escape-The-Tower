@@ -44,6 +44,7 @@ ModelImporter:
     100072: Toes_R
     100074: Torso
     100076: //RootNode
+    100078: Cube_001
     400000: Armature
     400002: ArmLow_L
     400004: ArmLow_R
@@ -83,7 +84,11 @@ ModelImporter:
     400072: Toes_R
     400074: Torso
     400076: //RootNode
+    400078: Cube_001
+    2300000: Cube_001
+    3300000: Cube_001
     4300000: Cube
+    4300002: Cube_001
     7400000: Default Take
     7400002: DwarfType01_1hBattleDamage00
     7400004: DwarfType01_1hBattleIdle00
@@ -100,6 +105,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 

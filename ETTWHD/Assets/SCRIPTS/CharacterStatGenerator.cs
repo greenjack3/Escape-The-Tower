@@ -49,13 +49,13 @@ public class CharacterStatGenerator : MonoBehaviour
                     GameObject weapon = STRWeapon[Random.Range(0, STRWeapon.Length)];
                     GameObject w = Instantiate(weapon, Hand.transform.position, Hand.transform.rotation);
                     w.transform.parent = Hand.transform;
-                    w.transform.Rotate(180, 0, 45);
+                    //w.transform.Rotate(180, 0, 45);
                     mainWeapon = w;
                     // losowanie dodatkowej broni
                     GameObject weapon2 = SecondaryWeapon[Random.Range(0, SecondaryWeapon.Length)];
                     GameObject w2 = Instantiate(weapon2, Hand.transform.position, Hand.transform.rotation);
                     w2.transform.parent = Hand.transform;
-                    w2.transform.Rotate(180, 0, 45);
+                    //w2.transform.Rotate(180, 0, 45);
                     secondaryWeapon = w2;
 
                     currentWeapon = mainWeapon;
@@ -96,13 +96,13 @@ public class CharacterStatGenerator : MonoBehaviour
                     GameObject weapon = AGIWeapon[Random.Range(0, AGIWeapon.Length)];
                     GameObject w = Instantiate(weapon, Hand.transform.position, Hand.transform.rotation);
                     w.transform.parent = Hand.transform;
-                    w.transform.Rotate(180, 0, 45);
+                    //w.transform.Rotate(180, 0, 45);
                     mainWeapon = w;
                     // losowanie dodatkowej broni
                     GameObject weapon2 = SecondaryWeapon[Random.Range(0, SecondaryWeapon.Length)];
                     GameObject w2 = Instantiate(weapon2, Hand.transform.position, Hand.transform.rotation);
                     w2.transform.parent = Hand.transform;
-                    w2.transform.Rotate(180, 0, 45);
+                    //w2.transform.Rotate(180, 0, 45);
                     secondaryWeapon = w2;
                     currentWeapon = mainWeapon;
                 }
@@ -147,13 +147,13 @@ public class CharacterStatGenerator : MonoBehaviour
                             GameObject weapon = STRWeapon[Random.Range(0, STRWeapon.Length)];
                             GameObject w = Instantiate(weapon, Hand.transform.position, Hand.transform.rotation);
                             w.transform.parent = Hand.transform;
-                            w.transform.Rotate(180, 0, 45);
+                            //w.transform.Rotate(180, 0, 45);
                             mainWeapon = w;
                             // losowanie dodatkowej broni
                             GameObject weapon2 = SecondaryWeapon[Random.Range(0, SecondaryWeapon.Length)];
                             GameObject w2 = Instantiate(weapon2, Hand.transform.position, Hand.transform.rotation);
                             w2.transform.parent = Hand.transform;
-                            w2.transform.Rotate(180, 0, 45);
+                            //w2.transform.Rotate(180, 0, 45);
                             secondaryWeapon = w2;
                             currentWeapon = mainWeapon;
                         }
@@ -167,13 +167,13 @@ public class CharacterStatGenerator : MonoBehaviour
                             GameObject weapon = AGIWeapon[Random.Range(0, AGIWeapon.Length)];
                             GameObject w = Instantiate(weapon, Hand.transform.position, Hand.transform.rotation);
                             w.transform.parent = Hand.transform;
-                            w.transform.Rotate(180, 0, 45);
+                            //w.transform.Rotate(180, 0, 45);
                             mainWeapon = w;
                             // losowanie dodatkowej broni
                             GameObject weapon2 = SecondaryWeapon[Random.Range(0, SecondaryWeapon.Length)];
                             GameObject w2 = Instantiate(weapon2, Hand.transform.position, Hand.transform.rotation);
                             w2.transform.parent = Hand.transform;
-                            w2.transform.Rotate(180, 0, 45);
+                            //w2.transform.Rotate(180, 0, 45);
                             secondaryWeapon = w2;
                             currentWeapon = mainWeapon;
                         }
@@ -187,13 +187,13 @@ public class CharacterStatGenerator : MonoBehaviour
                             GameObject weapon = INTWeapon[Random.Range(0, INTWeapon.Length)];
                             GameObject w = Instantiate(weapon, Hand.transform.position, Hand.transform.rotation);
                             w.transform.parent = Hand.transform;
-                            w.transform.Rotate(180, 0, 45);
+                            //w.transform.Rotate(180, 0, 45);
                             mainWeapon = w;
                             // losowanie dodatkowej broni
                             GameObject weapon2 = SecondaryWeapon[Random.Range(0, SecondaryWeapon.Length)];
                             GameObject w2 = Instantiate(weapon2, Hand.transform.position, Hand.transform.rotation);
                             w2.transform.parent = Hand.transform;
-                            w2.transform.Rotate(180, 0, 45);
+                            //w2.transform.Rotate(180, 0, 45);
                             secondaryWeapon = w2;
                             currentWeapon = mainWeapon;
                         }
@@ -216,14 +216,14 @@ public class CharacterStatGenerator : MonoBehaviour
                     GameObject w = Instantiate(weapon, Hand.transform.position, transform.rotation);
 
                     w.transform.parent = Hand.transform;
-                    w.transform.Rotate(180, 0, 45);
+                    //w.transform.Rotate(180, 0, 45);
 
                     mainWeapon = w;
                     // losowanie dodatkowej broni
                     GameObject weapon2 = SecondaryWeapon[Random.Range(0, SecondaryWeapon.Length)];
                     GameObject w2 = Instantiate(weapon2, Hand.transform.position, Hand.transform.rotation);
                     w2.transform.parent = Hand.transform;
-                    w2.transform.Rotate(180, 0, 45);
+                    //w2.transform.Rotate(180, 0, 45);
                     secondaryWeapon = w2;
                     currentWeapon = mainWeapon;
 
