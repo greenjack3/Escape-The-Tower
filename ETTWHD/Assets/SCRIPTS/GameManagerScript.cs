@@ -7,15 +7,16 @@ using UnityEngine.UI;
     using System.Collections.Generic;       //Allows us to use Lists. 
    
 
-    public class GameManagerScript : MonoBehaviour
-    {
-        public static GameManagerScript instance = null;
+ public class GameManagerScript : MonoBehaviour
+{        public static GameManagerScript instance = null;
         
      
         public int pupy;
         public Text PUPY;
-        
-
+    public float curHP;
+    public float maxHP;
+    public Text Hp;
+    float heroHP;
         void Awake()
         {
             if (instance == null)
@@ -37,9 +38,10 @@ using UnityEngine.UI;
         {
             SetPupyText();
             pupy = 0;
-           
-           
-        }
+        maxHP = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerLifeScript>().Max_Health;
+        curHP = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerLifeScript>().Cur_Health;
+        SetHP();
+    }
 
 
 
@@ -48,8 +50,9 @@ using UnityEngine.UI;
         void Update()
         {
             SetPupyText();
-
-        }
+        //curHP = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerLifeScript>().Cur_Health;
+        SetHP();
+    }
 
         void SetPupyText()
         {
@@ -59,8 +62,15 @@ using UnityEngine.UI;
         {
             pupy += PUPamount;
         }
-
-       
-        
+    public void hpupdate(float Cur_Health)
+    {
+        curHP = Cur_Health;
     }
+       
+        void SetHP()
+    {
+        //heroHP = curHP / maxHP;
+        Hp.text = curHP.ToString() + '/' + maxHP.ToString();
+    }
+}
   

@@ -7,11 +7,12 @@ public class InGameButtonControler : MonoBehaviour {
     public GameObject MenuPanel;
     public GameObject CharacterPanel;
     public bool menuIsActive;
-
+    public bool characterPanelIsActive;
     // Use this for initialization
     void Start ()
     {
         menuIsActive = false;
+        characterPanelIsActive = false;
     }
 	
 	// Update is called once per frame
@@ -36,6 +37,32 @@ public class InGameButtonControler : MonoBehaviour {
             MenuPanel.SetActive(false);
             menuIsActive = false;
         }
+    }
+
+
+    public void CharacterButton()
+    {
+        if(characterPanelIsActive == false)
+        {
+            CharacterPanel.SetActive(true);
+            characterPanelIsActive = true;
+        }
+
+        else if (characterPanelIsActive == true)
+        {
+            CharacterPanel.SetActive(false);
+            characterPanelIsActive = false;
+        }
+    }
+
+    public void exit()
+    {
+        Application.Quit();
+    }
+
+    public void Potion()
+    {
+        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerLifeScript>().SendMessage("DrinkPotion");
     }
 }
 

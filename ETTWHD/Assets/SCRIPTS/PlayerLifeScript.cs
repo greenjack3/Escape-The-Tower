@@ -16,15 +16,15 @@ public class PlayerLifeScript : MonoBehaviour {
     public CharacterMovementScript x;
     public float timer = 0.1f;
     public bool startTimer = false;
-
-
+    public bool isDead;
+    public float potionPower;
     void Start()
     {
         Cur_Health = Max_Health;
         anim = GetComponentInChildren<Animator>();
         x = GetComponent<CharacterMovementScript>();
-        
-     
+
+        isDead = false;
         
     }
 
@@ -63,8 +63,8 @@ public class PlayerLifeScript : MonoBehaviour {
     void CalculateHealth(float Damage)
     {
         Cur_Health = Cur_Health - Damage;
-
-        float Calc_Health = Cur_Health / Max_Health;
+        GameObject.FindGameObjectWithTag("DM").SendMessage("hpupdate", Cur_Health);
+        //float Calc_Health = Cur_Health / Max_Health;
        // SetHealthBar(Calc_Health);
         if (Cur_Health > 0)
         {
@@ -81,6 +81,7 @@ public class PlayerLifeScript : MonoBehaviour {
             x.StopPlayer();
             x.BlockPlayer();
             anim.SetInteger("AnimDwarfControl", 4);
+            isDead = true;
            GameObject.FindGameObjectWithTag("DM").SendMessage("resetLevel");
           GameObject Mc= GameObject.FindGameObjectWithTag("MainCamera");
             Destroy(Mc, 4f);
@@ -88,16 +89,34 @@ public class PlayerLifeScript : MonoBehaviour {
          
         }
     }
+
+
+
      void OnDestroy()
     {
-        SceneManager.LoadScene("test");
+        if(isDead == true)
+        {
+            SceneManager.LoadScene("test");
+        }
+   
     }
 
     //public void SetHealthBar(float HealthScale)
     //{
     //    HealthBar.transform.localScale = new Vector3(Mathf.Clamp(HealthScale, 0f, 1f), 1, 1);
     //}
+    public void DrinkPotion()
+    {
 
+        Debug.Log("jaki smaczny napój owocowy");
+        
+            Cur_Health = Cur_Health + 5;
+            if(Cur_Health > Max_Health)
+            {
+                Cur_Health = Max_Health;
+            }
+        GameObject.FindGameObjectWithTag("DM").SendMessage("hpupdate", Cur_Health);
+    }
 
 
 }
