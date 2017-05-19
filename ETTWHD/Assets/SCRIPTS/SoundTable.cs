@@ -8,6 +8,9 @@ public class SoundTable : MonoBehaviour {
     public AudioSource audioSource;
     public int Level;
     public LevelControler L;
+    public float clipTime;
+    public float x;
+    public double z;
     // Use this for initialization
     private void Awake()
     {
@@ -28,10 +31,13 @@ public class SoundTable : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (audioSource.time >= audioSource.clip.length)
+        x = audioSource.time;
+        z = audioSource.time;
+        if (audioSource.time >= clipTime - 0.1f)
         {
-            ChangeMusic();
             Debug.Log("zmieniam");
+            ChangeMusic();
+            
         }
             
         //if (audioSource.time >= audioSource.clip.length)
@@ -50,54 +56,64 @@ public class SoundTable : MonoBehaviour {
                 audioSource.loop = false;
                 audioSource.clip = sounds[Random.Range(0, sounds.Count)];
                 audioSource.Play();
+                clipTime = audioSource.clip.length;
                 Debug.Log(audioSource.clip.length);
+
 
                 break;
             case 2:
                 audioSource.loop = false;
                 audioSource.clip = sounds[Random.Range(0, sounds.Count)];
+                clipTime = audioSource.clip.length;
                 audioSource.Play();
 
                 break;
             case 3:
                 audioSource.loop = false;
                 audioSource.clip = sounds[Random.Range(0, sounds.Count)];
+                clipTime = audioSource.clip.length;
                 audioSource.Play();
 
                 break;
             case 4:
                 audioSource.loop = false;
                 audioSource.clip = sounds[Random.Range(0, sounds.Count)];
+                clipTime = audioSource.clip.length;
                 audioSource.Play();
 
                 break;
             case 5:
                 audioSource.loop = false;
                 audioSource.clip = sounds2[Random.Range(0, sounds2.Count)];
+                clipTime = audioSource.clip.length;
                 audioSource.Play();
 
                 break;
             case 6:
                 audioSource.loop = false;
                 audioSource.clip = sounds2[Random.Range(0, sounds2.Count)];
+                clipTime = audioSource.clip.length;
                 audioSource.Play();
 
                 break;
             case 7:
                 audioSource.loop = false;
                 audioSource.clip = sounds2[Random.Range(0, sounds2.Count)];
+                clipTime = audioSource.clip.length;
                 audioSource.Play();
 
                 break;
             case 8:
                 audioSource.loop = false;
                 audioSource.clip = sounds2[Random.Range(0, sounds2.Count)];
+                clipTime = audioSource.clip.length;
                 audioSource.Play();
 
                 break;
             case 9:
                 audioSource.loop = false;
                 audioSource.clip = sounds2[Random.Range(0, sounds2.Count)];
+                clipTime = audioSource.clip.length;
                 audioSource.Play();
 
                 break;
@@ -110,9 +126,11 @@ public class SoundTable : MonoBehaviour {
         
             if( Level < 5)
             {
-                //audioSource.loop = false;
+                audioSource.loop = false;
+            //audioSource.Stop();
                 audioSource.clip = sounds[Random.Range(0, sounds.Count)];
-                audioSource.Play();
+            clipTime = audioSource.clip.length;
+            audioSource.Play();
             Debug.Log(audioSource.clip.length);
 
             }
@@ -120,7 +138,8 @@ public class SoundTable : MonoBehaviour {
             {
                 audioSource.loop = false;
                 audioSource.clip = sounds2[Random.Range(0, sounds2.Count)];
-                audioSource.Play();
+            clipTime = audioSource.clip.length;
+            audioSource.Play();
             }
 
 
