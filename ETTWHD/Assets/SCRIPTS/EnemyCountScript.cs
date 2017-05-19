@@ -15,7 +15,7 @@ public class EnemyCountScript : MonoBehaviour
 
     private bool EnemiesCounted = false;
 
-    public Text EnemyCounter;
+   // public Text EnemyCounter;
 
     void Start ()
     {
@@ -23,7 +23,7 @@ public class EnemyCountScript : MonoBehaviour
 //        Enemy_Max = EnemyTotal.Length;
         Enemy_Cur = 0;
         //        EnemyCalculate();
-        EnemyCounter = GameObject.FindGameObjectWithTag("EnemyTekst").GetComponent<Text>();
+       // EnemyCounter = GameObject.FindGameObjectWithTag("EnemyTekst").GetComponent<Text>();
     }
 	
 	void Update ()
@@ -49,7 +49,7 @@ public class EnemyCountScript : MonoBehaviour
     void EnemyCalculate()
     {
         Enemy_Calc = Enemy_Cur / Enemy_Max * 100;
-        EnemyCounter.text = "Pokonani Przeciwnicy: " + (int)Enemy_Calc + "%";
+       // EnemyCounter.text = "Pokonani Przeciwnicy: " + (int)Enemy_Calc + "%";
         if (Enemy_Calc>= Requirement)
         {
             GameObject.FindGameObjectWithTag("Exit").SendMessage("Unlock");

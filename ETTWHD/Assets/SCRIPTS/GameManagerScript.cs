@@ -2,10 +2,10 @@
 using System.Collections;
 using UnityEngine.UI;
 
-namespace Completed
-{
-    using System.Collections.Generic;       //Allows us to use Lists. 
+//namespace Completed
 
+    using System.Collections.Generic;       //Allows us to use Lists. 
+   
 
     public class GameManagerScript : MonoBehaviour
     {
@@ -14,7 +14,6 @@ namespace Completed
      
         public int pupy;
         public Text PUPY;
-     
         
 
         void Awake()
@@ -39,6 +38,7 @@ namespace Completed
             SetPupyText();
             pupy = 0;
            
+           
         }
 
 
@@ -53,15 +53,14 @@ namespace Completed
 
         void SetPupyText()
         {
-            PUPY.text = "PUPy:" + pupy.ToString();
+            PUPY.text = /*"PUPy:"*/  pupy.ToString();
         }
         void AddPup(int PUPamount)
         {
             pupy += PUPamount;
         }
 
-
+       
         
     }
   
-}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [System.Serializable]
 
@@ -11,7 +12,7 @@ public class PlayerLifeScript : MonoBehaviour {
     public float Cur_Health;
     public float Def;
     public Animator anim;
-    public GameObject HealthBar;
+    public Text HealthBar;
     public CharacterMovementScript x;
     public float timer = 0.1f;
     public bool startTimer = false;
@@ -22,10 +23,16 @@ public class PlayerLifeScript : MonoBehaviour {
         Cur_Health = Max_Health;
         anim = GetComponentInChildren<Animator>();
         x = GetComponent<CharacterMovementScript>();
+        
+     
+        
     }
 
     public void Update()
     {
+
+
+
         PlayerDeath();
 
         if (startTimer == true)
@@ -58,7 +65,7 @@ public class PlayerLifeScript : MonoBehaviour {
         Cur_Health = Cur_Health - Damage;
 
         float Calc_Health = Cur_Health / Max_Health;
-        SetHealthBar(Calc_Health);
+       // SetHealthBar(Calc_Health);
         if (Cur_Health > 0)
         {
             anim.SetInteger("AnimDwarfControl", 3);
@@ -86,10 +93,10 @@ public class PlayerLifeScript : MonoBehaviour {
         SceneManager.LoadScene("test");
     }
 
-    public void SetHealthBar(float HealthScale)
-    {
-        HealthBar.transform.localScale = new Vector3(Mathf.Clamp(HealthScale, 0f, 1f), 1, 1);
-    }
+    //public void SetHealthBar(float HealthScale)
+    //{
+    //    HealthBar.transform.localScale = new Vector3(Mathf.Clamp(HealthScale, 0f, 1f), 1, 1);
+    //}
 
 
 
