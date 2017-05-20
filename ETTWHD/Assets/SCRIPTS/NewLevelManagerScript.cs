@@ -3871,7 +3871,7 @@ public class NewLevelManagerScript : MonoBehaviour {
                 
                 foreach (GameObject EnemyS in EnemySupportOnScene)
                 {
-                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                  //  GameObject.FindGameObjectWithTag("pointer").SetActive(false);
                     GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
                     GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
                 }
@@ -3903,7 +3903,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
                 foreach (GameObject EnemyS in EnemySupportOnScene)
                 {
-                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                   // GameObject.FindGameObjectWithTag("pointer").SetActive(false);
                     GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
                     GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
                 }
@@ -3932,7 +3932,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
                 foreach (GameObject EnemyS in EnemySupportOnScene)
                 {
-                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                  //  GameObject.FindGameObjectWithTag("pointer").SetActive(false);
                     GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
                     GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
                 }
@@ -3961,7 +3961,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
                 foreach (GameObject EnemyS in EnemySupportOnScene)
                 {
-                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                   // GameObject.FindGameObjectWithTag("pointer").SetActive(false);
                     GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
                     GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
                 }
@@ -3990,7 +3990,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
                 foreach (GameObject EnemyS in EnemySupportOnScene)
                 {
-                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                   // GameObject.FindGameObjectWithTag("pointer").SetActive(false);
                     GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
                     GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
                 }
@@ -4019,7 +4019,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
                 foreach (GameObject EnemyS in EnemySupportOnScene)
                 {
-                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                   // GameObject.FindGameObjectWithTag("pointer").SetActive(false);
                     GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
                     GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
                 }
@@ -4048,7 +4048,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
                 foreach (GameObject EnemyS in EnemySupportOnScene)
                 {
-                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                  //  GameObject.FindGameObjectWithTag("pointer").SetActive(false);
                     GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
                     GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
                 }
@@ -4077,7 +4077,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
                 foreach (GameObject EnemyS in EnemySupportOnScene)
                 {
-                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                   // GameObject.FindGameObjectWithTag("pointer").SetActive(false);
                     GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
                     GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
                 }
@@ -4106,7 +4106,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
                 foreach (GameObject EnemyS in EnemySupportOnScene)
                 {
-                    GameObject.FindGameObjectWithTag("pointer").SetActive(false);
+                  //  GameObject.FindGameObjectWithTag("pointer").SetActive(false);
                     GameObject EnemySPrefab = EnemySupport[Random.Range(0, EnemySupport.Length)];
                     GameObject instance = Instantiate(EnemySPrefab, EnemyS.transform.position, EnemyS.transform.rotation);
                 }

@@ -17,7 +17,17 @@ using UnityEngine.UI;
     public float maxHP;
     public Text Hp;
     float heroHP;
-        void Awake()
+    public int STR;
+    public int AGI;
+    public int END;
+    public int INT;
+
+    public Text strVal;
+    public Text agiVal;
+    public Text endVal;
+    public Text intVal;
+
+    void Awake()
         {
             if (instance == null)
 
@@ -41,6 +51,9 @@ using UnityEngine.UI;
         maxHP = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerLifeScript>().Max_Health;
         curHP = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerLifeScript>().Cur_Health;
         SetHP();
+        GetStats();
+        SetStats();
+
     }
 
 
@@ -52,6 +65,13 @@ using UnityEngine.UI;
             SetPupyText();
         //curHP = GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerLifeScript>().Cur_Health;
         SetHP();
+        if(STR == 0)
+        {
+            GetStats();
+            SetStats();
+        }
+
+
     }
 
         void SetPupyText()
@@ -72,5 +92,23 @@ using UnityEngine.UI;
         //heroHP = curHP / maxHP;
         Hp.text = curHP.ToString() + '/' + maxHP.ToString();
     }
+
+
+    public void GetStats()
+    {
+      STR = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStatGenerator>().STR;
+        AGI = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStatGenerator>().AGI; 
+        END = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStatGenerator>().END; 
+        INT = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterStatGenerator>().INT; 
 }
+
+    public void SetStats()
+    {
+      strVal.text = STR.ToString();
+     agiVal.text = AGI.ToString();
+     endVal.text = END.ToString();
+     intVal.text = INT.ToString();
+}
+}
+
   
