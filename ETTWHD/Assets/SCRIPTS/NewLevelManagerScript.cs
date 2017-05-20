@@ -4518,8 +4518,21 @@ public class NewLevelManagerScript : MonoBehaviour {
         GameObject hir = GameObject.FindGameObjectWithTag("Player");
         hir.transform.position = PlayerSpawner.transform.position;
         hir.transform.rotation = PlayerSpawner.transform.rotation;
-
+        turnOffpointer();
     }
+
+    public void turnOffpointer()
+    {
+        GameObject[] pointers = GameObject.FindGameObjectsWithTag("pointer");
+        if(pointers != null)
+        {
+            foreach (GameObject pointer in pointers)
+            {
+                pointer.SetActive(false);
+            }
+        }
+    }
+
 
     //void Update()
     //{
