@@ -42,6 +42,8 @@ public class NewLevelManagerScript : MonoBehaviour {
     public GameObject[] CornerWall2;
     public GameObject[] InnerWall;      // Tablica prefabów wewnętrznych ścian dla poziomów 1-2
     public GameObject[] InnerWall2;
+    public GameObject[] ExternalCentralWall;
+    public GameObject[] ExternalCentralWall2;
 
     #endregion
     // Meble
@@ -168,6 +170,7 @@ public class NewLevelManagerScript : MonoBehaviour {
     public GameObject[] ExternalWallsOnScene; // Tablica spawn pointów zewnętrznych ścian z wyłączeniem ścian narożnych
     public GameObject[] CornerWallsOnScene; // Tablica spawn pointów narożnych ścian
     public GameObject[] InnerWallsOnScene; // Tablica spawn pointów wewnętrznych ścian  
+    public GameObject[] ExternalCentralWallsOnScene;
     public GameObject[] Mebelki_1x1_OnScene;
     public GameObject[] Mebelki_1x2_OnScene;
     public GameObject[] Mebelki_1x3_OnScene;
@@ -438,6 +441,13 @@ public class NewLevelManagerScript : MonoBehaviour {
                     GameObject InnerWallPrefab = InnerWall[Random.Range(0, InnerWall.Length)];
                     instance = Instantiate(InnerWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
                 }
+                ExternalCentralWallsOnScene = GameObject.FindGameObjectsWithTag("ExternalCentralWall");
+                foreach (GameObject Ściana in ExternalCentralWallsOnScene)
+                {
+                    GameObject ExternalCentralWallPrefab = ExternalCentralWall[Random.Range(0, ExternalCentralWall.Length)];
+                    instance = Instantiate(ExternalCentralWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
+                }
+
                 LightSpotOnScene = GameObject.FindGameObjectsWithTag("LigthSpot");
 
                 foreach (GameObject Światełko in LightSpotOnScene)
@@ -638,7 +648,12 @@ public class NewLevelManagerScript : MonoBehaviour {
                     GameObject InnerWallPrefab = InnerWall[Random.Range(0, InnerWall.Length)];
                     instance = Instantiate(InnerWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
                 }
-
+                ExternalCentralWallsOnScene = GameObject.FindGameObjectsWithTag("ExternalCentralWall");
+                foreach (GameObject Ściana in ExternalCentralWallsOnScene)
+                {
+                    GameObject ExternalCentralWallPrefab = ExternalCentralWall[Random.Range(0, ExternalCentralWall.Length)];
+                    instance = Instantiate(ExternalCentralWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
+                }
                 LightSpotOnScene = GameObject.FindGameObjectsWithTag("LigthSpot");
 
                 foreach (GameObject Światełko in LightSpotOnScene)
@@ -838,7 +853,12 @@ public class NewLevelManagerScript : MonoBehaviour {
                     GameObject InnerWallPrefab = InnerWall[Random.Range(0, InnerWall.Length)];
                     instance = Instantiate(InnerWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
                 }
-
+                ExternalCentralWallsOnScene = GameObject.FindGameObjectsWithTag("ExternalCentralWall");
+                foreach (GameObject Ściana in ExternalCentralWallsOnScene)
+                {
+                    GameObject ExternalCentralWallPrefab = ExternalCentralWall[Random.Range(0, ExternalCentralWall.Length)];
+                    instance = Instantiate(ExternalCentralWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
+                }
                 LightSpotOnScene = GameObject.FindGameObjectsWithTag("LigthSpot");
 
                 foreach (GameObject Światełko in LightSpotOnScene)
@@ -1037,6 +1057,12 @@ public class NewLevelManagerScript : MonoBehaviour {
                 {
                     GameObject InnerWallPrefab = InnerWall[Random.Range(0, InnerWall.Length)];
                     instance = Instantiate(InnerWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
+                }
+                ExternalCentralWallsOnScene = GameObject.FindGameObjectsWithTag("ExternalCentralWall");
+                foreach (GameObject Ściana in ExternalCentralWallsOnScene)
+                {
+                    GameObject ExternalCentralWallPrefab = ExternalCentralWall[Random.Range(0, ExternalCentralWall.Length)];
+                    instance = Instantiate(ExternalCentralWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
                 }
                 LightSpotOnScene = GameObject.FindGameObjectsWithTag("LigthSpot");
 
@@ -1238,7 +1264,12 @@ public class NewLevelManagerScript : MonoBehaviour {
                     GameObject InnerWallPrefab = InnerWall2[Random.Range(0, InnerWall2.Length)];
                     instance = Instantiate(InnerWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
                 }
-
+                ExternalCentralWallsOnScene = GameObject.FindGameObjectsWithTag("ExternalCentralWall");
+                foreach (GameObject Ściana in ExternalCentralWallsOnScene)
+                {
+                    GameObject ExternalCentralWallPrefab = ExternalCentralWall2[Random.Range(0, ExternalCentralWall2.Length)];
+                    instance = Instantiate(ExternalCentralWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
+                }
                 LightSpotOnScene = GameObject.FindGameObjectsWithTag("LigthSpot");
 
                 foreach (GameObject Światełko in LightSpotOnScene)
@@ -1438,7 +1469,12 @@ public class NewLevelManagerScript : MonoBehaviour {
                     GameObject InnerWallPrefab = InnerWall2[Random.Range(0, InnerWall2.Length)];
                     instance = Instantiate(InnerWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
                 }
-
+                ExternalCentralWallsOnScene = GameObject.FindGameObjectsWithTag("ExternalCentralWall");
+                foreach (GameObject Ściana in ExternalCentralWallsOnScene)
+                {
+                    GameObject ExternalCentralWallPrefab = ExternalCentralWall2[Random.Range(0, ExternalCentralWall2.Length)];
+                    instance = Instantiate(ExternalCentralWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
+                }
                 LightSpotOnScene = GameObject.FindGameObjectsWithTag("LigthSpot");
 
                 foreach (GameObject Światełko in LightSpotOnScene)
@@ -1636,6 +1672,12 @@ public class NewLevelManagerScript : MonoBehaviour {
                 {
                     GameObject InnerWallPrefab = InnerWall2[Random.Range(0, InnerWall2.Length)];
                     instance = Instantiate(InnerWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
+                }
+                ExternalCentralWallsOnScene = GameObject.FindGameObjectsWithTag("ExternalCentralWall");
+                foreach (GameObject Ściana in ExternalCentralWallsOnScene)
+                {
+                    GameObject ExternalCentralWallPrefab = ExternalCentralWall2[Random.Range(0, ExternalCentralWall2.Length)];
+                    instance = Instantiate(ExternalCentralWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
                 }
                 LightSpotOnScene = GameObject.FindGameObjectsWithTag("LigthSpot");
 
@@ -1837,6 +1879,12 @@ public class NewLevelManagerScript : MonoBehaviour {
                     GameObject InnerWallPrefab = InnerWall2[Random.Range(0, InnerWall2.Length)];
                     instance = Instantiate(InnerWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
                 }
+                ExternalCentralWallsOnScene = GameObject.FindGameObjectsWithTag("ExternalCentralWall");
+                foreach (GameObject Ściana in ExternalCentralWallsOnScene)
+                {
+                    GameObject ExternalCentralWallPrefab = ExternalCentralWall2[Random.Range(0, ExternalCentralWall2.Length)];
+                    instance = Instantiate(ExternalCentralWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
+                }
                 LightSpotOnScene = GameObject.FindGameObjectsWithTag("LigthSpot");
 
                 foreach (GameObject Światełko in LightSpotOnScene)
@@ -2037,7 +2085,12 @@ public class NewLevelManagerScript : MonoBehaviour {
                     GameObject InnerWallPrefab = InnerWall2[Random.Range(0, InnerWall2.Length)];
                     instance = Instantiate(InnerWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
                 }
-
+                ExternalCentralWallsOnScene = GameObject.FindGameObjectsWithTag("ExternalCentralWall");
+                foreach (GameObject Ściana in ExternalCentralWallsOnScene)
+                {
+                    GameObject ExternalCentralWallPrefab = ExternalCentralWall2[Random.Range(0, ExternalCentralWall2.Length)];
+                    instance = Instantiate(ExternalCentralWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
+                }
                 LightSpotOnScene = GameObject.FindGameObjectsWithTag("LigthSpot");
 
                 foreach (GameObject Światełko in LightSpotOnScene)
