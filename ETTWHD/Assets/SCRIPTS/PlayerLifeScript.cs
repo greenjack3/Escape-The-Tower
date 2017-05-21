@@ -25,7 +25,7 @@ public class PlayerLifeScript : MonoBehaviour {
         x = GetComponent<CharacterMovementScript>();
 
         isDead = false;
-        
+        GameObject.FindGameObjectWithTag("DM").SendMessage("hpupdate", Cur_Health);
     }
 
     public void Update()
