@@ -109,7 +109,7 @@ public class PlayerLifeScript : MonoBehaviour {
     {
 
         Debug.Log("jaki smaczny napój owocowy");
-        
+        GetComponentInChildren<ParticleSystem>().Play();
             Cur_Health = Cur_Health + 5;
             if(Cur_Health > Max_Health)
             {
