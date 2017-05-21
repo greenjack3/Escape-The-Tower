@@ -11,7 +11,7 @@ public class SkrzynkoOtwieracz : MonoBehaviour
     public GameObject Wep;
     public float amplitude = 0.5f;
     public float frequency = 1f;
-
+    //public GameObject particle; 
     // Position Storage Variables
     Vector3 posOffset = new Vector3();
     Vector3 tempPos = new Vector3();
@@ -20,6 +20,7 @@ public class SkrzynkoOtwieracz : MonoBehaviour
         
        
         GetComponent<Animator>().Play("ChestAnim");
+        GetComponentInChildren<ParticleSystem>().Play();
         otwarte = true;
       
         

@@ -25,7 +25,7 @@ public class PlayerLifeScript : MonoBehaviour {
         x = GetComponent<CharacterMovementScript>();
 
         isDead = false;
-        
+        GameObject.FindGameObjectWithTag("DM").SendMessage("hpupdate", Cur_Health);
     }
 
     public void Update()
@@ -109,7 +109,7 @@ public class PlayerLifeScript : MonoBehaviour {
     {
 
         Debug.Log("jaki smaczny napój owocowy");
-        
+        GetComponentInChildren<ParticleSystem>().Play();
             Cur_Health = Cur_Health + 5;
             if(Cur_Health > Max_Health)
             {

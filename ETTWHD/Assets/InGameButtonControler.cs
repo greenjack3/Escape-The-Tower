@@ -64,6 +64,12 @@ public class InGameButtonControler : MonoBehaviour {
     {
         GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<PlayerLifeScript>().SendMessage("DrinkPotion");
     }
+
+    public void Continue()
+    {
+        MenuPanel.SetActive(false);
+        menuIsActive = false;
+    }
 }
 
 
