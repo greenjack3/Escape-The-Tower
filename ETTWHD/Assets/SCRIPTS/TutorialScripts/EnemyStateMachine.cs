@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 [System.Serializable]
 public class EnemyStateMachine : MonoBehaviour {
@@ -15,7 +16,20 @@ public class EnemyStateMachine : MonoBehaviour {
     public Animator anim;
     public DetectionLogic det;
     public bool detected;
+    public float actionDecision;
+    public float actionTime;
+    public bool isActionTime;
+    public float xPos;
+    public float zPos;
+    public float xPos2;
+    public float zPos2;
+    Vector3 targetDest;
+    NavMeshAgent agent;
+    //public float waitingTime;
+    //public bool isWaitingTime;
+    public float megaTimer;
     public enum TurnState
+      
     {
         PROCESSING,
         CHOOSEACTIONS,
@@ -39,13 +53,16 @@ public class EnemyStateMachine : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
+        agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
         det = gameObject.GetComponent<DetectionLogic>();
-       // currentState = TurnState.PROCESSING;
+        // currentState = TurnState.PROCESSING;
         //BSM = GameObject.Find("BattleManager").GetComponent<BattleStateMachine> ();
         //startPosition = transform.position;
-            
+        isActionTime = false;
+        //isWaitingTime = true;
+        megaTimer = 3f;
     }
 
     // Update is called once per frame
@@ -64,40 +81,124 @@ public class EnemyStateMachine : MonoBehaviour {
             timer = 0.1f;
         }
 
+
+        if(isActionTime == true)
+        {
+            actionTime -= Time.deltaTime;
+        }
+
+        if(actionTime <= 0)
+        {
+            //isWaitingTime = true;
+            agent.Stop();
+            agent.ResetPath();
+            currentState = TurnState.WAITING;
+        }
+
+        megaTimer -= Time.deltaTime;
+
+        if(megaTimer < 0)
+        {
+            actionDecision = Random.Range(0, 100);
+            megaTimer = 3f;
+
+        }
+        //if(isWaitingTime == true)
+        //{
+        //    waitingTime -= Time.deltaTime;
+        //}
         detected = det.playerDetected;
         switch (currentState)
         {
 
             case (TurnState.PROCESSING):                                // chcę zapierdolić krasnoluda!
                                                                         //    Debug.Log("Napisz PROCESSING; śmierć wszystkim kransoludom yebanym!");
-                Debug.Log("chce zabijać krasnale");
+                //Debug.Log("chce zabijać krasnale");
+                //isWaitingTime = false;
+                isActionTime = false;
                 timeLeft -= Time.deltaTime;
                 if (timeLeft < 0)
                 {
-                    Debug.Log("zayebie tego krasnala " + gameObject.name);
+                   // Debug.Log("zayebie tego krasnala " + gameObject.name);
                     anim.SetInteger("AnimControl", 2);
                     startTimer = true;
                     player.SendMessage("CalculateDamage", AtkStr);
                     timeLeft = 1f;
+                   // isWaitingTime = true;
                     currentState = TurnState.WAITING;
                   //  gameObject.SetActive(false);
                 }
                 break;
 
             case (TurnState.CHOOSEACTIONS):
-            // Debug.Log("Napisz CHOOSEACTIONS");
+                 //Debug.Log("Napisz CHOOSEACTIONS");
+               // isWaitingTime = false;
+                isActionTime = true;
+                xPos = gameObject.transform.position.x + Random.Range(3,7);
+                zPos = gameObject.transform.position.z + Random.Range(3, 7);
+                xPos2 = gameObject.transform.position.x + Random.Range(-10, -5);
+                zPos2 = gameObject.transform.position.z + Random.Range(-10, -5);
+                int directionChange = Random.Range(1, 9);
+                switch (directionChange)
+                {
+                    case 1:
+                        targetDest = new Vector3(xPos, 0, zPos);
+                        break;
+                    case 2:
+                        targetDest = new Vector3(xPos2, 0, zPos2);
+                        break;
+                    case 3:
+                        targetDest = new Vector3(xPos, 0, zPos2);
+                        break;
+                    case 4:
+                        targetDest = new Vector3(xPos2, 0, zPos2);
+                        break;
+                    case 5:
+                        targetDest = new Vector3(xPos, 0, 0);
+                        break;
+                    case 6:
+                        targetDest = new Vector3(xPos2, 0, 0);
+                        break;
+                    case 7:
+                        targetDest = new Vector3(0, 0, zPos);
+                        break;
+                    case 8:
+                        targetDest = new Vector3(0, 0, zPos2);
+                        break;
+
+                                            
+                }
+               // targetDest = new Vector3(xPos, 0, zPos);
+                agent.SetDestination(targetDest);
+                anim.SetInteger("AnimControl", 1);
+                
                 //ChooseAction();
                 //currentState = TurnState.WAITING;
     
                 break;
 
             case (TurnState.WAITING):
-                // Debug.Log("Napisz WAITING");
-                //if (detected == true)
-                //{
-                //    currentState = TurnState.PROCESSING;
-                //}
+                 //Debug.Log("Napisz WAITING");
+                isActionTime = false;
+                //waitingTime = 1f;
+               
+                anim.SetInteger("AnimControl", 0);
 
+                
+                
+                   
+                
+
+                if (actionDecision >27 && actionDecision < 30)
+                {
+                    actionTime = Random.Range(0.25f, 1f);
+                    currentState = TurnState.CHOOSEACTIONS;
+                }
+
+                //else if (actionDecision < 4) 
+                //{
+                //    waitingTime = 1f;
+                //}
                 break;
 
             case (TurnState.ACTION):
