@@ -13,8 +13,10 @@ ModelImporter:
     400004: SCALE
     2300000: Cylinder
     2300002: SCALE
+    2300004: //RootNode
     3300000: Cylinder
     3300002: SCALE
+    3300004: //RootNode
     4300000: Cylinder
     4300002: SCALE
     7400000: Default Take
@@ -29,6 +31,8 @@ ModelImporter:
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
