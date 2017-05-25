@@ -472,7 +472,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
                 foreach (GameObject Room in CenterRoomsOnScene)
                 {
-                    CenterPrefab = CenterRoom[Random.Range(0, CenterRoom.Length)];
+                    CenterPrefab = CenterRoom2[Random.Range(0, CenterRoom2.Length)];
                     instance = (GameObject)Instantiate(CenterPrefab, Room.transform.position, Room.transform.rotation);
                     print("działam i załadowałem level 2");
 
@@ -480,7 +480,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
                 foreach (GameObject Room in EdgeRoomsOnScene)
                 {
-                    GameObject EdgePrefab = EdgeRoom[Random.Range(0, EdgeRoom.Length)];
+                    GameObject EdgePrefab = EdgeRoom2[Random.Range(0, EdgeRoom2.Length)];
                     instance = (GameObject)Instantiate(EdgePrefab, Room.transform.position, Room.transform.rotation);
                     RotationModifactor = Random.Range(0, 4);
                     if (RotationModifactor < 3)
@@ -493,7 +493,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
                 foreach (GameObject Room in InnerRoomsOnScene)
                 {
-                    GameObject InnerPrefab = InnerRoom[Random.Range(0, InnerRoom.Length)];
+                    GameObject InnerPrefab = InnerRoom2[Random.Range(0, InnerRoom2.Length)];
                     instance = (GameObject)Instantiate(InnerPrefab, Room.transform.position, Room.transform.rotation);
                     RotationModifactor = Random.Range(0, 8);
                     if (RotationModifactor < 4)
@@ -505,7 +505,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
                 foreach (GameObject Room in OuterRoomsOnScene)
                 {
-                    GameObject OuterPrefab = OuterRoom[Random.Range(0, OuterRoom.Length)];
+                    GameObject OuterPrefab = OuterRoom2[Random.Range(0, OuterRoom2.Length)];
                     instance = (GameObject)Instantiate(OuterPrefab, Room.transform.position, Room.transform.rotation);
                     RotationModifactor = Random.Range(0, 9);
                     if (RotationModifactor < 5)
@@ -521,7 +521,7 @@ public class NewLevelManagerScript : MonoBehaviour {
                 {
                     GameObject.FindGameObjectWithTag("pointer").SetActive(false);
 
-                    GameObject MebelekPrefab = Mebelki_1x1[Random.Range(0, Mebelki_1x1.Length)];
+                    GameObject MebelekPrefab = Mebelki_1x1_2[Random.Range(0, Mebelki_1x1_2.Length)];
                     instance = (GameObject)Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
                 }
 
@@ -530,7 +530,7 @@ public class NewLevelManagerScript : MonoBehaviour {
                 foreach (GameObject Mebelek in Mebelki_1x2_OnScene)
                 {
                     GameObject.FindGameObjectWithTag("pointer").SetActive(false);
-                    GameObject MebelekPrefab = Mebelki_1x2[Random.Range(0, Mebelki_1x2.Length)];
+                    GameObject MebelekPrefab = Mebelki_1x2_2[Random.Range(0, Mebelki_1x2_2.Length)];
                     instance = Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
                 }
 
@@ -539,7 +539,7 @@ public class NewLevelManagerScript : MonoBehaviour {
                 foreach (GameObject Mebelek in Mebelki_1x3_OnScene)
                 {
                     GameObject.FindGameObjectWithTag("pointer").SetActive(false);
-                    GameObject MebelekPrefab = Mebelki_1x3[Random.Range(0, Mebelki_1x3.Length)];
+                    GameObject MebelekPrefab = Mebelki_1x3_2[Random.Range(0, Mebelki_1x3_2.Length)];
                     instance = Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
                 }
 
@@ -548,7 +548,7 @@ public class NewLevelManagerScript : MonoBehaviour {
                 foreach (GameObject Mebelek in Mebelki_2x1_OnScene)
                 {
                     GameObject.FindGameObjectWithTag("pointer").SetActive(false);
-                    GameObject MebelekPrefab = Mebelki_2x1[Random.Range(0, Mebelki_2x1.Length)];
+                    GameObject MebelekPrefab = Mebelki_2x1_2[Random.Range(0, Mebelki_2x1_2.Length)];
                     instance = Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
                 }
 
@@ -557,7 +557,7 @@ public class NewLevelManagerScript : MonoBehaviour {
                 foreach (GameObject Mebelek in Mebelki_2x2_OnScene)
                 {
                     GameObject.FindGameObjectWithTag("pointer").SetActive(false);
-                    GameObject MebelekPrefab = Mebelki_2x2[Random.Range(0, Mebelki_2x2.Length)];
+                    GameObject MebelekPrefab = Mebelki_2x2_2[Random.Range(0, Mebelki_2x2_2.Length)];
                     instance = Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
                 }
 
@@ -566,7 +566,7 @@ public class NewLevelManagerScript : MonoBehaviour {
                 foreach (GameObject Mebelek in Mebelki_2x3_OnScene)
                 {
                     GameObject.FindGameObjectWithTag("pointer").SetActive(false);
-                    GameObject MebelekPrefab = Mebelki_2x3[Random.Range(0, Mebelki_2x3.Length)];
+                    GameObject MebelekPrefab = Mebelki_2x3_2[Random.Range(0, Mebelki_2x3_2.Length)];
                     instance = Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
                 }
 
@@ -575,7 +575,7 @@ public class NewLevelManagerScript : MonoBehaviour {
                 foreach (GameObject Mebelek in Mebelki_3x1_OnScene)
                 {
                     GameObject.FindGameObjectWithTag("pointer").SetActive(false);
-                    GameObject MebelekPrefab = Mebelki_3x1[Random.Range(0, Mebelki_3x1.Length)];
+                    GameObject MebelekPrefab = Mebelki_3x1_2[Random.Range(0, Mebelki_3x1_2.Length)];
                     instance = Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
                 }
 
@@ -584,7 +584,7 @@ public class NewLevelManagerScript : MonoBehaviour {
                 foreach (GameObject Mebelek in Mebelki_3x2_OnScene)
                 {
                     GameObject.FindGameObjectWithTag("pointer").SetActive(false);
-                    GameObject MebelekPrefab = Mebelki_3x2[Random.Range(0, Mebelki_3x2.Length)];
+                    GameObject MebelekPrefab = Mebelki_3x2_2[Random.Range(0, Mebelki_3x2_2.Length)];
                     instance = Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
                 }
 
@@ -593,7 +593,7 @@ public class NewLevelManagerScript : MonoBehaviour {
                 foreach (GameObject Mebelek in Mebelki_3x3_OnScene)
                 {
                     GameObject.FindGameObjectWithTag("pointer").SetActive(false);
-                    GameObject MebelekPrefab = Mebelki_3x3[Random.Range(0, Mebelki_3x3.Length)];
+                    GameObject MebelekPrefab = Mebelki_3x3_2[Random.Range(0, Mebelki_3x3_2.Length)];
                     instance = Instantiate(MebelekPrefab, Mebelek.transform.position, Mebelek.transform.rotation);
                 }
 
@@ -611,7 +611,7 @@ public class NewLevelManagerScript : MonoBehaviour {
                 foreach (GameObject skrzyneczka in SkrzyniaOnScene)
                 {
                     GameObject.FindGameObjectWithTag("pointer").SetActive(false);
-                    GameObject SkrzynkaPrefab = Skrzynia[Random.Range(0, Skrzynia.Length)];
+                    GameObject SkrzynkaPrefab = Skrzynia2[Random.Range(0, Skrzynia2.Length)];
                     instance = Instantiate(SkrzynkaPrefab, skrzyneczka.transform.position, skrzyneczka.transform.rotation);
                 }
 
@@ -620,7 +620,7 @@ public class NewLevelManagerScript : MonoBehaviour {
                 foreach (GameObject IA in InteractiveOnScene)
                 {
                     GameObject.FindGameObjectWithTag("pointer").SetActive(false);
-                    GameObject InterActivePrefab = Interactive[Random.Range(0, Interactive.Length)];
+                    GameObject InterActivePrefab = Interactive2[Random.Range(0, Interactive2.Length)];
                     instance = Instantiate(InterActivePrefab, IA.transform.position, IA.transform.rotation);
                 }
 
@@ -629,7 +629,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
                 foreach (GameObject Ściana in ExternalWallsOnScene)
                 {
-                    GameObject ExternalWallPrefab = ExternalWall[Random.Range(0, ExternalWall.Length)];
+                    GameObject ExternalWallPrefab = ExternalWall2[Random.Range(0, ExternalWall2.Length)];
                     instance = Instantiate(ExternalWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
                 }
 
@@ -637,7 +637,7 @@ public class NewLevelManagerScript : MonoBehaviour {
 
                 foreach (GameObject Ściana in CornerWallsOnScene)
                 {
-                    GameObject CornerWallPrefab = CornerWall[Random.Range(0, CornerWall.Length)];
+                    GameObject CornerWallPrefab = CornerWall2[Random.Range(0, CornerWall2.Length)];
                     instance = Instantiate(CornerWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
                 }
 
@@ -645,13 +645,13 @@ public class NewLevelManagerScript : MonoBehaviour {
 
                 foreach (GameObject Ściana in InnerWallsOnScene)
                 {
-                    GameObject InnerWallPrefab = InnerWall[Random.Range(0, InnerWall.Length)];
+                    GameObject InnerWallPrefab = InnerWall2[Random.Range(0, InnerWall2.Length)];
                     instance = Instantiate(InnerWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
                 }
                 ExternalCentralWallsOnScene = GameObject.FindGameObjectsWithTag("ExternalCentralWall");
                 foreach (GameObject Ściana in ExternalCentralWallsOnScene)
                 {
-                    GameObject ExternalCentralWallPrefab = ExternalCentralWall[Random.Range(0, ExternalCentralWall.Length)];
+                    GameObject ExternalCentralWallPrefab = ExternalCentralWall2[Random.Range(0, ExternalCentralWall2.Length)];
                     instance = Instantiate(ExternalCentralWallPrefab, Ściana.transform.position, Ściana.transform.rotation);
                 }
                 LightSpotOnScene = GameObject.FindGameObjectsWithTag("LigthSpot");
@@ -659,7 +659,7 @@ public class NewLevelManagerScript : MonoBehaviour {
                 foreach (GameObject Światełko in LightSpotOnScene)
                 {
                     GameObject.FindGameObjectWithTag("pointer").SetActive(false);
-                    GameObject ŚwiatełkoPrefab = LightSpot[Random.Range(0, LightSpot.Length)];
+                    GameObject ŚwiatełkoPrefab = LightSpot2[Random.Range(0, LightSpot2.Length)];
                     instance = Instantiate(ŚwiatełkoPrefab, Światełko.transform.position, Światełko.transform.rotation);
                 }
 
