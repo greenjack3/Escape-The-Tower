@@ -90,8 +90,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DDLevelCreation.cs" />
     <Compile Include="Assets\DwarfSetter.cs" />
+    <Compile Include="Assets\DwarfSetterStats.cs" />
     <Compile Include="Assets\InGameButtonControler.cs" />
+    <Compile Include="Assets\LevelControler2.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -177,6 +180,7 @@
     <Compile Include="Assets\SCRIPTS\TutorialScripts\PlayerBase.cs" />
     <Compile Include="Assets\SCRIPTS\TutorialScripts\PlayerStateMachine.cs" />
     <Compile Include="Assets\SCRIPTS\virtualcursortest.cs" />
+    <Compile Include="Assets\sceneSwaper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\BrokenVector\LowPolyShaders\README.txt" />

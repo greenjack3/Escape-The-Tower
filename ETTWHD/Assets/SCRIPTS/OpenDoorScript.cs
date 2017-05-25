@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class OpenDoorScript : MonoBehaviour
 {
 
-    private bool Locked = true;
+    private bool Locked = false;
     public int Level;
     
     void Start()

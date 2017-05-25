@@ -32,16 +32,18 @@ public class DetectionLogic : MonoBehaviour
 
                 if(hit.collider.tag == "Player" /*&& Ai.roomID ==TurnBasedCombatStateMenager.Instance.playerCharacter.roomID*/)
                 {
-                    Debug.Log("Player Spotted");
+                   // Debug.Log("Player Spotted");
                     playerDetected = true;
                     // TurnBasedCombatStateMenager.Instance.PlayerDetected();
                     act = gameObject.GetComponent<EnemyStateMachine>();
                     act.currentState = EnemyStateMachine.TurnState.PROCESSING;
+                   // gameObject.SendMessage("PlayerDetected");
                 }
 
                 else
                 {
                     playerDetected = false;
+                   // gameObject.SendMessage("PlayerNotDetected", playerDetected);
                 }
 
               //  Debug.Log("Player Spotted");
@@ -55,10 +57,8 @@ public class DetectionLogic : MonoBehaviour
 
     private void Update()
     {
-        if (playerDetected == false)
-        {
-
+       
             CanSeePlayer();
-        }
+        
     }
 }

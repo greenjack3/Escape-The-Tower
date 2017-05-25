@@ -23,11 +23,13 @@ public class EnemyStateMachine : MonoBehaviour {
     public float zPos;
     public float xPos2;
     public float zPos2;
+    public bool playerDetected;
     Vector3 targetDest;
     NavMeshAgent agent;
     //public float waitingTime;
     //public bool isWaitingTime;
     public float megaTimer;
+    public bool isMegaTime;
     public enum TurnState
       
     {
@@ -63,6 +65,7 @@ public class EnemyStateMachine : MonoBehaviour {
         isActionTime = false;
         //isWaitingTime = true;
         megaTimer = 3f;
+        isMegaTime = true;
     }
 
     // Update is called once per frame
@@ -77,6 +80,7 @@ public class EnemyStateMachine : MonoBehaviour {
         if (timer < 0)
         {
             anim.SetInteger("AnimControl", 0);
+            currentState = TurnState.WAITING;
             startTimer = false;
             timer = 0.1f;
         }
@@ -90,12 +94,15 @@ public class EnemyStateMachine : MonoBehaviour {
         if(actionTime <= 0)
         {
             //isWaitingTime = true;
-            agent.Stop();
+            agent.isStopped = true;
             agent.ResetPath();
             currentState = TurnState.WAITING;
         }
-
-        megaTimer -= Time.deltaTime;
+        if(isMegaTime == true)
+        {
+            megaTimer -= Time.deltaTime;
+        }
+       // megaTimer -= Time.deltaTime;
 
         if(megaTimer < 0)
         {
@@ -107,25 +114,26 @@ public class EnemyStateMachine : MonoBehaviour {
         //{
         //    waitingTime -= Time.deltaTime;
         //}
-        detected = det.playerDetected;
+        //detected = det.playerDetected;
         switch (currentState)
         {
 
             case (TurnState.PROCESSING):                                // chcę zapierdolić krasnoluda!
                                                                         //    Debug.Log("Napisz PROCESSING; śmierć wszystkim kransoludom yebanym!");
-                //Debug.Log("chce zabijać krasnale");
+                Debug.Log("chce zabijać krasnale");
                 //isWaitingTime = false;
                 isActionTime = false;
+                isMegaTime = false;
                 timeLeft -= Time.deltaTime;
                 if (timeLeft < 0)
                 {
-                   // Debug.Log("zayebie tego krasnala " + gameObject.name);
+                    Debug.Log("zayebie tego krasnala " + gameObject.name);
                     anim.SetInteger("AnimControl", 2);
                     startTimer = true;
                     player.SendMessage("CalculateDamage", AtkStr);
                     timeLeft = 1f;
                    // isWaitingTime = true;
-                    currentState = TurnState.WAITING;
+                  //  currentState = TurnState.WAITING;
                   //  gameObject.SetActive(false);
                 }
                 break;
@@ -134,6 +142,7 @@ public class EnemyStateMachine : MonoBehaviour {
                  //Debug.Log("Napisz CHOOSEACTIONS");
                // isWaitingTime = false;
                 isActionTime = true;
+                isMegaTime = false;
                 xPos = gameObject.transform.position.x + Random.Range(3,7);
                 zPos = gameObject.transform.position.z + Random.Range(3, 7);
                 xPos2 = gameObject.transform.position.x + Random.Range(-10, -5);
@@ -180,15 +189,12 @@ public class EnemyStateMachine : MonoBehaviour {
             case (TurnState.WAITING):
                  //Debug.Log("Napisz WAITING");
                 isActionTime = false;
+                isMegaTime = true;
+                
                 //waitingTime = 1f;
                
-                anim.SetInteger("AnimControl", 0);
-
-                
-                
-                   
-                
-
+                anim.SetInteger("AnimControl", 0);                 
+                          
                 if (actionDecision >27 && actionDecision < 30)
                 {
                     actionTime = Random.Range(0.25f, 1f);
@@ -217,8 +223,13 @@ public class EnemyStateMachine : MonoBehaviour {
             
         }
 
-   
 
+    public void PlayerDetected()
+    {
+        Debug.Log("otrzymałem cel" + gameObject.name);
+        currentState = TurnState.PROCESSING;
+
+    }
 
     //void ChooseAction()
     //{

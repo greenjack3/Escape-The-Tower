@@ -209,4 +209,6 @@ public class CharacterMovementScript : MonoBehaviour
     {
         // Tu policzcie sobie ile ma AtkStr :)
     }
+
+   
 }
