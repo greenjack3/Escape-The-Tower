@@ -213,7 +213,7 @@ public class CharacterStatGenerator : MonoBehaviour
                 if (INTWeapon != null)
                 {
                     GameObject weapon = INTWeapon[Random.Range(0, INTWeapon.Length)];
-                    GameObject w = Instantiate(weapon, Hand.transform.position, transform.rotation);
+                    GameObject w = Instantiate(weapon, Hand.transform.position, Hand.transform.rotation);
 
                     w.transform.parent = Hand.transform;
                     //w.transform.Rotate(180, 0, 45);
